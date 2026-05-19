@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+import AstroBadge from '../components/AstroBadge.astro';
+import ReactBadge from '../components/ReactBadge.jsx'; // 👈 Apontando para o .jsx
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Portfolio - Max Ebina</title>
+  </head>
+  <body class="bg-background text-foreground min-h-screen flex flex-col items-center justify-center gap-8 py-12 font-sans relative">
+    
+    <div class="p-8 bg-primary text-primary-foreground rounded-md text-center max-w-md w-full">
+      <h1 class="text-3xl font-bold">Arquitetura de Ilhas 🚀</h1>
+      <p class="text-xs mt-2 opacity-85">Agora sim estamos misturando tecnologias reais de forma estável</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl px-4">
+      <AstroBadge />
+      <ReactBadge client:load /> </div>
+
+  </body>
+</html>

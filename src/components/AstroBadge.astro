@@ -1,0 +1,19 @@
+---
+// src/components/AstroBadge.astro
+---
+<div class="p-8 bg-card border border-border rounded-md shadow-sm flex flex-col items-center justify-center">
+  <span class="px-3 py-1 bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-400 text-xs font-semibold rounded-full tracking-wide uppercase border border-amber-200">
+    Tag Estrutural do Astro
+  </span>
+  <button id="astroBtn" class="mt-4 px-3 py-1 bg-amber-500 text-white text-xs rounded font-medium cursor-pointer">
+    Clique (Astro)
+  </button>
+</div>
+
+<script>
+  // No Astro, para dar vida ao botão, precisamos buscar a tag manualmente via JS da plataforma
+  const btn = document.getElementById('astroBtn');
+  btn?.addEventListener('click', () => {
+    alert('Fui disparado pelo JavaScript nativo da plataforma no Astro!');
+  });
+</script>
