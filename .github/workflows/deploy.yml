@@ -3,7 +3,7 @@ name: Deploy via FTP 🚀
 on:
   push:
     branches:
-      - master # Dispara o deploy sempre que você atualizar a branch main
+      - main # Dispara o deploy sempre que você atualizar a branch main
 
 jobs:
   web-deploy:
