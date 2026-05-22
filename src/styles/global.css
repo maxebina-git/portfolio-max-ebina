@@ -1,35 +1,32 @@
-/* 1. Importa os seus tokens do Figma */
 @import "./variables.css";
-
-/* 2. Inicializa o motor do Tailwind v4 */
 @import "tailwindcss";
 
-/* 3. Diz ao Tailwind v4 para mapear as suas variáveis como classes utilitárias */
 @theme {
+  /* Mapeamos as variáveis para que o Tailwind as reconheça */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  
   --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-
-  /* Seus arredondamentos do Figma */
-  --radius-none: var(--rounded-none);
-  --radius-sm: var(--rounded-sm);
-  --radius-md: var(--rounded-md);
-  --radius-lg: var(--rounded-lg);
-  --radius-xl: var(--rounded-xl);
-  --radius-full: var(--rounded-full);
+  /* Adicione essa linha para poder usar 'bg-muted' direto se quiser depois: */
+  --color-muted: var(--muted); 
 }
 
+/* Estado padrão: Tema Claro */
 :root {
-    color-scheme: light; /* Força o navegador a renderizar elementos no modo claro */
-  }
+  --background: #FEFCFB; 
+  --foreground: #020617;
+  --muted: #FCF9F6; /* 💡 Off-white que você definiu para o Header claro */
+}
+
+/* Estado ativo: Tema Escuro */
+.dark {
+  --background: #17120e;
+  --foreground: #f5f5f5;
+  --muted: #151413; /* 💡 O grafite escuro que veio do seu Figma/variables.css */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

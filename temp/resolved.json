@@ -32,7 +32,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       }
     },
@@ -68,7 +68,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.143rem",
+        "value": "2px",
         "type": "other"
       }
     },
@@ -104,7 +104,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.286rem",
+        "value": "4px",
         "type": "other"
       }
     },
@@ -140,7 +140,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       }
     },
@@ -176,7 +176,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       }
     },
@@ -212,7 +212,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       }
     },
@@ -248,7 +248,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       }
     },
@@ -284,7 +284,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       }
     },
@@ -320,7 +320,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "714.214rem",
+        "value": "9999px",
         "type": "other"
       }
     },
@@ -1612,7 +1612,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -1648,7 +1648,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "other"
       },
       "$description": {
@@ -1684,7 +1684,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.143rem",
+        "value": "2px",
         "type": "other"
       },
       "$description": {
@@ -1757,7 +1757,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       },
       "$description": {
@@ -1793,7 +1793,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -1829,7 +1829,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -1865,7 +1865,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -1901,7 +1901,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -1937,7 +1937,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       },
       "$description": {
@@ -1973,7 +1973,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -2009,7 +2009,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -2045,7 +2045,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -2081,7 +2081,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.143rem",
+        "value": "44px",
         "type": "other"
       },
       "$description": {
@@ -2117,7 +2117,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -2153,7 +2153,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       },
       "$description": {
@@ -2189,7 +2189,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4rem",
+        "value": "56px",
         "type": "other"
       },
       "$description": {
@@ -2225,7 +2225,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       },
       "$description": {
@@ -2261,7 +2261,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       },
       "$description": {
@@ -2297,7 +2297,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -2333,7 +2333,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "8rem",
+        "value": "112px",
         "type": "other"
       },
       "$description": {
@@ -2369,7 +2369,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -2405,7 +2405,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "18.286rem",
+        "value": "256px",
         "type": "other"
       },
       "$description": {
@@ -2441,7 +2441,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -2477,7 +2477,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       },
       "$description": {
@@ -2513,7 +2513,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -2549,7 +2549,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -2585,7 +2585,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       },
       "$description": {
@@ -2621,7 +2621,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "22.857rem",
+        "value": "320px",
         "type": "other"
       },
       "$description": {
@@ -2657,7 +2657,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       },
       "$description": {
@@ -2693,7 +2693,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "10.286rem",
+        "value": "144px",
         "type": "other"
       },
       "$description": {
@@ -2729,7 +2729,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "11.429rem",
+        "value": "160px",
         "type": "other"
       },
       "$description": {
@@ -2765,7 +2765,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "12.571rem",
+        "value": "176px",
         "type": "other"
       },
       "$description": {
@@ -2801,7 +2801,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       },
       "$description": {
@@ -2837,7 +2837,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.857rem",
+        "value": "208px",
         "type": "other"
       },
       "$description": {
@@ -2873,7 +2873,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -2909,7 +2909,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -2947,7 +2947,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -3020,7 +3020,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       },
       "$description": {
@@ -3056,7 +3056,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -3092,7 +3092,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -3128,7 +3128,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -3164,7 +3164,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -3237,7 +3237,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       },
       "$description": {
@@ -3273,7 +3273,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -3309,7 +3309,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -3345,7 +3345,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -3381,7 +3381,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -3417,7 +3417,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -3453,7 +3453,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -3489,7 +3489,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -3525,7 +3525,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -3561,7 +3561,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -3597,7 +3597,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       },
       "$description": {
@@ -3633,7 +3633,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       },
       "$description": {
@@ -3669,7 +3669,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -3705,7 +3705,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       },
       "$description": {
@@ -3741,7 +3741,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -3777,7 +3777,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       },
       "$description": {
@@ -3813,7 +3813,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -3849,7 +3849,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -3885,7 +3885,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -3921,7 +3921,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -4031,7 +4031,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4rem",
+        "value": "56px",
         "type": "other"
       },
       "$description": {
@@ -4067,7 +4067,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.143rem",
+        "value": "72px",
         "type": "other"
       },
       "$description": {
@@ -4103,7 +4103,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       },
       "$description": {
@@ -4139,7 +4139,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.143rem",
+        "value": "72px",
         "type": "other"
       },
       "$description": {
@@ -4175,7 +4175,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       },
       "$description": {
@@ -4211,7 +4211,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -4247,7 +4247,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -4283,7 +4283,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       },
       "$description": {
@@ -4319,7 +4319,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       },
       "$description": {
@@ -4355,7 +4355,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       },
       "$description": {
@@ -4391,7 +4391,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.143rem",
+        "value": "44px",
         "type": "other"
       },
       "$description": {
@@ -4427,7 +4427,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "8rem",
+        "value": "112px",
         "type": "other"
       },
       "$description": {
@@ -4463,7 +4463,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -4499,7 +4499,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "10.286rem",
+        "value": "144px",
         "type": "other"
       },
       "$description": {
@@ -4535,7 +4535,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "11.429rem",
+        "value": "160px",
         "type": "other"
       },
       "$description": {
@@ -4571,7 +4571,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "12.571rem",
+        "value": "176px",
         "type": "other"
       },
       "$description": {
@@ -4607,7 +4607,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       },
       "$description": {
@@ -4643,7 +4643,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.857rem",
+        "value": "208px",
         "type": "other"
       },
       "$description": {
@@ -4679,7 +4679,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "other"
       },
       "$description": {
@@ -4715,7 +4715,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "other"
       },
       "$description": {
@@ -4751,7 +4751,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -4787,7 +4787,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "17.143rem",
+        "value": "240px",
         "type": "other"
       },
       "$description": {
@@ -4823,7 +4823,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "18.286rem",
+        "value": "256px",
         "type": "other"
       },
       "$description": {
@@ -4859,7 +4859,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       },
       "$description": {
@@ -4895,7 +4895,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "22.857rem",
+        "value": "320px",
         "type": "other"
       },
       "$description": {
@@ -4931,7 +4931,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       },
       "$description": {
@@ -4967,7 +4967,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "8rem",
+        "value": "112px",
         "type": "other"
       },
       "$description": {
@@ -5003,7 +5003,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -5039,7 +5039,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "10.286rem",
+        "value": "144px",
         "type": "other"
       },
       "$description": {
@@ -5075,7 +5075,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "11.429rem",
+        "value": "160px",
         "type": "other"
       },
       "$description": {
@@ -5111,7 +5111,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "12.571rem",
+        "value": "176px",
         "type": "other"
       },
       "$description": {
@@ -5147,7 +5147,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       },
       "$description": {
@@ -5183,7 +5183,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.857rem",
+        "value": "208px",
         "type": "other"
       },
       "$description": {
@@ -5219,7 +5219,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -5255,7 +5255,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "17.143rem",
+        "value": "240px",
         "type": "other"
       },
       "$description": {
@@ -5291,7 +5291,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "18.286rem",
+        "value": "256px",
         "type": "other"
       },
       "$description": {
@@ -5327,7 +5327,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       },
       "$description": {
@@ -5363,7 +5363,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "22.857rem",
+        "value": "320px",
         "type": "other"
       },
       "$description": {
@@ -5399,7 +5399,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       },
       "$description": {
@@ -5437,7 +5437,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.286rem",
+        "value": "4px",
         "type": "other"
       },
       "$description": {
@@ -5473,7 +5473,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       }
     },
@@ -5505,7 +5505,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       }
     },
@@ -5537,7 +5537,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       }
     },
@@ -5569,7 +5569,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       }
     },
@@ -5601,7 +5601,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       }
     },
@@ -5633,7 +5633,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       }
     },
@@ -5665,7 +5665,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       }
     }
@@ -5699,7 +5699,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "opacity"
       },
       "$description": {
@@ -5735,7 +5735,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "0.357rem",
+        "value": "5px",
         "type": "opacity"
       },
       "$description": {
@@ -5771,7 +5771,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "opacity"
       },
       "$description": {
@@ -5807,7 +5807,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "opacity"
       },
       "$description": {
@@ -5843,7 +5843,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "1.786rem",
+        "value": "25px",
         "type": "opacity"
       },
       "$description": {
@@ -5879,7 +5879,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "2.143rem",
+        "value": "30px",
         "type": "opacity"
       },
       "$description": {
@@ -5915,7 +5915,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "opacity"
       },
       "$description": {
@@ -5951,7 +5951,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "3.571rem",
+        "value": "50px",
         "type": "opacity"
       },
       "$description": {
@@ -5987,7 +5987,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "4.286rem",
+        "value": "60px",
         "type": "opacity"
       },
       "$description": {
@@ -6023,7 +6023,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "5rem",
+        "value": "70px",
         "type": "opacity"
       },
       "$description": {
@@ -6059,7 +6059,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "opacity"
       },
       "$description": {
@@ -6095,7 +6095,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "6.429rem",
+        "value": "90px",
         "type": "opacity"
       },
       "$description": {
@@ -6131,7 +6131,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "6.786rem",
+        "value": "95px",
         "type": "opacity"
       },
       "$description": {
@@ -6167,7 +6167,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "7.143rem",
+        "value": "100px",
         "type": "opacity"
       },
       "$description": {
@@ -6203,7 +6203,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "1.071rem",
+        "value": "15px",
         "type": "opacity"
       },
       "$description": {
@@ -6239,7 +6239,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "2.5rem",
+        "value": "35px",
         "type": "opacity"
       },
       "$description": {
@@ -6275,7 +6275,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "3.214rem",
+        "value": "45px",
         "type": "opacity"
       },
       "$description": {
@@ -6311,7 +6311,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "3.929rem",
+        "value": "55px",
         "type": "opacity"
       },
       "$description": {
@@ -6347,7 +6347,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "4.643rem",
+        "value": "65px",
         "type": "opacity"
       },
       "$description": {
@@ -6383,7 +6383,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "5.357rem",
+        "value": "75px",
         "type": "opacity"
       },
       "$description": {
@@ -6419,7 +6419,7 @@
         "type": "opacity"
       },
       "$value": {
-        "value": "6.071rem",
+        "value": "85px",
         "type": "opacity"
       },
       "$description": {
@@ -6444,7 +6444,7 @@
       "type": "other"
     },
     "$value": {
-      "value": "0.286rem",
+      "value": "4px",
       "type": "other"
     },
     "$description": {
@@ -6481,7 +6481,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -6591,7 +6591,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       },
       "$description": {
@@ -6627,7 +6627,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       },
       "$description": {
@@ -6663,7 +6663,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -6699,7 +6699,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -6735,7 +6735,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       },
       "$description": {
@@ -6771,7 +6771,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -6807,7 +6807,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -6843,7 +6843,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -6879,7 +6879,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       },
       "$description": {
@@ -6915,7 +6915,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -6951,7 +6951,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -6987,7 +6987,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -7023,7 +7023,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.143rem",
+        "value": "44px",
         "type": "other"
       },
       "$description": {
@@ -7059,7 +7059,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -7095,7 +7095,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4rem",
+        "value": "56px",
         "type": "other"
       },
       "$description": {
@@ -7131,7 +7131,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       },
       "$description": {
@@ -7167,7 +7167,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       },
       "$description": {
@@ -7203,7 +7203,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -7239,7 +7239,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "8rem",
+        "value": "112px",
         "type": "other"
       },
       "$description": {
@@ -7275,7 +7275,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -7311,7 +7311,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "10.286rem",
+        "value": "144px",
         "type": "other"
       },
       "$description": {
@@ -7347,7 +7347,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "11.429rem",
+        "value": "160px",
         "type": "other"
       },
       "$description": {
@@ -7383,7 +7383,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "12.571rem",
+        "value": "176px",
         "type": "other"
       },
       "$description": {
@@ -7419,7 +7419,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       },
       "$description": {
@@ -7455,7 +7455,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.857rem",
+        "value": "208px",
         "type": "other"
       },
       "$description": {
@@ -7491,7 +7491,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -7527,7 +7527,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "17.143rem",
+        "value": "240px",
         "type": "other"
       },
       "$description": {
@@ -7563,7 +7563,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "18.286rem",
+        "value": "256px",
         "type": "other"
       },
       "$description": {
@@ -7599,7 +7599,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       },
       "$description": {
@@ -7635,7 +7635,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "22.857rem",
+        "value": "320px",
         "type": "other"
       },
       "$description": {
@@ -7671,7 +7671,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       },
       "$description": {
@@ -7767,7 +7767,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "32rem",
+        "value": "448px",
         "type": "other"
       }
     },
@@ -7793,7 +7793,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "36.571rem",
+        "value": "512px",
         "type": "other"
       }
     },
@@ -7819,7 +7819,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "41.143rem",
+        "value": "576px",
         "type": "other"
       }
     },
@@ -7845,7 +7845,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "48rem",
+        "value": "672px",
         "type": "other"
       }
     },
@@ -7871,7 +7871,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "54.857rem",
+        "value": "768px",
         "type": "other"
       }
     },
@@ -7897,7 +7897,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "64rem",
+        "value": "896px",
         "type": "other"
       }
     },
@@ -7923,7 +7923,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "73.143rem",
+        "value": "1024px",
         "type": "other"
       }
     },
@@ -7949,7 +7949,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "82.286rem",
+        "value": "1152px",
         "type": "other"
       }
     },
@@ -7975,7 +7975,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "91.429rem",
+        "value": "1280px",
         "type": "other"
       },
       "$description": {
@@ -8005,7 +8005,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "45.714rem",
+        "value": "640px",
         "type": "other"
       },
       "$description": {
@@ -8036,7 +8036,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "54.857rem",
+        "value": "768px",
         "type": "other"
       },
       "$description": {
@@ -8067,7 +8067,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "73.143rem",
+        "value": "1024px",
         "type": "other"
       },
       "$description": {
@@ -8098,7 +8098,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "91.429rem",
+        "value": "1280px",
         "type": "other"
       },
       "$description": {
@@ -8129,7 +8129,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "109.714rem",
+        "value": "1536px",
         "type": "other"
       },
       "$description": {
@@ -8160,7 +8160,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -8190,7 +8190,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "other"
       },
       "$description": {
@@ -8220,7 +8220,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.143rem",
+        "value": "2px",
         "type": "other"
       },
       "$description": {
@@ -8250,7 +8250,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.286rem",
+        "value": "4px",
         "type": "other"
       },
       "$description": {
@@ -8280,7 +8280,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       },
       "$description": {
@@ -8310,7 +8310,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       },
       "$description": {
@@ -8340,7 +8340,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -8370,7 +8370,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -8400,7 +8400,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -8430,7 +8430,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -8460,7 +8460,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -8490,7 +8490,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       },
       "$description": {
@@ -8520,7 +8520,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -8550,7 +8550,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -8580,7 +8580,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -8610,7 +8610,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.143rem",
+        "value": "44px",
         "type": "other"
       },
       "$description": {
@@ -8640,7 +8640,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -8670,7 +8670,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4rem",
+        "value": "56px",
         "type": "other"
       },
       "$description": {
@@ -8700,7 +8700,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       },
       "$description": {
@@ -8730,7 +8730,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       },
       "$description": {
@@ -8760,7 +8760,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -8790,7 +8790,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "8rem",
+        "value": "112px",
         "type": "other"
       },
       "$description": {
@@ -8820,7 +8820,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -8850,7 +8850,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "10.286rem",
+        "value": "144px",
         "type": "other"
       },
       "$description": {
@@ -8880,7 +8880,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "11.429rem",
+        "value": "160px",
         "type": "other"
       },
       "$description": {
@@ -8910,7 +8910,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "12.571rem",
+        "value": "176px",
         "type": "other"
       },
       "$description": {
@@ -8940,7 +8940,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       },
       "$description": {
@@ -8970,7 +8970,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.857rem",
+        "value": "208px",
         "type": "other"
       },
       "$description": {
@@ -9000,7 +9000,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -9030,7 +9030,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "17.143rem",
+        "value": "240px",
         "type": "other"
       },
       "$description": {
@@ -9060,7 +9060,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "18.286rem",
+        "value": "256px",
         "type": "other"
       },
       "$description": {
@@ -9090,7 +9090,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       },
       "$description": {
@@ -9120,7 +9120,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "22.857rem",
+        "value": "320px",
         "type": "other"
       },
       "$description": {
@@ -9150,7 +9150,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       },
       "$description": {
@@ -9182,7 +9182,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.286rem",
+        "value": "4px",
         "type": "other"
       }
     },
@@ -9208,7 +9208,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       }
     },
@@ -9234,7 +9234,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       }
     },
@@ -9260,7 +9260,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       }
     },
@@ -9286,7 +9286,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       }
     },
@@ -9312,7 +9312,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       }
     },
@@ -9338,7 +9338,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       }
     },
@@ -9364,7 +9364,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       }
     },
@@ -9390,7 +9390,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       }
     },
@@ -9416,7 +9416,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       }
     },
@@ -9442,7 +9442,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       }
     },
@@ -9468,7 +9468,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4rem",
+        "value": "56px",
         "type": "other"
       }
     },
@@ -9494,7 +9494,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       }
     },
@@ -9520,7 +9520,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.143rem",
+        "value": "72px",
         "type": "other"
       }
     },
@@ -9546,7 +9546,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       }
     },
@@ -9572,7 +9572,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       }
     },
@@ -9598,7 +9598,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       }
     },
@@ -9624,7 +9624,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       }
     },
@@ -9650,7 +9650,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       }
     },
@@ -9676,7 +9676,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       }
     },
@@ -9702,7 +9702,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "other"
       }
     },
@@ -9728,7 +9728,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.143rem",
+        "value": "2px",
         "type": "other"
       }
     },
@@ -9754,7 +9754,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       }
     },
@@ -9780,7 +9780,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       }
     }
@@ -9808,7 +9808,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.286rem",
+        "value": "4px",
         "type": "other"
       }
     },
@@ -9834,7 +9834,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       }
     },
@@ -9860,7 +9860,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       }
     },
@@ -9886,7 +9886,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       }
     },
@@ -9912,7 +9912,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       }
     },
@@ -9938,7 +9938,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       }
     },
@@ -9964,7 +9964,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       }
     },
@@ -9990,7 +9990,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       }
     },
@@ -10016,7 +10016,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       }
     },
@@ -10042,7 +10042,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       }
     },
@@ -10068,7 +10068,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       }
     },
@@ -10094,7 +10094,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4rem",
+        "value": "56px",
         "type": "other"
       }
     },
@@ -10120,7 +10120,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       }
     },
@@ -10146,7 +10146,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.143rem",
+        "value": "72px",
         "type": "other"
       }
     },
@@ -10172,7 +10172,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       }
     },
@@ -10198,7 +10198,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       }
     },
@@ -10224,7 +10224,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       }
     },
@@ -10250,7 +10250,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       }
     },
@@ -10276,7 +10276,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       }
     },
@@ -10302,7 +10302,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       }
     },
@@ -10328,7 +10328,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "other"
       }
     },
@@ -10354,7 +10354,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.143rem",
+        "value": "2px",
         "type": "other"
       }
     },
@@ -10380,7 +10380,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       }
     },
@@ -10406,7 +10406,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       }
     }
@@ -10434,7 +10434,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -10464,7 +10464,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       },
       "$description": {
@@ -10494,7 +10494,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -10524,7 +10524,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.286rem",
+        "value": "18px",
         "type": "other"
       },
       "$description": {
@@ -10554,7 +10554,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -10584,7 +10584,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -10614,7 +10614,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.143rem",
+        "value": "30px",
         "type": "other"
       },
       "$description": {
@@ -10644,7 +10644,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -10674,7 +10674,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -10704,7 +10704,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.286rem",
+        "value": "60px",
         "type": "other"
       },
       "$description": {
@@ -10734,7 +10734,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.143rem",
+        "value": "72px",
         "type": "other"
       },
       "$description": {
@@ -10764,7 +10764,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -10794,7 +10794,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -10826,7 +10826,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -10856,7 +10856,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -10886,7 +10886,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -10916,7 +10916,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -10946,7 +10946,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       },
       "$description": {
@@ -10976,7 +10976,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -11006,7 +11006,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -11036,7 +11036,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -11068,7 +11068,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "-0.357rem",
+        "value": "-5px",
         "type": "other"
       },
       "$description": {
@@ -11098,7 +11098,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "-0.179rem",
+        "value": "-2.5px",
         "type": "other"
       },
       "$description": {
@@ -11128,7 +11128,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -11158,7 +11158,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.179rem",
+        "value": "2.5px",
         "type": "other"
       },
       "$description": {
@@ -11188,7 +11188,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.357rem",
+        "value": "5px",
         "type": "other"
       },
       "$description": {
@@ -11218,7 +11218,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -11250,7 +11250,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "7.143rem",
+        "value": "100px",
         "type": "other"
       },
       "$description": {
@@ -11280,7 +11280,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.286rem",
+        "value": "200px",
         "type": "other"
       },
       "$description": {
@@ -11310,7 +11310,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "21.429rem",
+        "value": "300px",
         "type": "other"
       },
       "$description": {
@@ -11340,7 +11340,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "28.571rem",
+        "value": "400px",
         "type": "other"
       },
       "$description": {
@@ -11370,7 +11370,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "35.714rem",
+        "value": "500px",
         "type": "other"
       },
       "$description": {
@@ -11400,7 +11400,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "42.857rem",
+        "value": "600px",
         "type": "other"
       },
       "$description": {
@@ -11430,7 +11430,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "50rem",
+        "value": "700px",
         "type": "other"
       },
       "$description": {
@@ -11460,7 +11460,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "57.143rem",
+        "value": "800px",
         "type": "other"
       },
       "$description": {
@@ -11490,7 +11490,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "64.286rem",
+        "value": "900px",
         "type": "other"
       },
       "$description": {
@@ -11522,7 +11522,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -11552,7 +11552,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "other"
       },
       "$description": {
@@ -11582,7 +11582,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.143rem",
+        "value": "2px",
         "type": "other"
       },
       "$description": {
@@ -11612,7 +11612,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.286rem",
+        "value": "4px",
         "type": "other"
       },
       "$description": {
@@ -11642,7 +11642,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       },
       "$description": {
@@ -11672,7 +11672,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       },
       "$description": {
@@ -11702,7 +11702,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -11732,7 +11732,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -11762,7 +11762,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       },
       "$description": {
@@ -11792,7 +11792,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -11822,7 +11822,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -11852,7 +11852,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -11882,7 +11882,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       },
       "$description": {
@@ -11912,7 +11912,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -11942,7 +11942,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -11972,7 +11972,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -12002,7 +12002,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.143rem",
+        "value": "44px",
         "type": "other"
       },
       "$description": {
@@ -12032,7 +12032,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -12062,7 +12062,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4rem",
+        "value": "56px",
         "type": "other"
       },
       "$description": {
@@ -12092,7 +12092,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       },
       "$description": {
@@ -12122,7 +12122,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       },
       "$description": {
@@ -12152,7 +12152,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -12182,7 +12182,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "8rem",
+        "value": "112px",
         "type": "other"
       },
       "$description": {
@@ -12212,7 +12212,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -12242,7 +12242,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "10.286rem",
+        "value": "144px",
         "type": "other"
       },
       "$description": {
@@ -12272,7 +12272,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "11.429rem",
+        "value": "160px",
         "type": "other"
       },
       "$description": {
@@ -12302,7 +12302,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "12.571rem",
+        "value": "176px",
         "type": "other"
       },
       "$description": {
@@ -12332,7 +12332,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       },
       "$description": {
@@ -12362,7 +12362,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.857rem",
+        "value": "208px",
         "type": "other"
       },
       "$description": {
@@ -12392,7 +12392,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -12422,7 +12422,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "17.143rem",
+        "value": "240px",
         "type": "other"
       },
       "$description": {
@@ -12452,7 +12452,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "18.286rem",
+        "value": "256px",
         "type": "other"
       },
       "$description": {
@@ -12482,7 +12482,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       },
       "$description": {
@@ -12512,7 +12512,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "22.857rem",
+        "value": "320px",
         "type": "other"
       },
       "$description": {
@@ -12542,7 +12542,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       },
       "$description": {
@@ -12580,7 +12580,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -12690,7 +12690,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       },
       "$description": {
@@ -12726,7 +12726,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       },
       "$description": {
@@ -12762,7 +12762,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -12798,7 +12798,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -12834,7 +12834,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       },
       "$description": {
@@ -12870,7 +12870,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -12906,7 +12906,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -12942,7 +12942,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -12978,7 +12978,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       },
       "$description": {
@@ -13014,7 +13014,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -13050,7 +13050,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -13086,7 +13086,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -13122,7 +13122,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.143rem",
+        "value": "44px",
         "type": "other"
       },
       "$description": {
@@ -13158,7 +13158,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -13194,7 +13194,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4rem",
+        "value": "56px",
         "type": "other"
       },
       "$description": {
@@ -13230,7 +13230,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       },
       "$description": {
@@ -13266,7 +13266,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       },
       "$description": {
@@ -13302,7 +13302,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -13338,7 +13338,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "8rem",
+        "value": "112px",
         "type": "other"
       },
       "$description": {
@@ -13374,7 +13374,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -13410,7 +13410,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "10.286rem",
+        "value": "144px",
         "type": "other"
       },
       "$description": {
@@ -13446,7 +13446,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "11.429rem",
+        "value": "160px",
         "type": "other"
       },
       "$description": {
@@ -13482,7 +13482,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "12.571rem",
+        "value": "176px",
         "type": "other"
       },
       "$description": {
@@ -13518,7 +13518,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       },
       "$description": {
@@ -13554,7 +13554,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.857rem",
+        "value": "208px",
         "type": "other"
       },
       "$description": {
@@ -13590,7 +13590,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -13626,7 +13626,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "17.143rem",
+        "value": "240px",
         "type": "other"
       },
       "$description": {
@@ -13662,7 +13662,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "18.286rem",
+        "value": "256px",
         "type": "other"
       },
       "$description": {
@@ -13698,7 +13698,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       },
       "$description": {
@@ -13734,7 +13734,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "22.857rem",
+        "value": "320px",
         "type": "other"
       },
       "$description": {
@@ -13770,7 +13770,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       },
       "$description": {
@@ -13808,7 +13808,7 @@
         "type": "border"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "border"
       },
       "$description": {
@@ -13844,7 +13844,7 @@
         "type": "border"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "border"
       },
       "$description": {
@@ -13880,7 +13880,7 @@
         "type": "border"
       },
       "$value": {
-        "value": "0.143rem",
+        "value": "2px",
         "type": "border"
       },
       "$description": {
@@ -13916,7 +13916,7 @@
         "type": "border"
       },
       "$value": {
-        "value": "0.286rem",
+        "value": "4px",
         "type": "border"
       },
       "$description": {
@@ -13952,7 +13952,7 @@
         "type": "border"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "border"
       },
       "$description": {
@@ -15130,7 +15130,7 @@
       "type": "other"
     },
     "$value": {
-      "value": "0.143rem",
+      "value": "2px",
       "type": "other"
     },
     "$description": {
@@ -15167,7 +15167,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -15203,7 +15203,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "other"
       },
       "$description": {
@@ -15313,7 +15313,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       },
       "$description": {
@@ -15349,7 +15349,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       },
       "$description": {
@@ -15385,7 +15385,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -15421,7 +15421,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -15457,7 +15457,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       },
       "$description": {
@@ -15493,7 +15493,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -15529,7 +15529,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -15565,7 +15565,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -15601,7 +15601,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2rem",
+        "value": "28px",
         "type": "other"
       },
       "$description": {
@@ -15637,7 +15637,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -15673,7 +15673,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -15709,7 +15709,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -15745,7 +15745,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.143rem",
+        "value": "44px",
         "type": "other"
       },
       "$description": {
@@ -15781,7 +15781,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -15817,7 +15817,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4rem",
+        "value": "56px",
         "type": "other"
       },
       "$description": {
@@ -15853,7 +15853,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       },
       "$description": {
@@ -15889,7 +15889,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.143rem",
+        "value": "72px",
         "type": "other"
       },
       "$description": {
@@ -15925,7 +15925,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       },
       "$description": {
@@ -15961,7 +15961,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -15997,7 +15997,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "8rem",
+        "value": "112px",
         "type": "other"
       },
       "$description": {
@@ -16033,7 +16033,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -16069,7 +16069,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "10.286rem",
+        "value": "144px",
         "type": "other"
       },
       "$description": {
@@ -16105,7 +16105,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "11.429rem",
+        "value": "160px",
         "type": "other"
       },
       "$description": {
@@ -16141,7 +16141,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "12.571rem",
+        "value": "176px",
         "type": "other"
       },
       "$description": {
@@ -16177,7 +16177,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       },
       "$description": {
@@ -16213,7 +16213,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.857rem",
+        "value": "208px",
         "type": "other"
       },
       "$description": {
@@ -16249,7 +16249,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -16285,7 +16285,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "17.143rem",
+        "value": "240px",
         "type": "other"
       },
       "$description": {
@@ -16321,7 +16321,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "18.286rem",
+        "value": "256px",
         "type": "other"
       },
       "$description": {
@@ -16357,7 +16357,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       },
       "$description": {
@@ -16393,7 +16393,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "22.857rem",
+        "value": "320px",
         "type": "other"
       },
       "$description": {
@@ -16429,7 +16429,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       },
       "$description": {
@@ -16465,7 +16465,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0rem",
+        "value": "0px",
         "type": "other"
       },
       "$description": {
@@ -16501,7 +16501,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.071rem",
+        "value": "1px",
         "type": "other"
       },
       "$description": {
@@ -16611,7 +16611,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.429rem",
+        "value": "6px",
         "type": "other"
       },
       "$description": {
@@ -16647,7 +16647,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.571rem",
+        "value": "8px",
         "type": "other"
       },
       "$description": {
@@ -16683,7 +16683,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.714rem",
+        "value": "10px",
         "type": "other"
       },
       "$description": {
@@ -16719,7 +16719,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "0.857rem",
+        "value": "12px",
         "type": "other"
       },
       "$description": {
@@ -16755,7 +16755,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1rem",
+        "value": "14px",
         "type": "other"
       },
       "$description": {
@@ -16791,7 +16791,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.143rem",
+        "value": "16px",
         "type": "other"
       },
       "$description": {
@@ -16827,7 +16827,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.429rem",
+        "value": "20px",
         "type": "other"
       },
       "$description": {
@@ -16863,7 +16863,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "1.714rem",
+        "value": "24px",
         "type": "other"
       },
       "$description": {
@@ -16899,7 +16899,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.286rem",
+        "value": "32px",
         "type": "other"
       },
       "$description": {
@@ -16935,7 +16935,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.571rem",
+        "value": "36px",
         "type": "other"
       },
       "$description": {
@@ -16971,7 +16971,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "2.857rem",
+        "value": "40px",
         "type": "other"
       },
       "$description": {
@@ -17007,7 +17007,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "3.429rem",
+        "value": "48px",
         "type": "other"
       },
       "$description": {
@@ -17043,7 +17043,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "4.571rem",
+        "value": "64px",
         "type": "other"
       },
       "$description": {
@@ -17079,7 +17079,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.143rem",
+        "value": "72px",
         "type": "other"
       },
       "$description": {
@@ -17115,7 +17115,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "5.714rem",
+        "value": "80px",
         "type": "other"
       },
       "$description": {
@@ -17151,7 +17151,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "6.857rem",
+        "value": "96px",
         "type": "other"
       },
       "$description": {
@@ -17187,7 +17187,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "8rem",
+        "value": "112px",
         "type": "other"
       },
       "$description": {
@@ -17223,7 +17223,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "9.143rem",
+        "value": "128px",
         "type": "other"
       },
       "$description": {
@@ -17259,7 +17259,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "10.286rem",
+        "value": "144px",
         "type": "other"
       },
       "$description": {
@@ -17295,7 +17295,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "11.429rem",
+        "value": "160px",
         "type": "other"
       },
       "$description": {
@@ -17331,7 +17331,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "12.571rem",
+        "value": "176px",
         "type": "other"
       },
       "$description": {
@@ -17367,7 +17367,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "13.714rem",
+        "value": "192px",
         "type": "other"
       },
       "$description": {
@@ -17403,7 +17403,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "14.857rem",
+        "value": "208px",
         "type": "other"
       },
       "$description": {
@@ -17439,7 +17439,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "16rem",
+        "value": "224px",
         "type": "other"
       },
       "$description": {
@@ -17475,7 +17475,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "17.143rem",
+        "value": "240px",
         "type": "other"
       },
       "$description": {
@@ -17511,7 +17511,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "18.286rem",
+        "value": "256px",
         "type": "other"
       },
       "$description": {
@@ -17547,7 +17547,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "20.571rem",
+        "value": "288px",
         "type": "other"
       },
       "$description": {
@@ -17583,7 +17583,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "22.857rem",
+        "value": "320px",
         "type": "other"
       },
       "$description": {
@@ -17619,7 +17619,7 @@
         "type": "other"
       },
       "$value": {
-        "value": "27.429rem",
+        "value": "384px",
         "type": "other"
       },
       "$description": {
@@ -35621,6 +35621,10 @@
             },
             "1": {
               "value": "SHAPE_FILL",
+              "type": "other"
+            },
+            "2": {
+              "value": "STROKE_COLOR",
               "type": "other"
             }
           },

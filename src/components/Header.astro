@@ -1,0 +1,59 @@
+---
+// Header.astro - Menu Flutuante Modular para DesignOps
+---
+
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center bg-muted/80 backdrop-blur-md px-4 py-2 rounded-full border border-orange-200/50 shadow-sm transition-all duration-300">
+  
+  <div class="flex items-center gap-1">
+    <a 
+      href="#cases" 
+      class="px-4 py-1.5 rounded-full text-sm font-medium bg-accent text-white transition-all duration-200 shadow-sm"
+    >
+      Cases
+    </a>
+    
+    <a 
+      href="#ecossistema" 
+      class="px-4 py-1.5 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-200"
+    >
+      Ecossistema
+    </a>
+    
+    <a 
+      href="#max" 
+      class="px-4 py-1.5 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-200"
+    >
+      Max
+    </a>
+    
+    <a 
+      href="#conectar" 
+      class="px-4 py-1.5 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-200"
+    >
+      Conectar
+    </a>
+  </div>
+
+  <div class="w-[1px] h-4 bg-orange-200/60 mx-3"></div>
+
+  <button 
+    id="theme-toggle" 
+    aria-label="Alternar tema" 
+    class="p-1.5 rounded-full hover:bg-orange-200/40 text-lg leading-none transition-all duration-200 active:scale-95"
+  >
+    🌗
+  </button>
+</nav>
+
+<script>
+  // Script simples e direto na tag para controlar o Toggle sem quebrar o Astro
+  const toggleBtn = document.getElementById('theme-toggle');
+  
+  toggleBtn?.addEventListener('click', () => {
+    // Altera a classe na tag HTML para ativar/desativar as variáveis do .dark no seu variables.css
+    document.documentElement.classList.toggle('dark');
+    
+    // Opcional: Feedback visual rápido no botão durante o teste
+    console.log('Tema alterado! Modo escuro ativo:', document.documentElement.classList.contains('dark'));
+  });
+</script>

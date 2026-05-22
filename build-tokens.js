@@ -32,15 +32,16 @@ let cssLines = [];
 function 制造Tokens(obj, path = []) {
   if (!obj || typeof obj !== 'object') return;
   
-  // Ignora explicitamente as pastas de tema semântico na árvore recursiva geral
-  // para que elas não sejam jogadas de forma misturada dentro do :root
+  // 🔴 AJUSTE CRÍTICO: Ignora as pastas semânticas E os modos escuros ocultos na árvore global
   if (
     path[0] === 'shadcn/ui/dark/slate' || 
     path[0] === 'shadcn/ui/dark/zinc' || 
     path[0] === 'shadcn/ui/light/slate' || 
     path[0] === 'shadcn/ui/light/zinc' ||
     path[0] === 'theme-dark-slate' || 
-    path[0] === 'theme-dark-zinc'
+    path[0] === 'theme-dark-zinc' ||
+    path.includes('mode 2') || // 👈 Ignora a coluna de Modo Escuro do Figma Variables
+    path.includes('dark')      // 👈 Ignora qualquer menção a dark nas variáveis globais
   ) {
     return;
   }
@@ -85,13 +86,12 @@ function 制造Tokens(obj, path = []) {
   }
 }
 
-// 🎯 CAPTURA E SEPARAÇÃO DOS TOKENS SEMÂNTICOS (LIGHT VS DARK)
+// 🎯 CAPTURA E SEPARAÇÃO DOS TOKENS SEMÂNTICOS (LIGHT)
 const originalJson = JSON.parse(fs.readFileSync('tokens/tokens.json', 'utf8'));
 
 let lightLines = [];
-let darkLines = [];
 
-// 1. Processa e isola o Modo Claro (Light Mode)
+// Processa e isola o Modo Claro (Light Mode)
 const lightThemeBlock = originalJson['shadcn/ui/light/slate'] || originalJson['shadcn/ui/light/zinc'];
 if (lightThemeBlock) {
   for (const key in lightThemeBlock) {
@@ -110,40 +110,17 @@ if (lightThemeBlock) {
   }
 }
 
-// 2. Processa e isola o Modo Escuro (Dark Mode)
-const darkThemeBlock = originalJson['shadcn/ui/dark/slate'] || originalJson['shadcn/ui/dark/zinc'];
-if (darkThemeBlock) {
-  for (const key in darkThemeBlock) {
-    const token = darkThemeBlock[key];
-    if (token && (token.$value || token.value)) {
-      const rawValue = token.$value || token.value;
-      const varName = key.toLowerCase().replace(/[^a-z0-9_-]/g, '');
-      
-      if (typeof rawValue === 'string' && rawValue.includes('{')) {
-        let cleanRef = rawValue.replace(/[{}]/g, '').replace(/\./g, '-').replace(/\s+/g, '-');
-        darkLines.push(`  --${varName}: var(--${cleanRef.toLowerCase()});`);
-      } else if (typeof rawValue === 'string') {
-        darkLines.push(`  --${varName}: ${rawValue};`);
-      }
-    }
-  }
-}
-
 // Organiza as variáveis globais remanescentes
 cssLines = [...new Set(cssLines)].sort();
 
-// Estrutura final do CSS organizada com escopos independentes para o Toggle funcionar!
+// Monta a estrutura focando estritamente no :root limpo
 const cssContent = `:root {
 ${cssLines.join('\n')}
 ${lightLines.join('\n')}
-}
-
-.dark {
-${darkLines.join('\n')}
 }
 `;
 
 if (!fs.existsSync('src/styles')) fs.mkdirSync('src/styles', { recursive: true });
 fs.writeFileSync('src/styles/variables.css', cssContent);
 
-console.log(`✨ Sincronização concluída com sucesso! Suporte a Temas (Light e Dark) gerado com ${cssLines.length + lightLines.length + darkLines.length} tokens.`);
+console.log(`✨ Sincronização concluída! Modo Claro purificado sem interferência de Modos Escuros ocultos.`);
