@@ -3,3 +3,8 @@ Ecossistema de Engenharia de Design orquestrado com Astro, Tailwind CSS, Shadcn 
 
 *# COMANDO STYLE DICTIONARY #*
 node build-tokens.js
+
+*# DEPLOY NA MAIN #*
+git add .
+git commit -m "..."
+git push origin main
