@@ -1,0 +1,41 @@
+<div id="fake-loader" class="fixed inset-0 z-[100] bg-background flex flex-col transition-opacity duration-600 ease-in-out pointer-events-auto">
+  <div class="w-full h-16 border-b border-border/40 bg-background">
+    <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-end">
+      <div class="flex items-center gap-8">
+        <div class="flex items-center gap-6">
+          <div class="w-10 h-4 bg-neutral-200 dark:bg-neutral-800 rounded"></div>
+          <div class="w-20 h-4 bg-neutral-200 dark:bg-neutral-800 rounded"></div>
+          <div class="w-10 h-4 bg-neutral-200 dark:bg-neutral-800 rounded"></div>
+          <div class="w-14 h-4 bg-neutral-200 dark:bg-neutral-800 rounded"></div>
+        </div>
+        <div class="w-8 h-8 bg-neutral-200 dark:bg-neutral-800 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-[calc(100%-32px)] md:w-full max-w-7xl mx-auto py-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch min-h-[calc(100vh-4rem)]">
+    <div class="bg-primary/30 dark:bg-primary/20 p-8 md:p-12 rounded-3xl flex flex-col justify-between min-h-[390px] md:min-h-[500px] relative overflow-hidden">
+      <div id="loader-fill" class="absolute bottom-0 left-0 w-full bg-primary transition-all duration-400 ease-out z-0" style="height: 0%;"></div>
+      <div class="flex-grow"></div>
+      <div class="space-y-4 z-10">
+        <div class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white dark:text-foreground leading-tight md:leading-none select-none min-h-[2em] flex items-end">
+          <span id="load-text-container">
+            <span id="load-percentage">0</span><span id="load-symbol">%</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center space-y-8 pl-0 lg:pl-4">
+      <div class="space-y-3">
+        <div class="h-10 bg-neutral-200 dark:bg-neutral-800 rounded-xl w-full"></div>
+        <div class="h-10 bg-neutral-200 dark:bg-neutral-800 rounded-xl w-3/5"></div>
+      </div>
+      <div class="space-y-2.5">
+        <div class="h-4 bg-neutral-200 dark:bg-neutral-800 rounded-md w-full"></div>
+        <div class="h-4 bg-neutral-200 dark:bg-neutral-800 rounded-md w-full"></div>
+        <div class="h-4 bg-neutral-200 dark:bg-neutral-800 rounded-md w-11/12"></div>
+      </div>
+    </div>
+  </div>
+</div>

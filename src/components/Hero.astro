@@ -1,0 +1,76 @@
+---
+import meImage from '../assets/me.png';
+---
+
+<section 
+  id="hero" 
+  class="content-section max-w-7xl mx-auto px-4 md:px-0 py-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch min-h-[calc(100vh-4rem)]"
+>
+  
+  <div class="bg-primary p-8 md:p-12 rounded-3xl flex flex-col justify-between text-primary-foreground min-h-[460px] md:min-h-[500px]">
+    
+    <div class="flex-grow flex items-center justify-center">
+      <img src={meImage.src} alt="Logo ME" class="w-48 h-auto opacity-90" />
+    </div>
+    
+    <div class="space-y-4">
+      <a href="#hero" id="logo-link" class="active relative inline-block transition-colors duration-300 before:absolute before:-bottom-2 before:left-0 before:h-[3px] before:w-full before:scale-x-0 before:bg-white before:transition-transform before:duration-300 before:ease-out before:origin-right hover:before:scale-x-100 hover:before:origin-left [&.active]:before:scale-x-100 [&.active]:before:origin-left">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight md:leading-none flex flex-col md:block">
+          <span class="text-white/90 md:text-white">Max</span>
+          <span class="text-white/90 md:text-white">productdesigner</span>
+        </h1>
+      </a>
+
+      <div class="pt-2">
+        <span class="inline-block bg-white/20 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap text-white/90">
+          Disponível para propostas
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col justify-center space-y-8 pl-0 lg:pl-4">
+    
+    <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight text-foreground">
+      Conectando dados, pixel e código sem fricção.
+    </h2>
+
+    <p class="text-base md:text-lg text-muted-foreground leading-relaxed font-normal">
+      Construo interfaces de alta fidelidade baseadas em dados, pesquisas e usabilidade. Através de uma esteira robusta di DesignOps e tokens estruturados, garanto consistência cirúrgica entre design e produção, acelerando a entrega de engenharia e eliminando erros de comunicação.
+    </p>
+
+    <div class="space-y-6 pt-4 border-t border-border/60">
+
+      <div class="space-y-1">
+        <h3 class="font-bold text-foreground text-base flex items-center gap-2">
+          <span>🧠</span> Engenharia de Usabilidade
+        </h3>
+
+        <p class="text-sm text-muted-foreground pl-7">
+          Discovery baseado em dados, mapeamento de jornadas e testes iterativos para mitigar riscos e garantir solutions validadas com o usuário final.
+        </p>
+      </div>
+
+      <div class="space-y-1">
+        <h3 class="font-bold text-foreground text-base flex items-center gap-2">
+          <span>📐</span> UI Pixel-Perfect
+        </h3>
+
+        <p class="text-sm text-muted-foreground pl-7">
+          Interfaces impecáveis, consistência visual rigorosa e layouts fluidos que se adaptam nativamente a qualquer dispositivo.
+        </p>
+      </div>
+
+      <div class="space-y-1">
+        <h3 class="font-bold text-foreground text-base flex items-center gap-2">
+          <span>⚙️</span> DesignOps & Automação
+        </h3>
+
+        <p class="text-sm text-muted-foreground pl-7">
+          Governança de Design System, automação de tokens e esteiras de código limpo que eliminam o retrabalho e garantem a escalabilidade da interface.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

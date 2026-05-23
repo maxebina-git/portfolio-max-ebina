@@ -1,0 +1,162 @@
+/* =========================
+   BASE
+========================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  
+  /* =========================
+     GPU OPTIMIZATION (SAFE LAYER ONLY)
+  ========================= */
+  
+  /* evita overuse de GPU forcing */
+  .reveal-item,
+  [data-motion-layer],
+  [data-depth] {
+    will-change: transform;
+  }
+  
+  /* =========================
+     DEPTH SYSTEM (JS CONTROLLED ONLY)
+  ========================= */
+  
+  [data-depth] {
+    transform-origin: center;
+    filter: none !important;
+  }
+  
+  /* =========================
+     REVEAL SYSTEM (STATE ONLY)
+  ========================= */
+  
+  .reveal-item {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  
+    transition:
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.7s ease;
+  
+    will-change: transform, opacity;
+  }
+  
+  .reveal-item.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .reveal-item.exit-right {
+    opacity: 0;
+    transform: translate3d(30px, 0, 0);
+  }
+  
+  /* =========================
+     MOTION VARIANTS (SIMPLIFIED)
+  ========================= */
+  
+  html[data-motion="low"] .reveal-item {
+    transition-duration: 0.85s;
+  }
+  
+  html[data-motion="medium"] .reveal-item {
+    transition-duration: 0.55s;
+  }
+  
+  html[data-motion="high"] .reveal-item {
+    transition-duration: 0.3s;
+  }
+  
+  /* =========================
+     MOTION LAYERS (LIGHT)
+  ========================= */
+  
+  [data-motion-layer] {
+    transition: transform 0.1s linear;
+  }
+  
+  /* =========================
+     PULSE (OPTIMIZED)
+  ========================= */
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  
+    50% {
+      opacity: 0.4;
+      transform: scale(1.1);
+    }
+  }
+  
+  .badge-pulse {
+    animation: pulse 2s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+  
+  /* =========================
+     CASES BACKGROUND (SIMPLIFIED GPU FRIENDLY)
+  ========================= */
+  
+  #cases {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  
+  #cases::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  
+    background: radial-gradient(
+      circle at center,
+      #FFEFD6 50%,
+      #FFDFB5 100%
+    );
+  
+    z-index: 0;
+    opacity: 0;
+  
+    transform: scale(0.02);
+    transition:
+        transform 1.25s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.8s ease;
+
+    will-change: transform, opacity;
+  }
+  
+  #cases.bg-active::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  #cases > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* =========================
+     PERFORMANCE GUARD
+  ========================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* =========================
+     MOBILE OPTIMIZATION
+  ========================= */
+  
+  @media (max-width: 768px) {
+    html[data-motion="high"] .reveal-item {
+      transition-duration: 0.25s;
+    }
+  }

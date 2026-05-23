@@ -1,0 +1,19 @@
+---
+import '../styles/global.css';
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max.productdesigner | Portfólio</title>
+
+    <slot name="head" />
+  </head>
+
+  <body class="bg-background text-foreground antialiased min-h-screen transition-colors duration-300 overflow-hidden">
+
+    <slot />
+
+  </body>
+</html>
