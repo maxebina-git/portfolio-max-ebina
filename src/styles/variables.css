@@ -1077,9 +1077,9 @@
   --zinc-800: #27272a;
   --zinc-900: #18181b;
   --zinc-950: #09090b;
-  --background: #FEFCFB;
+  --background: #F6EEE7;
   --foreground: #020617;
-  --muted: #FCF9F6;
+  --muted: #F0E4D9;
   --muted-foreground: var(--slate-500);
   --card: var(--base-white);
   --card-foreground: var(--slate-950);

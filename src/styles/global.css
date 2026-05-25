@@ -13,9 +13,9 @@
 
 /* Estado padrão: Tema Claro */
 :root {
-  --background: #FEFCFB; 
-  --foreground: #020617;
-  --muted: #FCF9F6; /* 💡 Off-white que você definiu para o Header claro */
+  --background: var(-background);
+  --foreground: var(-foreground);
+  --muted: var(-muted);  /* 💡 Off-white que você definiu para o Header claro */
 }
 
 /* Estado ativo: Tema Escuro */
