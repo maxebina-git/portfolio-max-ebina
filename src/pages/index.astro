@@ -17,33 +17,27 @@ import Footer from '../components/Footer.astro';
 <MainLayout>
 
   <script is:inline slot="head">
+
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
+
   </script>
 
   <FakeLoader />
 
-  <Header />
-
   <main class="w-full">
 
     <Hero />
-
     <Cases />
-
     <Ecossistema />
-
     <Sobre />
-
     <Conectar />
-
-    <Footer />
 
   </main>
 
