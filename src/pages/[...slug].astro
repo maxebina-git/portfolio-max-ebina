@@ -1,0 +1,45 @@
+---
+import '../styles/pages/home.css';
+
+import MainLayout from '../layouts/MainLayout.astro';
+
+import Hero from '../components/Hero.astro';
+import Cases from '../components/Cases.astro';
+import Ecossistema from '../components/Ecossistema.astro';
+import Sobre from '../components/Sobre.astro';
+import Conectar from '../components/Conectar.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'cases' } },
+    { params: { slug: 'ecossistema' } },
+    { params: { slug: 'sobre' } },
+    { params: { slug: 'conectar' } }
+  ];
+}
+
+const { slug } = Astro.params;
+
+// segurança básica
+if (!slug) {
+  return Astro.redirect('/');
+}
+---
+
+<MainLayout>
+
+  <main class="w-full">
+
+    <Hero />
+    <Cases />
+    <Ecossistema />
+    <Sobre />
+    <Conectar />
+
+  </main>
+
+  <script>
+    import '../scripts/app.js';
+  </script>
+
+</MainLayout>
