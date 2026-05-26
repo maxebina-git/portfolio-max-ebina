@@ -6,44 +6,61 @@ let isClicking = false;
 // THEME
 // =====================================================
 
-const themeToggle =
-  document.getElementById('theme-toggle');
-
-const toggleIcon =
-  document.getElementById('toggle-icon');
-
-function updateToggleIcon() {
-
-  if (!toggleIcon) return;
-
-  toggleIcon.textContent =
-    document.documentElement.classList.contains('dark')
-      ? '🌕'
-      : '🌑';
-
-}
-
 function initTheme() {
+
+  const toggleIcon =
+    document.getElementById('toggle-icon');
+
+  const button =
+    document.getElementById('theme-toggle');
+
+  const html =
+    document.documentElement;
+
+  if (!button) {
+    console.log('THEME BUTTON NOT FOUND');
+    return;
+  }
+
+  // restaura tema salvo
+  const savedTheme =
+    localStorage.getItem('theme');
+
+  if (savedTheme === 'dark') {
+
+    html.classList.add('dark');
+
+  }
 
   updateToggleIcon();
 
-  themeToggle?.addEventListener('click', () => {
+  button.onclick = () => {
 
-    const html =
-      document.documentElement;
 
     html.classList.toggle('dark');
 
+    const isDark =
+      html.classList.contains('dark');
+
     localStorage.setItem(
       'theme',
-      html.classList.contains('dark')
-        ? 'dark'
-        : 'light'
+      isDark ? 'dark' : 'light'
     );
 
     updateToggleIcon();
 
-  });
+  };
+
+  function updateToggleIcon() {
+
+    if (!toggleIcon) return;
+
+    toggleIcon.textContent =
+      html.classList.contains('dark')
+        ? '🌕'
+        : '🌑';
+
+  }
 
 }
 
@@ -169,6 +186,18 @@ function initLoader() {
   const text =
     document.getElementById('load-percentage');
 
+  if (!loader) {
+
+    renderEngine.init();
+
+    return;
+
+  }
+
+  document.body.classList.add(
+    'overflow-hidden'
+  );
+
   let current = 0;
 
   const interval = setInterval(() => {
@@ -191,15 +220,27 @@ function initLoader() {
 
       clearInterval(interval);
 
-      setTimeout(() => {
+      requestAnimationFrame(() => {
 
-        loader?.remove();
+        loader.style.transition =
+          'opacity 1400ms ease';
 
-        document.body.classList.remove(
-          'overflow-hidden'
-        );
+        loader.style.opacity = '0';
 
-      }, 500);
+        setTimeout(() => {
+
+          loader.remove();
+
+          document.body.classList.remove(
+            'overflow-hidden'
+          );
+
+          // ENGINE SÓ COMEÇA AQUI
+          renderEngine.init();
+
+        }, 1400);
+
+      });
 
     }
 
@@ -211,9 +252,7 @@ function initLoader() {
 // INIT
 // =====================================================
 
-function init() {
-
-  renderEngine.init();
+window.addEventListener('DOMContentLoaded', () => {
 
   initTheme();
 
@@ -221,6 +260,4 @@ function init() {
 
   initLoader();
 
-}
-
-init();
+});

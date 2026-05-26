@@ -2,31 +2,35 @@
 @import "tailwindcss";
 
 @theme {
-  /* Mapeamos as variáveis para que o Tailwind as reconheça */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-border: var(--border);
   --color-primary: var(--primary);
-  /* Adicione essa linha para poder usar 'bg-muted' direto se quiser depois: */
-  --color-muted: var(--muted); 
+
+
+  --color-muted: var(--muted);
 }
 
 /* Estado padrão: Tema Claro */
 :root {
-  --background: var(-background);
-  --foreground: var(-foreground);
-  --muted: var(-muted);  /* 💡 Off-white que você definiu para o Header claro */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
 }
 
 /* Estado ativo: Tema Escuro */
 .dark {
   --background: #17120e;
   --foreground: #f5f5f5;
-  --muted: #151413; /* 💡 O grafite escuro que veio do seu Figma/variables.css */
+  --muted: #151413;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+
+
+    color 0.3s ease;
 }
