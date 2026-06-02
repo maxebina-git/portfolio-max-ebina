@@ -1,23 +1,429 @@
-<section 
-  id="cases" 
-  class="content-section relative overflow-hidden isolation-isolate w-[calc(100%-32px)] md:w-full max-w-7xl mx-auto rounded-[32px] py-16"
->
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+---
+import case1 from '../assets/cases/case-1/case-1-dashboard.png';
+import case1Wireframe from '../assets/cases/case-1/case-1-wireframe.png';
+import case1Figma from '../assets/cases/case-1/case-1-figma.png';
+import case1Aplication from '../assets/cases/case-1/case-1-aplication.png';
 
-    <div class="reveal-item bg-accent/10 p-12 rounded-3xl border border-border flex items-center justify-center min-h-[300px]">
-      <h2 class="text-4xl font-black tracking-tight text-foreground">
-        Cases
-      </h2>
-    </div>
+import case1mobile02 from '../assets/cases/case-1/case-1-mobile-02.png';
+import case1mobile03 from '../assets/cases/case-1/case-1-mobile-03.png';
+import case1mobile04 from '../assets/cases/case-1/case-1-mobile-04.png';
+import case1mobile05 from '../assets/cases/case-1/case-1-mobile-05.png';
+import case1mobile06 from '../assets/cases/case-1/case-1-mobile-06.png';
+import case1mobile07 from '../assets/cases/case-1/case-1-mobile-07.png';
+import case1mobile08 from '../assets/cases/case-1/case-1-mobile-08.png';
+import case1mobile09 from '../assets/cases/case-1/case-1-mobile-09.png';
+import case1mobile10 from '../assets/cases/case-1/case-1-mobile-10.png';
+---
 
-    <div 
-      class="reveal-item flex flex-col justify-center"
-      style="transition-delay: 200ms;"
+<section id="cases" data-reveal-container class="content-section relative overflow-hidden isolation-isolate w-[calc(100%-32px)] md:w-full max-w-7xl mx-auto rounded-[32px] py-6" data-stagger="true">
+  
+  <div class="max-w-7xl mx-auto px-6 mb-8 flex items-center justify-between" data-animate="fade-up">
+
+    <h2
+      data-animate="fade-up"
+      class="text-3xl md:text-5xl font-black text-foreground"
     >
-      <p class="text-xl text-muted-foreground">
-        Conteúdo do Cases aqui...
-      </p>
+      Cases
+    </h2>
+
+    <div class="flex items-center gap-3">
+
+      <!-- Botão Anterior (Prev) -->
+      <button
+        id="case-prev"
+        class="
+          group
+          relative
+          w-12 h-12
+          rounded-full
+          border border-border/50
+          text-muted-foreground
+          backdrop-blur
+          bg-background/30
+
+          flex items-center justify-center
+
+          transition-all duration-300 ease-out
+
+          hover:border-foreground/40
+          hover:bg-foreground/5
+          hover:text-foreground
+
+          cursor-pointer
+
+          disabled:opacity-30
+          disabled:pointer-events-none
+        "
+      >
+        <!-- A camada fluida que vai de 0 a 100 -->
+        <span class="absolute inset-0 bg-white/40 rounded-full scale-0 transition-transform duration-500 ease-out origin-center group-hover:scale-100"></span>
+        
+        <!-- O ícone precisa de posição relativa para ficar acima do efeito do bg -->
+        <span class="relative z-10 transition-colors duration-300 group-hover:text-foreground">←</span>
+      </button>
+
+      <!-- Botão Próximo (Next) -->
+      <button
+        id="case-next"
+        class="
+          group
+          relative
+          w-12 h-12
+          rounded-full
+          border border-border/50
+          text-muted-foreground
+          backdrop-blur
+          bg-background/30
+
+          flex items-center justify-center
+
+          transition-all duration-300 ease-out
+
+          hover:border-foreground/40
+          hover:bg-foreground/5
+          hover:text-foreground
+
+          cursor-pointer
+
+          disabled:opacity-30
+          disabled:pointer-events-none
+        "
+      >
+        <!-- A camada fluida que vai de 0 a 100 -->
+        <span class="absolute inset-0 bg-white/40 rounded-full scale-0 transition-transform duration-500 ease-out origin-center group-hover:scale-100"></span>
+        
+        <!-- O ícone precisa de posição relativa para ficar acima do efeito do bg -->
+        <span class="relative z-10 transition-colors duration-300 group-hover:text-foreground">→</span>
+      </button>
+
     </div>
 
+  </div>
+
+  <div id="cases-track">
+    <article id="case-1" class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 gap-y-6 items-center">
+
+      <div class="case-loader">
+        <span class="text-4xl animate-spin">⟳</span>
+      </div>
+
+      <h3 class="md:hidden text-2xl md:text-4xl text-muted-foreground font-bold" data-animate="fade-up">
+        Partners
+      </h3>
+
+      <p class="md:hidden" data-animate="fade-up">
+        Redesenho da experiência de acompanhamento de parceiros com foco na redução de atrito entre usuário e sistema, apoiado por Design System, pesquisa e validações em ambiente de desenvolvimento.
+      </p>
+      <!-- Mobile Case 1 Gallery -->
+      <div
+        class="case-modal-trigger md:hidden overflow-hidden rounded-2xl h-[300px]"
+        data-src={case1.src}
+        data-gallery="case-1-mobile"
+        data-caption="Dashboard Partners"
+        data-animate="fade-up"
+      >
+        <img 
+          src={case1.src} 
+          alt="Case 1 Wireframe" 
+          class="w-full h-auto" 
+        />
+      </div>
+
+      <div
+        class="hidden case-modal-trigger"
+        data-src={case1mobile02.src}
+        data-gallery="case-1-mobile"
+        data-caption="Wireframe Sign up"
+      ></div>
+      <div
+        class="hidden case-modal-trigger"
+        data-src={case1mobile03.src}
+        data-gallery="case-1-mobile"
+        data-caption="Wireframe Dashboard"
+      ></div>
+      <div
+        class="hidden case-modal-trigger"
+        data-src={case1mobile04.src}
+        data-gallery="case-1-mobile"
+        data-caption="Wireframe Configurações"
+      ></div>
+      <div
+        class="hidden case-modal-trigger"
+        data-src={case1mobile05.src}
+        data-gallery="case-1-mobile"
+        data-caption="Protótipo Sign up"
+      ></div>
+      <div
+        class="hidden case-modal-trigger"
+        data-src={case1mobile07.src}
+        data-gallery="case-1-mobile"
+        data-caption="Protótipo Configurações"
+      ></div>
+      <div
+        class="hidden case-modal-trigger"
+        data-src={case1mobile08.src}
+        data-gallery="case-1-mobile"
+        data-caption="Protótipo Mobile"
+      ></div>
+      <div
+        class="hidden case-modal-trigger"
+        data-src={case1mobile09.src}
+        data-gallery="case-1-mobile"
+        data-caption="Protótipo Slot View"
+      ></div>
+      <div
+        class="hidden case-modal-trigger"
+        data-src={case1mobile10.src}
+        data-gallery="case-1-mobile"
+        data-caption="View Components Variants"
+      ></div>
+
+      <!-- Left column -->
+      <div class="hidden md:grid md:col-span-8 flex flex-col justify-between h-full gap-8">
+
+        <div class="space-y-4">
+          
+          <h3 data-animate="fade-up"
+            class="text-2xl md:text-4xl text-muted-foreground font-bold"
+          >
+            Partners
+          </h3>
+
+          <p data-animate="fade-up"
+            class="text-base text-muted-foreground"
+          >
+            Redesenho da experiência de acompanhamento de parceiros, com foco na redução de atrito entre humano e sistema. O projeto combina melhorias visuais e de usabilidade baseadas no Design System, pesquisas de benchmark e rodadas de conversa com stakeholders para identificação de gaps e oportunidades. O trabalho também se apoia em um fluxo bidirecional entre design e código, onde protótipos e validações da versão mobile foram executados diretamente em ambiente de testes com apoio de IA, reduzindo dependência de prototipação tradicional e acelerando testes de funcionalidades.
+          </p>
+
+        </div>
+
+        <!-- images grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+
+          <div
+            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center case-modal-trigger cursor-pointer"
+            data-src={case1Wireframe.src}
+            data-gallery="case-1"
+            data-caption="Após o discovery e os estudos preliminares, criei o wireframes para validar o fluxo e a arquitetura do produto. Estruturar a lógica antes do design é o que garante a eficiência de todo o projeto."
+            data-animate="fade-up"
+          >
+            <img 
+              src={case1Wireframe.src} 
+              alt="Case 1 Wireframe" 
+              class="w-full h-auto" 
+            />
+          </div>
+
+          <div
+            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center case-modal-trigger cursor-pointer"
+            data-src={case1Figma.src}
+            data-gallery="case-1"
+            data-caption="Prototipagem em alta fidelidade: estruturando views e consumindo o Design System. Com todos os cenários mapeados, garanto consistência visual e eficiência na implementação final."
+            data-animate="fade-up"
+          >
+            <img 
+              src={case1Figma.src} 
+              alt="Case 1 Protótipo" 
+              class="w-full h-auto" 
+            />
+            
+          </div>
+
+          <div
+            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center case-modal-trigger cursor-pointer"
+            data-src={case1Aplication.src}
+            data-gallery="case-1"
+            data-caption="Aplicação em ambiente de testes: interface fiel à UI, validando Design Tokens e interatividade. Versões responsivas mapeadas para garantir consistência em todos os dispositivos."
+            data-animate="fade-up"
+          >
+            <img 
+              src={case1Aplication.src} 
+              alt="Case 1 Protótipo" 
+              class="w-full h-auto" 
+            />
+            
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right column -->
+      <div class="hidden md:grid md:col-span-4 flex items-center justify-center" data-animate="fade-up">
+        <div
+          class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center case-modal-trigger cursor-pointer"
+          data-src={case1.src}
+          data-gallery="case-1"
+          data-caption="Dashboard Partners"
+          data-animate="fade-up"
+        >
+          <img 
+            src={case1.src} 
+            alt="Case 1 Dashboard" 
+            class="w-full h-auto" 
+          />
+          
+        </div>
+
+      </div>
+
+    </article >
+
+    <article id="case-2" class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center hidden md:grid">
+
+      <div class="case-loader">
+        <span class="text-4xl animate-spin">⟳</span>
+      </div>
+
+      <!-- Left column -->
+      <div class="md:col-span-8 flex flex-col justify-between h-full gap-8">
+
+        <div class="space-y-4">
+          
+          <h3 data-animate="fade-up"
+            class="text-2xl md:text-4xl text-muted-foreground font-bold"
+          >
+            Dashboard Partners
+          </h3>
+
+          <p data-animate="fade-up"
+            class="text-base text-muted-foreground"
+          >
+            Descrição do case...
+          </p>
+
+        </div>
+
+        <!-- images grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+
+          <div
+            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center"
+            data-animate="fade-up"
+          >
+            <img 
+              src={case1Wireframe.src} 
+              alt="Case 1 Wireframe" 
+              class="w-full h-auto" 
+            />
+          </div>
+
+          <div
+            class="bg-white/40 text-secondary-foreground rounded-2xl p-6 flex items-center"
+            data-animate="fade-up"
+          >
+            <img 
+              src={case1Figma.src} 
+              alt="Case 1 Protótipo" 
+              class="w-full h-auto" 
+            />
+            
+          </div>
+
+          <div
+            class="bg-white/40 text-secondary-foreground rounded-2xl p-6 flex items-center"
+            data-animate="fade-up"
+          >
+            <img 
+              src={case1Aplication.src} 
+              alt="Case 1 Aplicação" 
+              class="w-full h-auto" 
+            />
+            
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right column -->
+      <div class="md:col-span-4 flex items-center justify-center" data-animate="fade-up">
+
+        <img
+          src={case1.src} 
+          alt="Case 1 Dashboard" 
+          class="w-full h-auto rounded-2xl shadow-lg" 
+        />
+
+      </div>
+
+    </article >
+
+    <article id="case-3" class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center hidden md:grid">
+
+      <div class="case-loader">
+        <span class="text-4xl animate-spin">⟳</span>
+      </div>
+
+      <!-- Left column -->
+      <div class="md:col-span-8 flex flex-col justify-between h-full gap-8">
+
+        <div class="space-y-4">
+          
+          <h3 data-animate="fade-up"
+            class="text-2xl md:text-4xl text-muted-foreground font-bold"
+          >
+            Dashboard Partners
+          </h3>
+
+          <p data-animate="fade-up"
+            class="text-base text-muted-foreground"
+          >
+            Descrição do case...
+          </p>
+
+        </div>
+
+        <!-- images grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+
+          <div
+            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center"
+            data-animate="fade-up"
+          >
+            <img 
+              src={case1Wireframe.src} 
+              alt="Case 1 Wireframe" 
+              class="w-full h-auto" 
+            />
+          </div>
+
+          <div
+            class="bg-white/40 text-secondary-foreground rounded-2xl p-6 flex items-center"
+            data-animate="fade-up"
+          >
+            <img 
+              src={case1Figma.src} 
+              alt="Case 1 Protótipo" 
+              class="w-full h-auto" 
+            />
+            
+          </div>
+
+          <div
+            class="bg-white/40 text-secondary-foreground rounded-2xl p-6 flex items-center"
+            data-animate="fade-up"
+          >
+            <img 
+              src={case1Aplication.src} 
+              alt="Case 1 Aplicação" 
+              class="w-full h-auto" 
+            />
+            
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right column -->
+      <div class="md:col-span-4 flex items-center justify-center" data-animate="fade-up">
+
+        <img
+          src={case1.src} 
+          alt="Case 1 Dashboard" 
+          class="w-full h-auto rounded-2xl shadow-lg" 
+        />
+
+      </div>
+
+    </article >
   </div>
 </section>

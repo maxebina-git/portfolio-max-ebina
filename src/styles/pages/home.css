@@ -28,47 +28,6 @@ html {
   }
   
   /* =========================
-     REVEAL SYSTEM (STATE ONLY)
-  ========================= */
-  
-  .reveal-item {
-    opacity: 0;
-    transform: translate3d(-30px, 0, 0);
-  
-    transition:
-      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-      opacity 0.7s ease;
-  
-    will-change: transform, opacity;
-  }
-  
-  .reveal-item.is-visible {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-  
-  .reveal-item.exit-right {
-    opacity: 0;
-    transform: translate3d(30px, 0, 0);
-  }
-  
-  /* =========================
-     MOTION VARIANTS (SIMPLIFIED)
-  ========================= */
-  
-  html[data-motion="low"] .reveal-item {
-    transition-duration: 0.85s;
-  }
-  
-  html[data-motion="medium"] .reveal-item {
-    transition-duration: 0.55s;
-  }
-  
-  html[data-motion="high"] .reveal-item {
-    transition-duration: 0.3s;
-  }
-  
-  /* =========================
      MOTION LAYERS (LIGHT)
   ========================= */
   
@@ -138,18 +97,35 @@ html {
     position: relative;
     z-index: 1;
   }
-  
+
+/* #cases h2 {
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: all 0.8s ease !important;
+  transition-delay: 1s !important;
+}
+
+#cases.bg-active h2 {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+} */
+
+[data-animate] {
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: opacity 0.7s ease, transform 0.7s ease !important;
+  will-change: opacity, transform !important;
+}
+
+[data-animate].is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+
   /* =========================
      PERFORMANCE GUARD
   ========================= */
-  
-  @media (prefers-reduced-motion: reduce) {
-    * {
-      animation: none !important;
-      transition: none !important;
-      scroll-behavior: auto !important;
-    }
-  }
   
   /* =========================
      MOBILE OPTIMIZATION
@@ -160,3 +136,162 @@ html {
       transition-duration: 0.25s;
     }
   }
+
+    /* =========================
+       LOADER FADE UTILITIES
+       Used by src/scripts/app.js addFade(...)
+    ========================= */
+
+    /* Ensure loader starts fully opaque */
+    #fake-loader {
+      opacity: 1;
+      transition-property: opacity;
+    }
+
+    /* Generic fade-out utility: duration set inline via JS (el.style.transitionDuration)
+       JS will add .fade-out to elements to trigger opacity transition. */
+    .fade-out {
+      opacity: 0 !important;
+      transition-property: opacity;
+      transition-timing-function: ease;
+      will-change: opacity;
+    }
+
+    /* Optional: smoother container fade when hiding the full loader */
+    #fake-loader.fade-out {
+      pointer-events: none;
+    }
+
+    /* =========================
+      BASE REVEAL SYSTEM (FINAL)
+    ========================= */
+
+[data-reveal] {
+  opacity: 0 !important;
+  background: red !important;
+}
+
+[data-reveal].is-visible {
+  opacity: 1 !important;
+}
+
+#cases-track {
+  display: flex;
+  transition: transform .6s ease;
+}
+
+#cases-track article {
+  width: 100%;
+  min-width: 100%;
+  flex: 0 0 100%;
+}
+
+.case-loader {
+  display:none;
+  position:absolute;
+  inset:0;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+
+  /* =========================
+    MODAL
+  ========================= */
+
+.case-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+
+  z-index: 9999;
+}
+
+/* estado aberto */
+.case-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* overlay */
+.case-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* conteúdo */
+.case-modal__content {
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  transform: scale(0.96);
+  transition: transform 0.25s ease;
+
+  z-index: 1;
+}
+
+/* animação de entrada */
+.case-modal.is-open .case-modal__content {
+  transform: scale(1);
+}
+
+/* imagem */
+.case-modal__image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* legenda */
+.case-modal__caption {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+/* botão fechar */
+.case-modal__close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 999px;
+  border: none;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 20px;
+  line-height: 1;
+
+  transition: background 0.2s ease;
+}
+
+.case-modal__close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}

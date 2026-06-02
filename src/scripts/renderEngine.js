@@ -1,4 +1,3 @@
-
 // =====================================================
 // RENDER ENGINE - FINAL CLEAN VERSION
 // =====================================================
@@ -26,6 +25,8 @@ const renderEngine = (() => {
     smoothFactor: 0.12
   };
 
+  let initialized = false;
+
   // =========================================
   // DOM CACHE
   // =========================================
@@ -50,6 +51,8 @@ const renderEngine = (() => {
     motion: new Map(),
     depth: new Map()
   };
+
+  const previousTransforms = new WeakMap();
 
   let ticking = false;
   let needsLayoutUpdate = true;
@@ -86,6 +89,18 @@ const renderEngine = (() => {
         id: section.id,
         el: section
       }));
+
+    // IntersectionObserver for reveal sections (replaces per-frame checks)
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const section = entry.target;
+        const visible = entry.isIntersecting && entry.intersectionRatio > 0.15;
+        section.classList.toggle('bg-active', visible);
+        
+      });
+    }, { root: null, threshold: [0, 0.15, 0.45] });
+
+    dom.revealSections.forEach(s => revealObserver.observe(s));
 
   }
 
@@ -377,68 +392,7 @@ const renderEngine = (() => {
   // =========================================
 
   function renderReveal() {
-
-    const scrollingDown =
-      state.direction === 'down';
-
-    for (let i = 0; i < dom.revealSections.length; i++) {
-
-      const section =
-        dom.revealSections[i];
-
-      const rect =
-        section.getBoundingClientRect();
-
-      const items =
-        section.querySelectorAll('.reveal-item');
-
-      const isVisible =
-        rect.top < window.innerHeight * 0.45 &&
-        rect.bottom > window.innerHeight * 0.15;
-
-      if (isVisible) {
-
-        section.classList.add('bg-active');
-
-        for (let j = 0; j < items.length; j++) {
-
-          const item = items[j];
-
-          item.classList.remove('exit-right');
-
-          item.classList.add('is-visible');
-
-        }
-
-      } else {
-
-        section.classList.remove('bg-active');
-
-        for (let j = 0; j < items.length; j++) {
-
-          const item = items[j];
-
-          if (scrollingDown) {
-
-            item.classList.remove('is-visible');
-
-            item.classList.add('exit-right');
-
-          } else {
-
-            item.classList.remove(
-              'is-visible',
-              'exit-right'
-            );
-
-          }
-
-        }
-
-      }
-
-    }
-
+    // Reveal handled by IntersectionObserver initialized in initDOM()
   }
 
   // =========================================
@@ -448,15 +402,20 @@ const renderEngine = (() => {
   function flushDOM() {
 
     transforms.motion.forEach((value, el) => {
-      el.style.transform = value;
+      if (previousTransforms.get(el) !== value) {
+        el.style.transform = value;
+        previousTransforms.set(el, value);
+      }
     });
 
     transforms.depth.forEach((value, el) => {
-      el.style.transform = value;
+      if (previousTransforms.get(el) !== value) {
+        el.style.transform = value;
+        previousTransforms.set(el, value);
+      }
     });
 
     transforms.motion.clear();
-
     transforms.depth.clear();
 
   }
@@ -512,6 +471,9 @@ const renderEngine = (() => {
 
   function init() {
 
+    if (initialized) return;
+    initialized = true;
+
     initDOM();
 
     requestAnimationFrame(() => {
@@ -530,7 +492,10 @@ const renderEngine = (() => {
 
     window.addEventListener(
       'resize',
-      () => needsLayoutUpdate = true
+      () => {
+        needsLayoutUpdate = true;
+        state.isMobile = window.innerWidth <= 768;
+      }
     );
 
     loop();

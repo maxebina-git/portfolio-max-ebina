@@ -1,36 +1,47 @@
+---
+import meImage from '../assets/me.png';
+---
+
 <header 
   id="main-header" 
-  class="sticky top-0 z-50 w-full bg-muted/80 backdrop-blur-md transition-all duration-300 ease-in-out py-4 border-b border-border
-        [&.header-expanded]:top-2 
-        [&.header-expanded]:py-6 
-        [&.header-expanded]:mx-auto 
-        [&.header-expanded]:w-[calc(100%-16px)] 
-        [&.header-expanded]:rounded-2xl 
-        [&.header-expanded]:border 
-        [&.header-expanded]:border-border/50 
-        [&.header-expanded]:shadow-lg"
+  class="sticky top-0 z-50 w-full relative bg-muted/80 backdrop-blur-md transform transition-all duration-300 ease-in-out py-4 border-b border-border
+        [&.header-expanded]:top-2
+        [&.header-expanded]:py-6
+        [&.header-expanded]:mx-auto
+        [&.header-expanded]:w-[calc(100%-16px)]
+        [&.header-expanded]:rounded-2xl
+        [&.header-expanded]:border
+        [&.header-expanded]:border-border/50
+        [&.header-expanded]:shadow-lg
+        [&.header-hidden]:-translate-y-full
+        [&.header-hidden]:opacity-0"
 >
-  <div class="max-w-7xl mx-auto px-6 flex items-center justify-end">
+  <div class="max-w-7xl mx-auto px-6 flex items-center">
+    <!-- Desktop logo (inside container) -->
+    <div class="hidden md:inline-block">
+      <a href="#hero" id="logo-link" class="active relative inline-block transition-colors duration-300 before:absolute before:-bottom-2 before:left-0 before:h-[3px] before:w-full before:scale-x-0 before:bg-primary before:transition-transform before:duration-300 before:ease-out before:origin-right hover:before:scale-x-100 hover:before:origin-left [&.active]:before:scale-x-100 [&.active]:before:origin-left">
+        <img src={meImage.src} alt="me" class="h-8" />
+      </a>
+    </div>
 
-    <div class="flex items-center gap-8 transition-all duration-300">
+    <div class="flex flex-col sm:flex-row items-center w-full transition-all duration-300">
 
-      <nav class="flex items-center">
+      <div class="w-full flex sm:hidden justify-center mb-2 sm:mb-0">
+        <button type="button" id="logo-button-mobile" aria-label="Ir ao topo" class="flex sm:hidden items-center">
+          <img src={meImage.src} alt="me" class="h-8" />
+        </button>
+      </div>
 
-        <div class="flex items-center gap-6 text-sm font-medium text-[var(--muted-foreground)]">
+      <nav class="flex items-center w-full">
+
+        <div class="flex w-full items-center justify-between sm:justify-end flex-nowrap gap-4 sm:gap-6 text-sm font-medium text-[var(--muted-foreground)]">
 
           <a 
             href="#cases"
             class="nav-link relative py-1 transition-colors duration-300 hover:text-[var(--foreground)] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-[var(--foreground)] before:transition-transform before:duration-300 before:ease-out before:origin-right hover:before:scale-x-100 hover:before:origin-left [&.active]:text-[var(--foreground)] [&.active]:before:scale-x-100 [&.active]:before:origin-left"
           >
             Cases
-          </a>
-
-          <a 
-            href="#ecossistema"
-            class="nav-link relative py-1 transition-colors duration-300 hover:text-[var(--foreground)] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-[var(--foreground)] before:transition-transform before:duration-300 before:ease-out before:origin-right hover:before:scale-x-100 hover:before:origin-left [&.active]:text-[var(--foreground)] [&.active]:before:scale-x-100 [&.active]:before:origin-left"
-          >
-            Ecossistema
-          </a>
+          </a>  
 
           <a 
             href="#sobre"
@@ -46,19 +57,78 @@
             Conectar
           </a>
 
+          <button 
+            id="theme-toggle"
+            aria-label="Alternar tema escuro/claro"
+            class="w-8 h-8 flex items-center justify-center text-xl bg-transparent border-none outline-none transition-transform active:scale-90 cursor-pointer"
+          >
+            <span id="toggle-icon">🌑</span>
+          </button>
         </div>
 
       </nav>
 
-      <button 
-        id="theme-toggle"
-        aria-label="Alternar tema escuro/claro"
-        class="w-8 h-8 flex items-center justify-center text-xl bg-transparent border-none outline-none transition-transform active:scale-90 cursor-pointer"
-      >
-        <span id="toggle-icon">🌑</span>
-      </button>
-
     </div>
 
   </div>
+
+  <script>
+    (function () {
+      function initHeaderScroll() {
+        var header = document.getElementById('main-header');
+        var logo = document.getElementById('logo-button');
+        var logoMobile = document.getElementById('logo-button-mobile');
+
+        function scrollToTopIfNeeded() {
+          if (window.scrollY > 0) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }
+
+        // Capture-phase listener on document to ensure logo clicks are handled even if other handlers interfere.
+        function captureLogoClick(e) {
+          var el = e.target.closest && e.target.closest('#logo-button');
+          if (!el) return;
+          // Only handle on desktop (sm+)
+          if (window.matchMedia('(min-width: 640px)').matches) {
+            e.preventDefault();
+            e.stopPropagation();
+            var target = document.getElementById('hero');
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }
+        }
+
+        document.addEventListener('click', captureLogoClick, true); // capture = true
+
+        // Keep previous handlers for mobile logo and header background
+        if (logoMobile) {
+          logoMobile.setAttribute('type', 'button');
+          logoMobile.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (!window.matchMedia('(min-width: 640px)').matches) {
+              scrollToTopIfNeeded();
+            }
+          });
+        }
+
+        if (header) {
+          header.addEventListener('click', function (e) {
+            if (e.target.closest('a') || e.target.closest('button') || e.target.closest('[role="button"]')) return;
+            scrollToTopIfNeeded();
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHeaderScroll);
+      } else {
+        initHeaderScroll();
+      }
+    })();
+  </script>
 </header>

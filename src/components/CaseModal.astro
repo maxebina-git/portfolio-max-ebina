@@ -1,0 +1,165 @@
+<div
+  id="case-modal"
+  class="
+    fixed
+    inset-0
+    z-[9999]
+    hidden
+    items-center
+    justify-center
+    opacity-0
+    transition-opacity
+    duration-300
+  "
+>
+
+  <!-- Overlay -->
+  <div
+    class="absolute inset-0 bg-black/80 backdrop-blur-sm"
+    data-close="modal"
+  ></div>
+
+  <!-- Conteúdo -->
+  <div
+    class="
+        relative
+        z-10
+        w-full
+        max-w-6xl
+
+        mx-1
+        md:mx-6
+
+        p-2
+        md:p-8
+
+        bg-background
+        rounded-3xl
+        shadow-2xl
+    "
+    >
+
+    <!-- Controles -->
+    <div
+    class="
+        absolute
+        top-4
+        right-4
+        flex
+        items-center
+        gap-2
+    "
+    >
+
+    <!-- Prev -->
+    <button
+        id="case-modal-prev"
+        type="button"
+        class="
+        group
+        flex
+        items-center
+        justify-center
+        w-10
+        h-10
+        rounded-full
+        border
+        border-border/50
+        text-muted-foreground
+        transition-all
+        duration-300
+        hover:border-foreground/40
+        hover:bg-foreground/5
+        cursor-pointer
+        disabled:opacity-30
+        disabled:pointer-events-none
+        "
+    >
+        ←
+    </button>
+
+    <!-- Next -->
+    <button
+        id="case-modal-next"
+        type="button"
+        class="
+        group
+        flex
+        items-center
+        justify-center
+        w-10
+        h-10
+        rounded-full
+        border
+        border-border/50
+        text-muted-foreground
+        transition-all
+        duration-300
+        hover:border-foreground/40
+        hover:bg-foreground/5
+        cursor-pointer
+        disabled:opacity-30
+        disabled:pointer-events-none
+        "
+    >
+        →
+    </button>
+
+    <!-- Fechar -->
+    <button
+        data-close="modal"
+        class="
+        group
+        flex
+        items-center
+        justify-center
+        w-10
+        h-10
+        rounded-full
+        border
+        border-border/50
+        text-muted-foreground
+        transition-all
+        duration-300
+        hover:border-foreground/40
+        hover:bg-foreground/5
+        cursor-pointer
+        "
+    >
+        ×
+    </button>
+
+    </div>
+
+    <!-- Imagem -->
+    <img
+    id="case-modal-image"
+    src=""
+    alt=""
+    class="
+        w-full
+        object-contain
+        rounded-2xl
+
+        max-h-[85vh]
+        md:max-h-[80vh]
+
+        mt-12
+        md:mt-8
+    "
+    />
+
+    <!-- Legenda -->
+    <p
+      id="case-modal-caption"
+      class="
+        mt-4
+        text-center
+        text-sm
+        text-muted-foreground
+      "
+    ></p>
+
+  </div>
+
+</div>

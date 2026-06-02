@@ -18,6 +18,11 @@
   --color-muted: var(--muted);
 }
 
+html, body {
+  scroll-behavior: smooth !important;
+  
+}
+
 /* Estado ativo: Tema Escuro */
 .dark {
   --background: #17120e;
@@ -34,3 +39,17 @@ body {
 
     color 0.3s ease;
 }
+
+/* Usamos o id com :global para o Astro não "esconder" a regra */
+  #fake-loader {
+    transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1), 
+                visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Quando o JS colocar 'fade-out', aplicamos o sumiço suave */
+  #fake-loader.fade-out {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
