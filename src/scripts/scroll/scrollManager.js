@@ -52,7 +52,10 @@ const ScrollManager = () => {
   observerSystem.observeElements(
     sections,
     revealElements,
-    casesSection ? [casesSection] : []
+    [
+      casesSection,
+      document.querySelector('#conectar')
+    ].filter(Boolean)
   );
 
   // =========================

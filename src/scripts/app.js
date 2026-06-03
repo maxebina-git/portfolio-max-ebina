@@ -1,4 +1,5 @@
 import renderEngine from './renderEngine.js';
+import './contactValidation.js';
 
 let isClicking = false;
 

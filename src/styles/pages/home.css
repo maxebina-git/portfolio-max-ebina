@@ -60,13 +60,13 @@ html {
      CASES BACKGROUND (SIMPLIFIED GPU FRIENDLY)
   ========================= */
   
-  #cases {
+  #cases, #conectar {
     position: relative;
     overflow: hidden;
     isolation: isolate;
   }
   
-  #cases::before {
+  #cases::before, #conectar::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -88,12 +88,12 @@ html {
     will-change: transform, opacity;
   }
   
-  #cases.bg-active::before {
+  #cases.bg-active::before, #conectar.bg-active::before {
     opacity: 1;
     transform: scale(1);
   }
   
-  #cases > * {
+  #cases > *, #conectar > * {
     position: relative;
     z-index: 1;
   }
@@ -134,6 +134,28 @@ html {
   @media (max-width: 768px) {
     html[data-motion="high"] .reveal-item {
       transition-duration: 0.25s;
+    }
+    .about-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+
+      padding: 12px 20px;
+      margin-top: 8px;
+
+      border-radius: 9999px;
+
+      background: var(--primary);
+      color: var(--primary-foreground);
+
+      font-weight: 600;
+      text-decoration: none;
+
+      transition:
+        transform .2s ease,
+        opacity .2s ease;
     }
   }
 
@@ -294,4 +316,24 @@ html {
 
 .case-modal__close:hover {
   background: rgba(255, 255, 255, 0.3);
+}
+
+section {
+  /* margin-block: 4rem; */
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+
+  background-color: color-mix(in srgb, var(--primary) 7.5%, transparent);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
 }

@@ -34,5 +34,5 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         port: ${{ secrets.FTP_PORT }}
         local-dir: ./dist/
-        server-dir: /maxebina.com.br/www/portfolio-teste/
+        server-dir: /maxebina.com.br/www/
         dangerous-clean-slate: true

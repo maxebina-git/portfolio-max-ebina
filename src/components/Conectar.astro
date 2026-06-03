@@ -1,7 +1,5 @@
-<section
-  id="conectar"
-  class="content-section max-w-7xl mx-auto px-4 md:px-6 rounded-3xl py-32 pb-32 md:pb-40"
->
+<section id="conectar" data-reveal-container class="min-h-[calc(70vh-1rem)] content-section relative overflow-hidden isolation-isolate w-[calc(100%-32px)] md:w-full max-w-7xl mx-auto rounded-[32px] py-12 my-12" data-stagger="true">
+
   <div class="max-w-3xl mx-auto px-6 text-center space-y-6">
 
     <h2 class="text-4xl font-black tracking-tight text-foreground">
@@ -14,16 +12,197 @@
       Fique à vontade para me acionar para contratos, consultorias de DesignOps ou posições core de Product Design.
     </p>
 
-    <div 
-      class="pt-4"
+    <form
+      id="contact-form"
+      class="mt-12 max-w-3xl mx-auto space-y-6 text-left"
+      novalidate
+      action="/send-email.php" method="POST"
     >
-      <a 
-        href="mailto:seu-email@dominio.com"
-        class="inline-flex bg-primary text-primary-foreground font-semibold px-8 py-4 rounded-xl text-lg hover:bg-primary/90 transition-all shadow-md"
-      >
-        Iniciar Conversa
-      </a>
-    </div>
+      <fieldset class="space-y-6">
+
+        <legend class="sr-only">
+          Formulário de contato
+        </legend>
+
+        <!-- Nome + Telefone -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div>
+            <label
+              for="name"
+              class="block text-sm font-medium mb-2 text-foreground"
+            >
+              Nome
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              aria-describedby="name-error"
+              placeholder="Seu nome"
+              class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
+            />
+
+            <p
+              id="name-error"
+              class="mt-2 text-sm text-destructive hidden"
+            >
+              Informe seu nome.
+            </p>
+          </div>
+
+          <div>
+            <label
+              for="phone"
+              class="block text-sm font-medium mb-2 text-foreground"
+            >
+              Telefone
+            </label>
+
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              required
+              aria-describedby="phone-error"
+              placeholder="(11) 99999-9999"
+              class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
+            />
+
+            <p
+              id="phone-error"
+              class="mt-2 text-sm text-destructive hidden"
+            >
+              Informe um telefone válido.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium mb-2 text-foreground"
+          >
+            E-mail
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            aria-describedby="email-error"
+            placeholder="voce@empresa.com"
+            class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
+          />
+
+          <p
+            id="email-error"
+            class="mt-2 text-sm text-destructive hidden"
+          >
+            Informe um e-mail válido.
+          </p>
+        </div>
+
+        <!-- Assunto -->
+        <div>
+          <label
+            for="subject"
+            class="block text-sm font-medium mb-2 text-foreground"
+          >
+            Assunto
+          </label>
+
+          <select
+            id="subject"
+            name="subject"
+            required
+            aria-describedby="subject-error"
+            class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
+          >
+            <option value="">
+              Selecione uma opção
+            </option>
+
+            <option value="product-design">
+              Product Design
+            </option>
+
+            <option value="design-system">
+              Design System
+            </option>
+
+            <option value="designops">
+              Consultoria DesignOps
+            </option>
+
+            <option value="freelance">
+              Projeto Freelancer
+            </option>
+
+            <option value="hiring">
+              Oportunidade de Contratação
+            </option>
+
+            <option value="other">
+              Outro assunto
+            </option>
+          </select>
+
+          <p
+            id="subject-error"
+            class="mt-2 text-sm text-destructive hidden"
+          >
+            Selecione um assunto.
+          </p>
+        </div>
+
+        <!-- Mensagem -->
+        <div>
+          <label
+            for="message"
+            class="block text-sm font-medium mb-2 text-foreground"
+          >
+            Mensagem
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            aria-describedby="message-error"
+            placeholder="Conte um pouco sobre seu projeto, desafio ou oportunidade."
+            class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition resize-y focus:border-primary"
+          ></textarea>
+
+          <p
+            id="message-error"
+            class="mt-2 text-sm text-destructive hidden"
+          >
+            Escreva uma mensagem.
+          </p>
+        </div>
+
+        <!-- Submit -->
+        <div class="pt-2">
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:opacity-90 cursor-pointer"
+          >
+            Enviar mensagem
+          </button>
+        </div>
+
+      </fieldset>
+    </form>
 
   </div>
 </section>
