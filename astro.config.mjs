@@ -19,7 +19,9 @@ export default defineConfig({
   //
   // Em localhost:
   // http://localhost:4321/
-  base: '/',
+  base: isProd
+    ? '/portfolio-teste'
+    : '/',
 
   integrations: [
     react()
