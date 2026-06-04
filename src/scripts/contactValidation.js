@@ -17,8 +17,7 @@ if (form) {
     email: {
       input: form.querySelector("#email"),
       error: form.querySelector("#email-error"),
-      validate: (v) =>
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
+      validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
     },
 
     assunto: {
@@ -61,10 +60,8 @@ if (form) {
     return true;
   }
 
-  // =========================
-  // SUBMIT (FETCH)
-  // =========================
-  form.addEventListener("submit", async (e) => {
+  // validação no submit
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     let isFormValid = true;
@@ -76,40 +73,13 @@ if (form) {
 
     if (!isFormValid) return;
 
-    console.log("FORM VÁLIDO ✔ ENVIANDO...");
+    console.log("FORM VÁLIDO ✔");
 
-    try {
-      const formData = new FormData(form);
-
-      const res = await fetch(
-        "https://maxebina.com.br/send-email.php",
-        {
-          method: "POST",
-          body: formData
-        }
-      );
-
-      const text = await res.text();
-
-      if (text === "OK") {
-        console.log("EMAIL ENVIADO ✔");
-
-        form.reset();
-
-        alert("Mensagem enviada com sucesso!");
-      } else {
-        console.error("Erro no envio:", text);
-        alert("Erro ao enviar mensagem.");
-      }
-    } catch (err) {
-      console.error(err);
-      alert("Erro de conexão.");
-    }
+    // mantém envio tradicional (PHP)
+    form.submit();
   });
 
-  // =========================
-  // VALIDAÇÃO EM TEMPO REAL
-  // =========================
+  // validação em tempo real
   Object.keys(fields).forEach((key) => {
     fields[key].input.addEventListener("input", () => {
       validateField(key);
