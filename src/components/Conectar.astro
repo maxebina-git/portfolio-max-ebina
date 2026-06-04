@@ -2,12 +2,12 @@
 
   <div class="max-w-3xl mx-auto px-6 text-center space-y-6">
 
-    <h2 class="text-4xl font-black tracking-tight text-foreground">
+    <h2 class="text-4xl font-black tracking-tight text-foreground" data-animate="fade-up">
       Vamos transformar design em código escalável?
     </h2>
 
     <p 
-      class="text-lg text-muted-foreground"
+      class="text-lg text-muted-foreground" data-animate="fade-up"
     >
       Fique à vontade para me acionar para contratos, consultorias de DesignOps ou posições core de Product Design.
     </p>
@@ -16,7 +16,8 @@
       id="contact-form"
       class="mt-12 max-w-3xl mx-auto space-y-6 text-left"
       novalidate
-      action="/send-email.php" method="POST"
+      action="/send-email.php"
+      method="POST"
     >
       <fieldset class="space-y-6">
 
@@ -25,29 +26,29 @@
         </legend>
 
         <!-- Nome + Telefone -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-animate="fade-up">
 
           <div>
             <label
-              for="name"
+              for="nome"
               class="block text-sm font-medium mb-2 text-foreground"
             >
               Nome
             </label>
 
             <input
-              id="name"
-              name="name"
+              id="nome"
+              name="nome"
               type="text"
               autocomplete="name"
               required
-              aria-describedby="name-error"
+              aria-describedby="nome-error"
               placeholder="Seu nome"
               class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
             />
 
             <p
-              id="name-error"
+              id="nome-error"
               class="mt-2 text-sm text-destructive hidden"
             >
               Informe seu nome.
@@ -56,25 +57,25 @@
 
           <div>
             <label
-              for="phone"
+              for="telefone"
               class="block text-sm font-medium mb-2 text-foreground"
             >
               Telefone
             </label>
 
             <input
-              id="phone"
-              name="phone"
+              id="telefone"
+              name="telefone"
               type="tel"
               autocomplete="tel"
               required
-              aria-describedby="phone-error"
+              aria-describedby="telefone-error"
               placeholder="(11) 99999-9999"
               class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
             />
 
             <p
-              id="phone-error"
+              id="telefone-error"
               class="mt-2 text-sm text-destructive hidden"
             >
               Informe um telefone válido.
@@ -84,7 +85,7 @@
         </div>
 
         <!-- Email -->
-        <div>
+        <div data-animate="fade-up">
           <label
             for="email"
             class="block text-sm font-medium mb-2 text-foreground"
@@ -112,19 +113,19 @@
         </div>
 
         <!-- Assunto -->
-        <div>
+        <div data-animate="fade-up">
           <label
-            for="subject"
+            for="assunto"
             class="block text-sm font-medium mb-2 text-foreground"
           >
             Assunto
           </label>
 
           <select
-            id="subject"
-            name="subject"
+            id="assunto"
+            name="assunto"
             required
-            aria-describedby="subject-error"
+            aria-describedby="assunto-error"
             class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
           >
             <option value="">
@@ -157,7 +158,7 @@
           </select>
 
           <p
-            id="subject-error"
+            id="assunto-error"
             class="mt-2 text-sm text-destructive hidden"
           >
             Selecione um assunto.
@@ -165,26 +166,26 @@
         </div>
 
         <!-- Mensagem -->
-        <div>
+        <div data-animate="fade-up">
           <label
-            for="message"
+            for="mensagem"
             class="block text-sm font-medium mb-2 text-foreground"
           >
             Mensagem
           </label>
 
           <textarea
-            id="message"
-            name="message"
+            id="mensagem"
+            name="mensagem"
             rows="6"
             required
-            aria-describedby="message-error"
+            aria-describedby="mensagem-error"
             placeholder="Conte um pouco sobre seu projeto, desafio ou oportunidade."
             class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition resize-y focus:border-primary"
           ></textarea>
 
           <p
-            id="message-error"
+            id="mensagem-error"
             class="mt-2 text-sm text-destructive hidden"
           >
             Escreva uma mensagem.
@@ -192,7 +193,7 @@
         </div>
 
         <!-- Submit -->
-        <div class="pt-2">
+        <div class="pt-2" data-animate="fade-up">
           <button
             type="submit"
             class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:opacity-90 cursor-pointer"

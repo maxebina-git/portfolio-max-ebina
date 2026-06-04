@@ -2,29 +2,33 @@ const form = document.querySelector("#contact-form");
 
 if (form) {
   const fields = {
-    name: {
-      input: form.querySelector("#name"),
-      error: form.querySelector("#name-error"),
+    nome: {
+      input: form.querySelector("#nome"),
+      error: form.querySelector("#nome-error"),
       validate: (v) => v.trim().length > 2
     },
-    phone: {
-      input: form.querySelector("#phone"),
-      error: form.querySelector("#phone-error"),
+
+    telefone: {
+      input: form.querySelector("#telefone"),
+      error: form.querySelector("#telefone-error"),
       validate: (v) => v.trim().length >= 8
     },
+
     email: {
       input: form.querySelector("#email"),
       error: form.querySelector("#email-error"),
       validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
     },
-    subject: {
-      input: form.querySelector("#subject"),
-      error: form.querySelector("#subject-error"),
+
+    assunto: {
+      input: form.querySelector("#assunto"),
+      error: form.querySelector("#assunto-error"),
       validate: (v) => v !== ""
     },
-    message: {
-      input: form.querySelector("#message"),
-      error: form.querySelector("#message-error"),
+
+    mensagem: {
+      input: form.querySelector("#mensagem"),
+      error: form.querySelector("#mensagem-error"),
       validate: (v) => v.trim().length > 10
     }
   };
@@ -70,7 +74,9 @@ if (form) {
     if (!isFormValid) return;
 
     console.log("FORM VÁLIDO ✔");
-    form.submit(); // depois vamos trocar por fetch
+
+    // mantém envio tradicional (PHP)
+    form.submit();
   });
 
   // validação em tempo real
