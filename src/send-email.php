@@ -17,7 +17,7 @@ try {
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
-    // 🚀 AQUI (CORREÇÃO DE ACENTOS)
+    // 🚀 Encoding correto
     $mail->CharSet = 'UTF-8';
     $mail->Encoding = 'base64';
     $mail->Subject = mb_encode_mimeheader('Novo contato do portfólio', 'UTF-8');
@@ -36,8 +36,13 @@ try {
     ";
 
     $mail->send();
-    echo "OK";
+
+    // 🚀 REDIRECT APÓS SUCESSO
+    header("Location: https://www.maxebina.com.br/");
+    exit;
 
 } catch (Exception $e) {
-    echo "Erro: {$mail->ErrorInfo}";
+
+    // 🚨 se der erro, não redireciona
+    echo "Erro ao enviar mensagem: {$mail->ErrorInfo}";
 }

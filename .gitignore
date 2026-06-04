@@ -144,3 +144,8 @@ vite.config.ts.timestamp-*
 
 # Astro
 .astro/
+
+# Send-email
+send-email.php
+
+src\send-email.php
