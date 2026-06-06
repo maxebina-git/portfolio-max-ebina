@@ -51,7 +51,6 @@ $mail->addAddress('maxebina@gmail.com');
 
 $mail->Sender = 'maxebina@gmail.com';
 
-$mail->clearReplyTos();
 $mail->addReplyTo($emailPost, $nome);
 
 /* =========================
