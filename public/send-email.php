@@ -4,6 +4,15 @@ if (!empty($_POST['website'])) {
     exit;
 }
 
+$email = filter_var(
+    $_POST['email'] ?? '',
+    FILTER_VALIDATE_EMAIL
+);
+
+if (!$email) {
+    exit;
+}
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
