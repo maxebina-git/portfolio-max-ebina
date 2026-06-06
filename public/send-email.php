@@ -61,7 +61,9 @@ try {
     $mail->send();
 
     // 🚀 REDIRECT APÓS SUCESSO
-    header("Location: https://www.maxebina.com.br/");
+    header(
+    "Location: https://www.maxebina.com.br/conectar?success=1"
+    );
     exit;
 
 } catch (Exception $e) {

@@ -803,3 +803,55 @@ function initCaseModal() {
   bindTriggers();
 
 }
+
+// =====================================================
+// FORM SUBMIT LOADING
+// =====================================================
+
+function initContactFormLoading() {
+
+  const form = document.getElementById('contact-form');
+  const label = document.getElementById('submit-label');
+
+  if (!form || !label) return;
+
+  form.addEventListener('submit', () => {
+
+    let dots = 0;
+
+    setInterval(() => {
+
+      dots = (dots + 1) % 4;
+
+      label.textContent =
+        'Enviando' + '.'.repeat(dots);
+
+    }, 300);
+
+  });
+
+}
+
+// =====================================================
+// FORM SUCCESS MESSAGE
+// =====================================================
+
+function initContactFormSuccess() {
+
+  const successMessage =
+    document.getElementById('form-success');
+
+  if (!successMessage) return;
+
+  const params =
+    new URLSearchParams(window.location.search);
+
+  if (params.get('success') === '1') {
+
+    successMessage.classList.remove('hidden');
+
+  }
+
+}
+
+initContactFormSuccess();
