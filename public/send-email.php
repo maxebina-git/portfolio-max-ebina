@@ -1,4 +1,28 @@
 <?php
+
+// Honeypot anti-spam
+if (!empty($_POST['website'])) {
+    exit;
+}
+
+// Valida origem
+if (
+    !isset($_SERVER['HTTP_REFERER']) ||
+    strpos($_SERVER['HTTP_REFERER'], 'maxebina.com.br') === false
+) {
+    exit;
+}
+
+// Valida email
+$email = filter_var(
+    $_POST['email'] ?? '',
+    FILTER_VALIDATE_EMAIL
+);
+
+if (!$email) {
+    exit;
+}
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -13,7 +37,7 @@ try {
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'maxebina@gmail.com';
-    $mail->Password = 'fqna srbp zdhv ulox';
+    $mail->Password = 'vwtv peed tjro ibsg';
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
@@ -28,12 +52,11 @@ try {
     $mail->isHTML(true);
 
     $mail->Body = "
-        Nome: {$_POST['nome']}<br>
-        Email: {$_POST['email']}<br>
-        Telefone: {$_POST['telefone']}<br>
-        Assunto: {$_POST['assunto']}<br>
-        Mensagem: {$_POST['mensagem']}
-    ";
+    Nome: " . htmlspecialchars($_POST['nome'] ?? '') . "<br>
+    Email: " . htmlspecialchars($_POST['email'] ?? '') . "<br>
+    Telefone: " . htmlspecialchars($_POST['telefone'] ?? '') . "<br>
+    Assunto: " . htmlspecialchars($_POST['assunto'] ?? '') . "<br>
+    Mensagem: " . nl2br(htmlspecialchars($_POST['mensagem'] ?? ''));
 
     $mail->send();
 
