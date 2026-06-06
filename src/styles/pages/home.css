@@ -135,7 +135,7 @@ html {
     html[data-motion="high"] .reveal-item {
       transition-duration: 0.25s;
     }
-    .about-link {
+    .about-link, .form-submit {
       display: flex;
       align-items: center;
       justify-content: center;

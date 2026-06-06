@@ -19,11 +19,16 @@
       action="/send-email.php"
       method="POST"
     >
+      <!-- Honeypot anti-spam -->
+      <input
+        type="text"
+        name="website"
+        tabindex="-1"
+        autocomplete="off"
+        class="hidden"
+      />
+      
       <fieldset class="space-y-6">
-
-        <legend class="sr-only">
-          Formulário de contato
-        </legend>
 
         <!-- Nome + Telefone -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-animate="fade-up">
@@ -196,7 +201,7 @@
         <div class="pt-2" data-animate="fade-up">
           <button
             type="submit"
-            class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:opacity-90 cursor-pointer"
+            class="form-submit inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-white transition hover:opacity-90 cursor-pointer"
           >
             Enviar mensagem
           </button>
