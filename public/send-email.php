@@ -2,7 +2,7 @@
 
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 
-$email = filter_var($email, FILTER_VALIDATE_EMAIL);
+$emailPost = filter_var($_POST['email'] ?? '', FILTER_VALIDATE_EMAIL);
 
 if (!$email) {
     exit;
@@ -48,12 +48,58 @@ $telefone = isset($_POST['telefone']) ? htmlspecialchars($_POST['telefone']) : '
 $assunto = isset($_POST['assunto']) ? htmlspecialchars($_POST['assunto']) : '';
 $mensagem = isset($_POST['mensagem']) ? htmlspecialchars($_POST['mensagem']) : '';
 
-$mail->Body = "
-Nome: {$nome}<br>
-Email: {$emailPost}<br>
-Telefone: {$telefone}<br>
-Assunto: {$assunto}<br>
-Mensagem: " . nl2br($mensagem);
+$mail->addReplyTo($emailPost, $nome);
+
+$mail->Body = '
+<div style="background:#f6f7fb;padding:40px 0;font-family:Arial,sans-serif;">
+  <div style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08);">
+
+    <!-- Header -->
+    <div style="background:#111827;padding:20px 30px;color:#ffffff;">
+      <h2 style="margin:0;font-size:18px;">Novo contato do portfólio</h2>
+      <p style="margin:5px 0 0;font-size:12px;opacity:0.8;">Formulário do site maxebina.com.br</p>
+    </div>
+
+    <!-- Body -->
+    <div style="padding:30px;color:#111827;">
+
+      <div style="margin-bottom:15px;">
+        <strong>Nome:</strong><br>
+        <span style="color:#374151;">' . htmlspecialchars($nome) . '</span>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <strong>Email:</strong><br>
+        <span style="color:#374151;">' . htmlspecialchars($emailPost) . '</span>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <strong>Telefone:</strong><br>
+        <span style="color:#374151;">' . htmlspecialchars($telefone) . '</span>
+      </div>
+
+      <div style="margin-bottom:15px;">
+        <strong>Assunto:</strong><br>
+        <span style="color:#374151;">' . htmlspecialchars($assunto) . '</span>
+      </div>
+
+      <div style="margin-top:25px;">
+        <strong>Mensagem:</strong>
+        <div style="margin-top:8px;padding:15px;background:#f3f4f6;border-radius:10px;line-height:1.5;color:#374151;">
+          ' . nl2br(htmlspecialchars($mensagem)) . '
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div style="padding:15px 30px;background:#f9fafb;font-size:11px;color:#6b7280;">
+      Enviado automaticamente pelo formulário de contato.
+    </div>
+
+  </div>
+</div>
+';
 
 try {
 
