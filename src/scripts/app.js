@@ -817,6 +817,12 @@ function initContactFormLoading() {
 
   form.addEventListener('submit', () => {
 
+    // marca sucesso para exibir após o redirect
+    sessionStorage.setItem(
+      'contactSuccess',
+      'true'
+    );
+
     let dots = 0;
 
     setInterval(() => {
@@ -843,15 +849,25 @@ function initContactFormSuccess() {
 
   if (!successMessage) return;
 
-  const params =
-    new URLSearchParams(window.location.search);
-
-  if (params.get('success') === '1') {
+  if (
+    sessionStorage.getItem('contactSuccess')
+    === 'true'
+  ) {
 
     successMessage.classList.remove('hidden');
+
+    sessionStorage.removeItem(
+      'contactSuccess'
+    );
 
   }
 
 }
 
+// =====================================================
+// INIT
+// =====================================================
+
+initContactFormLoading();
 initContactFormSuccess();
+
