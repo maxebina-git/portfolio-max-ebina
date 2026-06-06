@@ -37,9 +37,19 @@ $mail->addAddress(
 
 $mail->isHTML(true);
 
-$mail->Subject = 'Teste';
+$mail->Subject = mb_encode_mimeheader(
+    'Novo contato do portfólio',
+    'UTF-8'
+);
 
-$mail->Body = 'Teste';
+$mail->isHTML(true);
+
+$mail->Body = "
+    Nome: " . htmlspecialchars($_POST['nome'] ?? '') . "<br>
+    Email: " . htmlspecialchars($_POST['email'] ?? '') . "<br>
+    Telefone: " . htmlspecialchars($_POST['telefone'] ?? '') . "<br>
+    Assunto: " . htmlspecialchars($_POST['assunto'] ?? '') . "<br>
+    Mensagem: " . nl2br(htmlspecialchars($_POST['mensagem'] ?? ''));
 
 echo "ANTES SEND<br>";
 
