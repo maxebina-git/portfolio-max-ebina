@@ -125,7 +125,7 @@ try {
 
     // 🚀 REDIRECT APÓS SUCESSO
     header(
-    "Location: https://www.maxebina.com.br/conectar"
+    "Location: https://www.maxebina.com.br/#conectar"
     );
     exit;
 
