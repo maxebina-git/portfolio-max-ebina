@@ -21,7 +21,7 @@ $mail->SMTPAuth = true;
 echo "PASSOU 3<br>";
 
 $mail->Username = 'maxebina@gmail.com';
-$mail->Password = 'SUA_SENHA';
+$mail->Password = 'vwtv peed tjro ibsg';
 
 echo "PASSOU 4<br>";
 
