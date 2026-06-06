@@ -1,13 +1,8 @@
 <?php
 
-if (!empty($_POST['website'])) {
-    exit;
-}
+$email = isset($_POST['email']) ? $_POST['email'] : '';
 
-$email = filter_var(
-    $_POST['email'] ?? '',
-    FILTER_VALIDATE_EMAIL
-);
+$email = filter_var($email, FILTER_VALIDATE_EMAIL);
 
 if (!$email) {
     exit;
