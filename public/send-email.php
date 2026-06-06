@@ -1,39 +1,18 @@
-try {
+<?php
 
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'maxebina@gmail.com';
-    $mail->Password = 'vwtv peed tjro ibsg';
-    $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    $mail->CharSet = 'UTF-8';
-    $mail->Encoding = 'base64';
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-    $mail->setFrom(
-        'maxebina@gmail.com',
-        'Portfolio Max'
-    );
+$mail = new PHPMailer(true);
 
-    $mail->addAddress(
-        'maxebina@gmail.com'
-    );
+echo "ANTES SMTP<br>";
 
-    $mail->isHTML(true);
+$mail->isSMTP();
 
-    $mail->Subject = 'Teste';
+echo "DEPOIS SMTP<br>";
 
-    $mail->Body = 'Teste';
-
-    echo "ANTES SEND<br>";
-
-    $mail->send();
-
-    echo "DEPOIS SEND<br>";
-
-} catch (Exception $e) {
-
-    echo "ERRO:<br>";
-    echo $mail->ErrorInfo;
-}
+exit;
