@@ -1,43 +1,39 @@
-<?php
+try {
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'maxebina@gmail.com';
+    $mail->Password = 'vwtv peed tjro ibsg';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+    $mail->CharSet = 'UTF-8';
+    $mail->Encoding = 'base64';
 
-$mail = new PHPMailer(true);
+    $mail->setFrom(
+        'maxebina@gmail.com',
+        'Portfolio Max'
+    );
 
-echo "PASSOU 1<br>";
+    $mail->addAddress(
+        'maxebina@gmail.com'
+    );
 
-$mail->isSMTP();
+    $mail->isHTML(true);
 
-echo "PASSOU 2<br>";
+    $mail->Subject = 'Teste';
 
-$mail->Host = 'smtp.gmail.com';
-$mail->SMTPAuth = true;
+    $mail->Body = 'Teste';
 
-echo "PASSOU 3<br>";
+    echo "ANTES SEND<br>";
 
-$mail->Username = 'maxebina@gmail.com';
-$mail->Password = 'vwtv peed tjro ibsg';
+    $mail->send();
 
-echo "PASSOU 4<br>";
+    echo "DEPOIS SEND<br>";
 
-$mail->SMTPSecure = 'tls';
-$mail->Port = 587;
+} catch (Exception $e) {
 
-echo "PASSOU 5<br>";
-
-$mail->CharSet = 'UTF-8';
-$mail->Encoding = 'base64';
-
-echo "PASSOU 6<br>";
-
-$mail->Subject = mb_encode_mimeheader(
-    'Novo contato do portfólio',
-    'UTF-8'
-);
-
-echo "PASSOU 7<br>";
+    echo "ERRO:<br>";
+    echo $mail->ErrorInfo;
+}
