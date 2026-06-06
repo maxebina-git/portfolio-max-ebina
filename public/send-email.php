@@ -13,6 +13,8 @@ echo "PHPMailer OK<br>";
 
 $mail = new PHPMailer(true);
 
-echo "Objeto OK<br>";
+$mail->isSMTP();
+
+echo "SMTP OK<br>";
 
 exit;
