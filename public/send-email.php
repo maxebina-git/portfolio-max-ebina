@@ -123,7 +123,9 @@ try {
 
     $mail->send();
 
-    header("Location: https://www.maxebina.com.br/");
+    echo "<pre>";
+    echo $mail->getSentMIMEMessage();
+    echo "</pre>";
     exit;
 
 } catch (\Throwable $e) {
