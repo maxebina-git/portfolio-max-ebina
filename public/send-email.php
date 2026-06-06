@@ -7,8 +7,6 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-echo "PHP OK<br>";
-
 $mail = new PHPMailer(true);
 
 $mail->isSMTP();
@@ -19,8 +17,6 @@ $mail->Username = 'maxebina@gmail.com';
 $mail->Password = 'vwtv peed tjro ibsg';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
-
-echo "CONFIG SMTP OK<br>";
 
 $mail->setFrom(
     'maxebina@gmail.com',
@@ -43,7 +39,8 @@ try {
 
     $mail->send();
 
-    echo "DEPOIS SEND<br>";
+    header("Location: https://www.maxebina.com.br/");
+    exit;
 
 } catch (Exception $e) {
 
