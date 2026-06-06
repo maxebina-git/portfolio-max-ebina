@@ -123,7 +123,10 @@ try {
 
     $mail->send();
 
-    header("Location: https://www.maxebina.com.br/");
+    // 🚀 REDIRECT APÓS SUCESSO
+    header(
+    "Location: https://www.maxebina.com.br/conectar?success=1"
+    );
     exit;
 
 } catch (\Throwable $e) {
