@@ -1,5 +1,9 @@
 <?php
 
+if (!empty($_POST['website'])) {
+    exit;
+}
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
