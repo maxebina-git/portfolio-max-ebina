@@ -2,7 +2,7 @@
 
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 
-$emailPost = filter_var($_POST['email'] ?? '', FILTER_VALIDATE_EMAIL);
+$email = filter_var($email, FILTER_VALIDATE_EMAIL);
 
 if (!$email) {
     exit;
@@ -47,8 +47,6 @@ $emailPost = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
 $telefone = isset($_POST['telefone']) ? htmlspecialchars($_POST['telefone']) : '';
 $assunto = isset($_POST['assunto']) ? htmlspecialchars($_POST['assunto']) : '';
 $mensagem = isset($_POST['mensagem']) ? htmlspecialchars($_POST['mensagem']) : '';
-
-$mail->addReplyTo($emailPost, $nome);
 
 $mail->Body = '
 <div style="background:#f6f7fb;padding:40px 0;font-family:Arial,sans-serif;">
