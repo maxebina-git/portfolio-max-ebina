@@ -45,13 +45,13 @@ $mail->Encoding = 'base64';
    REMETENTE / DESTINO
 ========================= */
 
-$mail->setFrom('no-reply@maxebina.com.br', 'Portfolio Max');
+$mail->setFrom('maxebina@gmail.com', 'Portfolio Max');
 
-$mail->addAddress(
-    'maxebina@gmail.com'
-);
+$mail->addAddress('maxebina@gmail.com');
 
-/* 👉 ESSENCIAL: resposta vai para o usuário */
+$mail->Sender = 'maxebina@gmail.com';
+
+$mail->clearReplyTos();
 $mail->addReplyTo($emailPost, $nome);
 
 /* =========================
