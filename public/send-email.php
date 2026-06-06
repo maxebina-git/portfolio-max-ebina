@@ -1,5 +1,8 @@
 <?php
 
+echo "PHP OK";
+exit;
+
 // Honeypot anti-spam
 if (!empty($_POST['website'])) {
     exit;
