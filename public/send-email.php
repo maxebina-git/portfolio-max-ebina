@@ -37,21 +37,20 @@ $mail->addAddress(
 
 $mail->isHTML(true);
 
-$mail->Subject = mb_encode_mimeheader(
-    'Novo contato do portfólio',
-    'UTF-8'
-);
+$mail->Subject = 'Novo contato do portfólio';
 
-$mail->isHTML(true);
+$nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : '';
+$emailPost = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
+$telefone = isset($_POST['telefone']) ? htmlspecialchars($_POST['telefone']) : '';
+$assunto = isset($_POST['assunto']) ? htmlspecialchars($_POST['assunto']) : '';
+$mensagem = isset($_POST['mensagem']) ? htmlspecialchars($_POST['mensagem']) : '';
 
 $mail->Body = "
-    Nome: " . htmlspecialchars($_POST['nome'] ?? '') . "<br>
-    Email: " . htmlspecialchars($_POST['email'] ?? '') . "<br>
-    Telefone: " . htmlspecialchars($_POST['telefone'] ?? '') . "<br>
-    Assunto: " . htmlspecialchars($_POST['assunto'] ?? '') . "<br>
-    Mensagem: " . nl2br(htmlspecialchars($_POST['mensagem'] ?? ''));
-
-echo "ANTES SEND<br>";
+Nome: {$nome}<br>
+Email: {$emailPost}<br>
+Telefone: {$telefone}<br>
+Assunto: {$assunto}<br>
+Mensagem: " . nl2br($mensagem);
 
 try {
 
@@ -60,8 +59,10 @@ try {
     header("Location: https://www.maxebina.com.br/");
     exit;
 
-} catch (Exception $e) {
+} catch (\Throwable $e) {
 
-    echo "ERRO:<br>";
+    echo "ERRO AO ENVIAR MENSAGEM:<br>";
     echo $mail->ErrorInfo;
+
+    exit;
 }
