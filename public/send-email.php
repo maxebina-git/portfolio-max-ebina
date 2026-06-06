@@ -37,7 +37,10 @@ $mail->addAddress(
 
 $mail->isHTML(true);
 
-$mail->Subject = 'Novo contato do portfólio';
+$mail->Subject = mb_encode_mimeheader(
+    'Novo contato do portfólio',
+    'UTF-8'
+);
 
 $nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : '';
 $emailPost = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
