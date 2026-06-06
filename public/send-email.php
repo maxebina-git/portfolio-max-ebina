@@ -11,18 +11,19 @@ require 'PHPMailer/src/SMTP.php';
    VALIDAÇÃO DOS DADOS
 ========================= */
 
-$nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : '';
+$nome = htmlspecialchars($_POST['nome'] ?? '', ENT_QUOTES, 'UTF-8');
 
-$emailPostRaw = isset($_POST['email']) ? $_POST['email'] : '';
+/* 🔥 IMPORTANTE: nunca sanitiza antes de validar */
+$emailPostRaw = $_POST['email'] ?? '';
 $emailPost = filter_var($emailPostRaw, FILTER_VALIDATE_EMAIL);
 
 if (!$emailPost) {
     exit;
 }
 
-$telefone = isset($_POST['telefone']) ? htmlspecialchars($_POST['telefone']) : '';
-$assunto = isset($_POST['assunto']) ? htmlspecialchars($_POST['assunto']) : '';
-$mensagem = isset($_POST['mensagem']) ? htmlspecialchars($_POST['mensagem']) : '';
+$telefone = htmlspecialchars($_POST['telefone'] ?? '', ENT_QUOTES, 'UTF-8');
+$assunto  = htmlspecialchars($_POST['assunto'] ?? '', ENT_QUOTES, 'UTF-8');
+$mensagem = htmlspecialchars($_POST['mensagem'] ?? '', ENT_QUOTES, 'UTF-8');
 
 /* =========================
    CONFIG PHPMailer
@@ -49,8 +50,7 @@ $mail->setFrom('maxebina@gmail.com', 'Portfolio Max');
 
 $mail->addAddress('maxebina@gmail.com');
 
-$mail->Sender = 'maxebina@gmail.com';
-
+/* 🔥 ESSENCIAL (Gmail-friendly) */
 $mail->addReplyTo($emailPost, $nome);
 
 /* =========================
@@ -68,45 +68,27 @@ $mail->Body = '
 <div style="background:#f6f7fb;padding:40px 0;font-family:Arial,sans-serif;">
   <div style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08);">
 
-    <!-- Header -->
     <div style="background:#111827;padding:20px 30px;color:#ffffff;">
       <h2 style="margin:0;font-size:18px;">Novo contato do portfólio</h2>
       <p style="margin:5px 0 0;font-size:12px;opacity:0.8;">Formulário do site maxebina.com.br</p>
     </div>
 
-    <!-- Body -->
     <div style="padding:30px;color:#111827;">
 
-      <div style="margin-bottom:15px;">
-        <strong>Nome:</strong><br>
-        <span style="color:#374151;">' . htmlspecialchars($nome) . '</span>
-      </div>
+      <div><strong>Nome:</strong><br><span>' . $nome . '</span></div><br>
+      <div><strong>Email:</strong><br><span>' . $emailPost . '</span></div><br>
+      <div><strong>Telefone:</strong><br><span>' . $telefone . '</span></div><br>
+      <div><strong>Assunto:</strong><br><span>' . $assunto . '</span></div><br>
 
-      <div style="margin-bottom:15px;">
-        <strong>Email:</strong><br>
-        <span style="color:#374151;">' . htmlspecialchars($emailPost) . '</span>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <strong>Telefone:</strong><br>
-        <span style="color:#374151;">' . htmlspecialchars($telefone) . '</span>
-      </div>
-
-      <div style="margin-bottom:15px;">
-        <strong>Assunto:</strong><br>
-        <span style="color:#374151;">' . htmlspecialchars($assunto) . '</span>
-      </div>
-
-      <div style="margin-top:25px;">
+      <div style="margin-top:20px;">
         <strong>Mensagem:</strong>
-        <div style="margin-top:8px;padding:15px;background:#f3f4f6;border-radius:10px;line-height:1.5;color:#374151;">
-          ' . nl2br(htmlspecialchars($mensagem)) . '
+        <div style="margin-top:8px;padding:15px;background:#f3f4f6;border-radius:10px;">
+          ' . nl2br($mensagem) . '
         </div>
       </div>
 
     </div>
 
-    <!-- Footer -->
     <div style="padding:15px 30px;background:#f9fafb;font-size:11px;color:#6b7280;">
       Enviado automaticamente pelo formulário de contato.
     </div>
