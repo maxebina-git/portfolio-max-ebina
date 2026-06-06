@@ -1,13 +1,5 @@
 <?php
 
-$email = isset($_POST['email']) ? $_POST['email'] : '';
-
-$email = filter_var($email, FILTER_VALIDATE_EMAIL);
-
-if (!$email) {
-    exit;
-}
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -15,10 +7,30 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
+/* =========================
+   VALIDAÇÃO DOS DADOS
+========================= */
+
+$nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : '';
+
+$emailPostRaw = isset($_POST['email']) ? $_POST['email'] : '';
+$emailPost = filter_var($emailPostRaw, FILTER_VALIDATE_EMAIL);
+
+if (!$emailPost) {
+    exit;
+}
+
+$telefone = isset($_POST['telefone']) ? htmlspecialchars($_POST['telefone']) : '';
+$assunto = isset($_POST['assunto']) ? htmlspecialchars($_POST['assunto']) : '';
+$mensagem = isset($_POST['mensagem']) ? htmlspecialchars($_POST['mensagem']) : '';
+
+/* =========================
+   CONFIG PHPMailer
+========================= */
+
 $mail = new PHPMailer(true);
 
 $mail->isSMTP();
-
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
 $mail->Username = 'maxebina@gmail.com';
@@ -26,14 +38,25 @@ $mail->Password = 'vwtv peed tjro ibsg';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
-$mail->setFrom(
-    'maxebina@gmail.com',
-    'Portfolio Max'
-);
+$mail->CharSet = 'UTF-8';
+$mail->Encoding = 'base64';
+
+/* =========================
+   REMETENTE / DESTINO
+========================= */
+
+$mail->setFrom('no-reply@maxebina.com.br', 'Portfolio Max');
 
 $mail->addAddress(
     'maxebina@gmail.com'
 );
+
+/* 👉 ESSENCIAL: resposta vai para o usuário */
+$mail->addReplyTo($emailPost, $nome);
+
+/* =========================
+   EMAIL
+========================= */
 
 $mail->isHTML(true);
 
@@ -41,12 +64,6 @@ $mail->Subject = mb_encode_mimeheader(
     'Novo contato do portfólio',
     'UTF-8'
 );
-
-$nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : '';
-$emailPost = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
-$telefone = isset($_POST['telefone']) ? htmlspecialchars($_POST['telefone']) : '';
-$assunto = isset($_POST['assunto']) ? htmlspecialchars($_POST['assunto']) : '';
-$mensagem = isset($_POST['mensagem']) ? htmlspecialchars($_POST['mensagem']) : '';
 
 $mail->Body = '
 <div style="background:#f6f7fb;padding:40px 0;font-family:Arial,sans-serif;">
@@ -99,6 +116,10 @@ $mail->Body = '
 </div>
 ';
 
+/* =========================
+   ENVIO
+========================= */
+
 try {
 
     $mail->send();
@@ -110,6 +131,5 @@ try {
 
     echo "ERRO AO ENVIAR MENSAGEM:<br>";
     echo $mail->ErrorInfo;
-
     exit;
 }
