@@ -827,7 +827,7 @@ function initContactFormLoading() {
       'SUBMIT INTERCEPTADO'
     );
 
-    form.submit();
+    alert('CHEGUEI AQUI');
 
   });
 
