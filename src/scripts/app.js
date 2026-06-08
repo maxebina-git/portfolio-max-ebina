@@ -810,17 +810,16 @@ function initCaseModal() {
 
 function initContactFormLoading() {
 
-  console.log('initContactFormLoading');
-
   const form =
     document.getElementById('contact-form');
+
+  const button =
+    document.getElementById('submit-button');
 
   const label =
     document.getElementById('submit-label');
 
-  console.log('FORM:', form);
-
-  if (!form || !label) return;
+  if (!form || !button || !label) return;
 
   form.addEventListener('submit', async (e) => {
 
