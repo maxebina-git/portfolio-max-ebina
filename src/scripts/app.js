@@ -810,8 +810,12 @@ function initCaseModal() {
 
 function initContactFormLoading() {
 
+  console.log('initContactFormLoading');
+
   const form =
     document.getElementById('contact-form');
+
+  console.log('FORM:', form);
 
   if (!form) return;
 
