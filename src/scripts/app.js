@@ -825,6 +825,8 @@ function initContactFormLoading() {
 
     e.preventDefault();
 
+    button.disabled = true;
+
     const originalLabel =
       label.textContent;
 
