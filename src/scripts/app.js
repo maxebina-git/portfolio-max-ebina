@@ -824,6 +824,21 @@ function initContactFormLoading() {
 
   if (!form || !button || !label) return;
 
+  // =====================================================
+  // HELPER (evita repetição e bugs de estado)
+  // =====================================================
+  function resetButton() {
+
+    button.disabled = false;
+
+    button.classList.remove(
+      'opacity-70',
+      'cursor-not-allowed'
+    );
+
+    label.textContent = 'Enviar mensagem';
+  }
+
   form.addEventListener('submit', async (e) => {
 
     e.preventDefault();
@@ -835,94 +850,83 @@ function initContactFormLoading() {
       'cursor-not-allowed'
     );
 
-    const originalLabel =
-      label.textContent;
-
     let dots = 0;
+    const loadingText = 'Enviando';
 
-    const dotsInterval =
-      setInterval(() => {
+    const dotsInterval = setInterval(() => {
 
-        dots = (dots + 1) % 4;
+      dots = (dots + 1) % 4;
 
-        label.textContent =
-          'Enviando' + '.'.repeat(dots);
-
-      }, 300);
-
-    console.log(
-      'SUBMIT INTERCEPTADO'
-    );
-
-    const formData = new FormData(form);
-
-    const response = await fetch(
-      form.action,
-      {
-        method: 'POST',
-        body: formData
-      }
-    );
-
-    const result =
-      await response.text();
-
-    clearInterval(dotsInterval);
-
-    console.log(
-      'RESPOSTA PHP:',
-      result
-    );
-
-    if (result === 'OK') {
+      if (!button.disabled) return;
 
       label.textContent =
-        'Mensagem enviada ✓';
+        loadingText + '.'.repeat(dots);
 
-      const successMessage =
-        document.getElementById(
-          'form-success'
-        );
+    }, 300);
 
-      successMessage?.classList.remove(
-        'hidden'
-      );
+    console.log('SUBMIT INTERCEPTADO');
 
-      requestAnimationFrame(() => {
+    try {
 
-        successMessage?.classList.remove(
-          'opacity-0'
-        );
+      const formData = new FormData(form);
 
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData
       });
 
-      setTimeout(() => {
+      const result = await response.text();
 
-        successMessage?.classList.add(
-          'opacity-0'
-        );
+      console.log('RESPOSTA PHP:', result);
+
+      window.clearInterval(dotsInterval);
+      dots = 0;
+
+      if (result === 'OK') {
+
+        label.textContent = 'Mensagem enviada ✓';
+
+        const successMessage =
+          document.getElementById('form-success');
+
+        successMessage?.classList.remove('hidden');
+
+        requestAnimationFrame(() => {
+          successMessage?.classList.remove('opacity-0');
+        });
 
         setTimeout(() => {
 
-          successMessage?.classList.add(
-            'hidden'
-          );
+          successMessage?.classList.add('opacity-0');
 
-          label.textContent =
-            'Enviar mensagem';
+          setTimeout(() => {
 
-          button.disabled = false;
+            successMessage?.classList.add('hidden');
 
-          button.classList.remove(
-            'opacity-70',
-            'cursor-not-allowed'
-          );
+            resetButton();
 
-        }, 500);
+          }, 500);
 
-      }, 5000);
+        }, 5000);
 
-      form.reset();
+        form.reset();
+
+      } else {
+
+        resetButton();
+        label.textContent = 'Erro ao enviar';
+
+      }
+
+    } catch (err) {
+
+      console.error(err);
+
+      window.clearInterval(dotsInterval);
+      dots = 0;
+
+      resetButton();
+      label.textContent = 'Erro ao enviar';
 
     }
 
