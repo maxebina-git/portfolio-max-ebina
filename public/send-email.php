@@ -122,14 +122,14 @@ $mail->Body = '
 try {
 
     $mail->send();
+      echo "EMAIL ENVIADO";
+    exit;
 
     // 🚀 REDIRECT APÓS SUCESSO
-    header(
-    "Location: https://www.maxebina.com.br/#conectar
-    // 
-    // "
-    );
-    exit;
+    // header(
+//   "Location: https://maxebina.com.br/#conectar"
+// );
+// exit;
 
 } catch (\Throwable $e) {
 
