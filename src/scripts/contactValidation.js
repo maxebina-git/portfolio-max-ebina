@@ -76,7 +76,14 @@ if (form) {
 
     if (!isFormValid) {
       e.preventDefault();
+      return;
     }
+
+    console.log("FORM VÁLIDO ✔");
+
+    // NÃO faz form.submit()
+    // NÃO faz requestSubmit()
+    // deixa o navegador continuar normalmente
 
   });
 

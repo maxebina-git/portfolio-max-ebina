@@ -1,5 +1,6 @@
 import renderEngine from './renderEngine.js';
 import './contactValidation.js';
+import './backToTop.js';
 
 let isClicking = false;
 
@@ -825,34 +826,107 @@ function initContactFormLoading() {
 
   form.addEventListener('submit', async (e) => {
 
-  e.preventDefault(); // CRÍTICO
+    e.preventDefault();
 
-  const formData =
-    new FormData(form);
+    button.disabled = true;
 
-  const response =
-    await fetch(form.action, {
-      method: 'POST',
-      body: formData
-    });
+    button.classList.add(
+      'opacity-70',
+      'cursor-not-allowed'
+    );
 
-  const result =
-    await response.text();
+    const originalLabel =
+      label.textContent;
 
-  console.log('RESPOSTA PHP:', result);
+    let dots = 0;
 
-  if (result === 'OK') {
+    const dotsInterval =
+      setInterval(() => {
 
-    // sucesso UI
-    form.reset();
+        dots = (dots + 1) % 4;
 
-    document
-      .getElementById('form-success')
-      ?.classList.remove('hidden');
+        label.textContent =
+          'Enviando' + '.'.repeat(dots);
 
-  }
+      }, 300);
 
-});
+    console.log(
+      'SUBMIT INTERCEPTADO'
+    );
+
+    const formData = new FormData(form);
+
+    const response = await fetch(
+      form.action,
+      {
+        method: 'POST',
+        body: formData
+      }
+    );
+
+    const result =
+      await response.text();
+
+    clearInterval(dotsInterval);
+
+    console.log(
+      'RESPOSTA PHP:',
+      result
+    );
+
+    if (result === 'OK') {
+
+      label.textContent =
+        'Mensagem enviada ✓';
+
+      const successMessage =
+        document.getElementById(
+          'form-success'
+        );
+
+      successMessage?.classList.remove(
+        'hidden'
+      );
+
+      requestAnimationFrame(() => {
+
+        successMessage?.classList.remove(
+          'opacity-0'
+        );
+
+      });
+
+      setTimeout(() => {
+
+        successMessage?.classList.add(
+          'opacity-0'
+        );
+
+        setTimeout(() => {
+
+          successMessage?.classList.add(
+            'hidden'
+          );
+
+          label.textContent =
+            'Enviar mensagem';
+
+          button.disabled = false;
+
+          button.classList.remove(
+            'opacity-70',
+            'cursor-not-allowed'
+          );
+
+        }, 500);
+
+      }, 5000);
+
+      form.reset();
+
+    }
+
+  });
 
 }
 
@@ -887,101 +961,12 @@ function initContactFormSuccess() {
 
 }
 
+// =====================================================
+// INIT
+// =====================================================
+
+initContactFormLoading();
 initContactFormSuccess();
 
-// =====================================================
-// BACK TO TOP
-// =====================================================
 
-function initBackToTop() {
-
-  const button =
-    document.getElementById('back-to-top');
-
-  if (!button) return;
-
-  // mostrar/esconder
-  window.addEventListener('scroll', () => {
-
-    const trigger =
-      window.innerHeight * 0.1;
-
-    if (window.scrollY > trigger) {
-
-      button.classList.remove(
-        'opacity-0',
-        'scale-90',
-        'pointer-events-none'
-      );
-
-      button.classList.add(
-        'opacity-100',
-        'scale-100'
-      );
-
-    } else {
-
-      button.classList.remove(
-        'opacity-100',
-        'scale-100'
-      );
-
-      button.classList.add(
-        'opacity-0',
-        'scale-90',
-        'pointer-events-none'
-      );
-
-    }
-
-  });
-
-  // voltar ao topo
-  button.addEventListener('click', () => {
-
-    const start = window.scrollY;
-
-    const duration = 900;
-
-    const startTime =
-      performance.now();
-
-    function animate(now) {
-
-      const elapsed =
-        now - startTime;
-
-      const progress =
-        Math.min(
-          elapsed / duration,
-          1
-        );
-
-      const ease =
-        progress < 0.5
-          ? 8 * Math.pow(progress, 4)
-          : 1 - Math.pow(
-              -2 * progress + 2,
-              4
-            ) / 2;
-
-      window.scrollTo(
-        0,
-        start * (1 - ease)
-      );
-
-      if (progress < 1) {
-        requestAnimationFrame(
-          animate
-        );
-      }
-
-    }
-
-    requestAnimationFrame(
-      animate
-    );
-
-  });
-
-}
+console.log('APP JS CARREGADO');
