@@ -865,3 +865,5 @@ function initContactFormSuccess() {
 initContactFormLoading();
 initContactFormSuccess();
 
+
+console.log('APP JS CARREGADO');
