@@ -328,6 +328,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   initCaseModal();
 
+  initBackToTop();
+
 });
 
 // =====================================================
@@ -810,23 +812,98 @@ function initCaseModal() {
 
 function initContactFormLoading() {
 
-  const form = document.getElementById('contact-form');
-  const label = document.getElementById('submit-label');
+  const form =
+    document.getElementById('contact-form');
 
-  if (!form || !label) return;
+  const button =
+    document.getElementById('submit-button');
 
-  form.addEventListener('submit', () => {
+  const label =
+    document.getElementById('submit-label');
+
+  if (!form || !button || !label) return;
+
+  form.addEventListener('submit', async (e) => {
+
+    e.preventDefault();
+
+    // 🔒 impede submit inválido visual/HTML
+    if (!form.checkValidity()) return;
+
+    // estado loading
+    button.disabled = true;
+    button.style.opacity = "0.6";
 
     let dots = 0;
 
-    setInterval(() => {
+    const loadingInterval =
+      setInterval(() => {
 
-      dots = (dots + 1) % 4;
+        dots = (dots + 1) % 4;
+
+        label.textContent =
+          'Enviando' + '.'.repeat(dots);
+
+      }, 300);
+
+    try {
+
+      const formData =
+        new FormData(form);
+
+      const response =
+        await fetch(form.action, {
+          method: 'POST',
+          body: formData
+        });
+
+      const result =
+        await response.text();
+
+      clearInterval(loadingInterval);
+
+      if (result === 'OK') {
+
+        label.textContent =
+          'Mensagem enviada ✓';
+
+        form.reset();
+
+        const successMessage =
+          document.getElementById('form-success');
+
+        successMessage?.classList.remove('hidden');
+
+        // reset visual do botão depois de um tempo
+        setTimeout(() => {
+
+          label.textContent =
+            'Enviar mensagem';
+
+          button.disabled = false;
+          button.style.opacity = "1";
+
+        }, 2500);
+
+      } else {
+
+        throw new Error('Erro no envio');
+
+      }
+
+    } catch (err) {
+
+      clearInterval(loadingInterval);
 
       label.textContent =
-        'Enviando' + '.'.repeat(dots);
+        'Tentar novamente';
 
-    }, 300);
+      button.disabled = false;
+      button.style.opacity = "1";
+
+      console.error(err);
+
+    }
 
   });
 
@@ -855,3 +932,100 @@ function initContactFormSuccess() {
 }
 
 initContactFormSuccess();
+
+// =====================================================
+// BACK TO TOP
+// =====================================================
+
+function initBackToTop() {
+
+  const button =
+    document.getElementById('back-to-top');
+
+  if (!button) return;
+
+  // mostrar/esconder
+  window.addEventListener('scroll', () => {
+
+    const trigger =
+      window.innerHeight * 0.1;
+
+    if (window.scrollY > trigger) {
+
+      button.classList.remove(
+        'opacity-0',
+        'scale-90',
+        'pointer-events-none'
+      );
+
+      button.classList.add(
+        'opacity-100',
+        'scale-100'
+      );
+
+    } else {
+
+      button.classList.remove(
+        'opacity-100',
+        'scale-100'
+      );
+
+      button.classList.add(
+        'opacity-0',
+        'scale-90',
+        'pointer-events-none'
+      );
+
+    }
+
+  });
+
+  // voltar ao topo
+  button.addEventListener('click', () => {
+
+    const start = window.scrollY;
+
+    const duration = 900;
+
+    const startTime =
+      performance.now();
+
+    function animate(now) {
+
+      const elapsed =
+        now - startTime;
+
+      const progress =
+        Math.min(
+          elapsed / duration,
+          1
+        );
+
+      const ease =
+        progress < 0.5
+          ? 8 * Math.pow(progress, 4)
+          : 1 - Math.pow(
+              -2 * progress + 2,
+              4
+            ) / 2;
+
+      window.scrollTo(
+        0,
+        start * (1 - ease)
+      );
+
+      if (progress < 1) {
+        requestAnimationFrame(
+          animate
+        );
+      }
+
+    }
+
+    requestAnimationFrame(
+      animate
+    );
+
+  });
+
+}

@@ -62,7 +62,6 @@ if (form) {
 
   // validação no submit
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
 
     let isFormValid = true;
 
@@ -71,12 +70,10 @@ if (form) {
       if (!valid) isFormValid = false;
     });
 
-    if (!isFormValid) return;
+    if (!isFormValid) {
+      e.preventDefault();
+    }
 
-    console.log("FORM VÁLIDO ✔");
-
-    // mantém envio tradicional (PHP)
-    form.submit();
   });
 
   // validação em tempo real
