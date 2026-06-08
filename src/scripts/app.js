@@ -825,87 +825,34 @@ function initContactFormLoading() {
 
   form.addEventListener('submit', async (e) => {
 
-    e.preventDefault();
+  e.preventDefault(); // CRÍTICO
 
-    // 🔒 impede submit inválido visual/HTML
-    if (!form.checkValidity()) return;
+  const formData =
+    new FormData(form);
 
-    // estado loading
-    button.disabled = true;
-    button.style.opacity = "0.6";
+  const response =
+    await fetch(form.action, {
+      method: 'POST',
+      body: formData
+    });
 
-    let dots = 0;
+  const result =
+    await response.text();
 
-    const loadingInterval =
-      setInterval(() => {
+  console.log('RESPOSTA PHP:', result);
 
-        dots = (dots + 1) % 4;
+  if (result === 'OK') {
 
-        label.textContent =
-          'Enviando' + '.'.repeat(dots);
+    // sucesso UI
+    form.reset();
 
-      }, 300);
+    document
+      .getElementById('form-success')
+      ?.classList.remove('hidden');
 
-    try {
+  }
 
-      const formData =
-        new FormData(form);
-
-      const response =
-        await fetch(form.action, {
-          method: 'POST',
-          body: formData
-        });
-
-      const result =
-        await response.text();
-
-      clearInterval(loadingInterval);
-
-      if (result === 'OK') {
-
-        label.textContent =
-          'Mensagem enviada ✓';
-
-        form.reset();
-
-        const successMessage =
-          document.getElementById('form-success');
-
-        successMessage?.classList.remove('hidden');
-
-        // reset visual do botão depois de um tempo
-        setTimeout(() => {
-
-          label.textContent =
-            'Enviar mensagem';
-
-          button.disabled = false;
-          button.style.opacity = "1";
-
-        }, 2500);
-
-      } else {
-
-        throw new Error('Erro no envio');
-
-      }
-
-    } catch (err) {
-
-      clearInterval(loadingInterval);
-
-      label.textContent =
-        'Tentar novamente';
-
-      button.disabled = false;
-      button.style.opacity = "1";
-
-      console.error(err);
-
-    }
-
-  });
+});
 
 }
 
