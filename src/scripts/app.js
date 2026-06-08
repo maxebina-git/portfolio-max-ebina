@@ -885,6 +885,14 @@ function initContactFormLoading() {
         'hidden'
       );
 
+      setTimeout(() => {
+
+        successMessage?.classList.add(
+          'hidden'
+        );
+
+      }, 5000);
+
       form.reset();
 
     }
