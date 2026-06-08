@@ -122,18 +122,14 @@ $mail->Body = '
 try {
 
     $mail->send();
-      echo "EMAIL ENVIADO";
-    exit;
 
-    // 🚀 REDIRECT APÓS SUCESSO
-    // header(
-//   "Location: https://maxebina.com.br/#conectar"
-// );
-// exit;
+    header("Location: /#conectar");
+    exit;
 
 } catch (\Throwable $e) {
 
     echo "ERRO AO ENVIAR MENSAGEM:<br>";
     echo $mail->ErrorInfo;
     exit;
+
 }
