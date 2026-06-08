@@ -826,7 +826,20 @@ function initContactFormLoading() {
 
     e.preventDefault();
 
-    label.textContent = 'Enviando...';
+    const originalLabel =
+      label.textContent;
+
+    let dots = 0;
+
+    const dotsInterval =
+      setInterval(() => {
+
+        dots = (dots + 1) % 4;
+
+        label.textContent =
+          'Enviando' + '.'.repeat(dots);
+
+      }, 300);
 
     console.log(
       'SUBMIT INTERCEPTADO'
@@ -845,12 +858,17 @@ function initContactFormLoading() {
     const result =
       await response.text();
 
+    clearInterval(dotsInterval);
+
     console.log(
       'RESPOSTA PHP:',
       result
     );
 
     if (result === 'OK') {
+
+      label.textContent =
+        'Mensagem enviada ✓';
 
       const successMessage =
         document.getElementById(
