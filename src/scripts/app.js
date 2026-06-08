@@ -905,6 +905,16 @@ function initContactFormLoading() {
             'hidden'
           );
 
+          label.textContent =
+            'Enviar mensagem';
+
+          button.disabled = false;
+
+          button.classList.remove(
+            'opacity-70',
+            'cursor-not-allowed'
+          );
+
         }, 500);
 
       }, 5000);
