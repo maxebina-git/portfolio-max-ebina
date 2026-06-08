@@ -885,11 +885,27 @@ function initContactFormLoading() {
         'hidden'
       );
 
+      requestAnimationFrame(() => {
+
+        successMessage?.classList.remove(
+          'opacity-0'
+        );
+
+      });
+
       setTimeout(() => {
 
         successMessage?.classList.add(
-          'hidden'
+          'opacity-0'
         );
+
+        setTimeout(() => {
+
+          successMessage?.classList.add(
+            'hidden'
+          );
+
+        }, 500);
 
       }, 5000);
 
