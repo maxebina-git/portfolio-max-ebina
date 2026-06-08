@@ -1,6 +1,7 @@
 const form = document.querySelector("#contact-form");
 
 if (form) {
+
   const fields = {
     nome: {
       input: form.querySelector("#nome"),
@@ -62,21 +63,28 @@ if (form) {
 
   // validação no submit
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
 
     let isFormValid = true;
 
     Object.keys(fields).forEach((key) => {
       const valid = validateField(key);
-      if (!valid) isFormValid = false;
+
+      if (!valid) {
+        isFormValid = false;
+      }
     });
 
-    if (!isFormValid) return;
+    if (!isFormValid) {
+      e.preventDefault();
+      return;
+    }
 
     console.log("FORM VÁLIDO ✔");
 
-    // mantém envio tradicional (PHP)
-    form.submit();
+    // NÃO faz form.submit()
+    // NÃO faz requestSubmit()
+    // deixa o navegador continuar normalmente
+
   });
 
   // validação em tempo real
@@ -85,4 +93,5 @@ if (form) {
       validateField(key);
     });
   });
+
 }
