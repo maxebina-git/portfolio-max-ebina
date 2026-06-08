@@ -123,13 +123,14 @@ try {
 
     $mail->send();
 
-    header("Location: /#conectar");
+    echo 'OK';
     exit;
 
 } catch (\Throwable $e) {
 
-    echo "ERRO AO ENVIAR MENSAGEM:<br>";
-    echo $mail->ErrorInfo;
+    http_response_code(500);
+
+    echo 'ERRO';
     exit;
 
 }
