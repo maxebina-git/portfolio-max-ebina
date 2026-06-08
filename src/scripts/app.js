@@ -827,6 +827,11 @@ function initContactFormLoading() {
 
     button.disabled = true;
 
+    button.classList.add(
+      'opacity-70',
+      'cursor-not-allowed'
+    );
+
     const originalLabel =
       label.textContent;
 
