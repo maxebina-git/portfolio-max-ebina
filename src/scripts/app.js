@@ -844,6 +844,11 @@ function initContactFormLoading() {
 
 function initContactFormSuccess() {
 
+  console.log(
+    'contactSuccess:',
+    sessionStorage.getItem('contactSuccess')
+  );
+
   const successMessage =
     document.getElementById('form-success');
 
