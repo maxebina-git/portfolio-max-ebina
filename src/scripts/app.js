@@ -810,29 +810,18 @@ function initCaseModal() {
 
 function initContactFormLoading() {
 
-  const form = document.getElementById('contact-form');
-  const label = document.getElementById('submit-label');
+  const form =
+    document.getElementById('contact-form');
 
-  if (!form || !label) return;
+  if (!form) return;
 
-  form.addEventListener('submit', () => {
+  form.addEventListener('submit', (e) => {
 
-    // marca sucesso para exibir após o redirect
-    sessionStorage.setItem(
-      'contactSuccess',
-      'true'
+    e.preventDefault();
+
+    console.log(
+      'SUBMIT INTERCEPTADO'
     );
-
-    let dots = 0;
-
-    setInterval(() => {
-
-      dots = (dots + 1) % 4;
-
-      label.textContent =
-        'Enviando' + '.'.repeat(dots);
-
-    }, 300);
 
   });
 
