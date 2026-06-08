@@ -845,6 +845,21 @@ function initContactFormLoading() {
       result
     );
 
+    if (result === 'OK') {
+
+      const successMessage =
+        document.getElementById(
+          'form-success'
+        );
+
+      successMessage?.classList.remove(
+        'hidden'
+      );
+
+      form.reset();
+
+    }
+
   });
 
 }
