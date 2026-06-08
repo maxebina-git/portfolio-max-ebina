@@ -819,7 +819,7 @@ function initContactFormLoading() {
 
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
 
     e.preventDefault();
 
@@ -827,7 +827,23 @@ function initContactFormLoading() {
       'SUBMIT INTERCEPTADO'
     );
 
-    alert('CHEGUEI AQUI');
+    const formData = new FormData(form);
+
+    const response = await fetch(
+      form.action,
+      {
+        method: 'POST',
+        body: formData
+      }
+    );
+
+    const result =
+      await response.text();
+
+    console.log(
+      'RESPOSTA PHP:',
+      result
+    );
 
   });
 
