@@ -846,81 +846,6 @@ function initContactFormLoading() {
 
       }, 300);
 
-<<<<<<< HEAD
-    console.log(
-      'SUBMIT INTERCEPTADO'
-    );
-
-    const formData = new FormData(form);
-
-    const response = await fetch(
-      form.action,
-      {
-        method: 'POST',
-        body: formData
-      }
-    );
-
-    const result =
-      await response.text();
-
-    clearInterval(dotsInterval);
-
-    console.log(
-      'RESPOSTA PHP:',
-      result
-    );
-
-    if (result === 'OK') {
-
-      label.textContent =
-        'Mensagem enviada ✓';
-
-      const successMessage =
-        document.getElementById(
-          'form-success'
-        );
-
-      successMessage?.classList.remove(
-        'hidden'
-      );
-
-      requestAnimationFrame(() => {
-
-        successMessage?.classList.remove(
-          'opacity-0'
-        );
-
-      });
-
-      setTimeout(() => {
-
-        successMessage?.classList.add(
-          'opacity-0'
-        );
-
-        setTimeout(() => {
-
-          successMessage?.classList.add(
-            'hidden'
-          );
-
-          label.textContent =
-            'Enviar mensagem';
-
-          button.disabled = false;
-
-          button.classList.remove(
-            'opacity-70',
-            'cursor-not-allowed'
-          );
-
-        }, 500);
-
-      }, 5000);
-
-      form.reset();
-=======
     try {
 
       const formData =
@@ -977,7 +902,6 @@ function initContactFormLoading() {
       button.style.opacity = "1";
 
       console.error(err);
->>>>>>> feat/mvp-polish
 
     }
 
@@ -1016,17 +940,6 @@ function initContactFormSuccess() {
 
 }
 
-<<<<<<< HEAD
-// =====================================================
-// INIT
-// =====================================================
-
-initContactFormLoading();
-initContactFormSuccess();
-
-
-console.log('APP JS CARREGADO');
-=======
 initContactFormSuccess();
 
 // =====================================================
@@ -1125,4 +1038,3 @@ function initBackToTop() {
   });
 
 }
->>>>>>> feat/mvp-polish
