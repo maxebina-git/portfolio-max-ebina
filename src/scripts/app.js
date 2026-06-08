@@ -815,13 +815,18 @@ function initContactFormLoading() {
   const form =
     document.getElementById('contact-form');
 
+  const label =
+    document.getElementById('submit-label');
+
   console.log('FORM:', form);
 
-  if (!form) return;
+  if (!form || !label) return;
 
   form.addEventListener('submit', async (e) => {
 
     e.preventDefault();
+
+    label.textContent = 'Enviando...';
 
     console.log(
       'SUBMIT INTERCEPTADO'
