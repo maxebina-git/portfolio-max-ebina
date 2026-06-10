@@ -2,6 +2,17 @@ import renderEngine from './renderEngine.js';
 import './contactValidation.js';
 import './backToTop.js';
 
+let engineStarted = false;
+
+function startEngineOnce() {
+  if (engineStarted) return;
+  engineStarted = true;
+
+  if (typeof renderEngine !== 'undefined' && renderEngine.init) {
+    renderEngine.init();
+  }
+}
+
 let isClicking = false;
 
 // =====================================================
@@ -230,7 +241,7 @@ function initLoader() {
   if (!loader) {
     console.warn('[FakeLoader] initLoader: #fake-loader not found, starting renderEngine immediately');
     if (typeof renderEngine !== 'undefined' && renderEngine.init) {
-      renderEngine.init();
+      startEngineOnce();
     } else {
       console.warn('[FakeLoader] initLoader: renderEngine not available');
     }
@@ -265,7 +276,7 @@ function initLoader() {
 
       // 1. Inicia a engine IMEDIATAMENTE (o site renderiza por baixo enquanto o loader esmaece)
       if (typeof renderEngine !== 'undefined' && renderEngine.init) {
-        renderEngine.init();
+        startEngineOnce();
       } else {
         console.warn('[FakeLoader] initLoader: renderEngine not available');
       }
@@ -325,6 +336,11 @@ window.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initLoader();
   initCaseModal();
+  initStagger();
+  initReveal();
+  initCasesSlider();
+  initContactFormLoading();
+  initContactFormSuccess();
 
   // =====================================
   // INITIAL SCROLL RESTORE (ROBUSTO)
@@ -396,8 +412,17 @@ function initReveal() {
     threshold: 0.15,
   });
 
-  document.querySelectorAll("[data-animate]").forEach((el) => {
-    observer.observe(el);
+  const observeElements = () => {
+    document.querySelectorAll("[data-animate]").forEach((el) => {
+      observer.observe(el);
+    });
+  };
+
+  // roda depois que o layout estabiliza
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      observeElements();
+    });
   });
 
 }
@@ -420,15 +445,6 @@ function initStagger() {
   });
 
 }
-// =====================================================
-// INIT GERAL
-// =====================================================
-
-document.addEventListener("DOMContentLoaded", () => {
-  initStagger();
-  initReveal();
-  initCasesSlider();
-});
 
 // =====================================================
 // SLIDER DE CASES

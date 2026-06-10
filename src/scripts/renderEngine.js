@@ -269,6 +269,9 @@ const renderEngine = (() => {
 
   function updateActiveSection() {
 
+    // 🔒 evita rodar durante o boot / restore de scroll
+    if (!window.__APP_READY__) return;
+
     const scrollMiddle =
       state.targetScroll +
       window.innerHeight * 0.35;
@@ -303,15 +306,10 @@ const renderEngine = (() => {
           break;
 
         }
-
       }
-
     }
 
-    // =====================================
     // NAV LINKS
-    // =====================================
-
     for (let i = 0; i < dom.navLinks.length; i++) {
 
       const link =
@@ -327,59 +325,40 @@ const renderEngine = (() => {
         'active',
         sectionId === activeSection
       );
-
     }
 
-    // =====================================
     // HERO LOGO
-    // =====================================
-
     if (dom.logoLink) {
 
       dom.logoLink.classList.toggle(
         'active',
         activeSection === 'hero'
       );
-
     }
 
-    // =====================================
     // FOOTER CONNECT
-    // =====================================
-
-    if (
-      dom.footerConnect &&
-      dom.sections.length
-    ) {
+    if (dom.footerConnect && dom.sections.length) {
 
       const lastSection =
-        dom.sections[
-          dom.sections.length - 1
-        ].id;
+        dom.sections[dom.sections.length - 1].id;
 
       dom.footerConnect.classList.toggle(
         'active',
         activeSection === lastSection
       );
-
     }
 
-    // =====================================
-    // URL UPDATE
-    // =====================================
-
+    // URL UPDATE (mantém comportamento atual, sem quebrar refresh)
     const newPath =
       activeSection === 'hero'
         ? '/'
         : `/${activeSection}`;
 
-    if (
-      window.location.pathname !== newPath &&
-      window.location.pathname !== newPath + '/'
-    ) {
+    const current = window.location.pathname.replace(/\/$/, '');
+
+    if (current !== newPath) {
       window.history.replaceState({}, '', newPath);
     }
-
   }
 
   // =========================================
