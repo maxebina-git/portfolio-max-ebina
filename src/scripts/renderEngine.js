@@ -368,22 +368,22 @@ const renderEngine = (() => {
     // URL UPDATE
     // =====================================
 
-    const newPath =
-      activeSection === 'hero'
-        ? '/'
-        : `/${activeSection}`;
+    // const newPath =
+    //   activeSection === 'hero'
+    //     ? '/'
+    //     : `/${activeSection}`;
 
-    if (
-      window.location.pathname !== newPath
-    ) {
+    // if (
+    //   window.location.pathname !== newPath
+    // ) {
 
-      window.history.replaceState(
-        {},
-        '',
-        newPath
-      );
+    //   window.history.replaceState(
+    //     {},
+    //     '',
+    //     newPath
+    //   );
 
-    }
+    // }
 
   }
 
