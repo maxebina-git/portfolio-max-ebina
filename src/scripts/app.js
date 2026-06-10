@@ -322,32 +322,45 @@ function initLoader() {
 window.addEventListener('DOMContentLoaded', () => {
 
   initTheme();
-
   initNavigation();
-
   initLoader();
-
   initCaseModal();
 
   // =====================================
-  // INITIAL SCROLL RESTORE (HOST SAFE)
+  // INITIAL SCROLL RESTORE (ROBUSTO)
   // =====================================
 
-  const section = window.__INITIAL_SECTION__;
+  const path = window.location.pathname;
 
-  if (section) {
-    const target = document.getElementById(section);
+  // normaliza rota:
+  // "/" -> hero
+  // "/sobre" -> sobre
+  // "/cases" -> cases
+  // "/conectar" -> conectar
+  let sectionId = 'hero';
 
-    if (target) {
+  if (path && path !== '/') {
+    sectionId = path.replace(/\//g, '');
+  }
+
+  const target = document.getElementById(sectionId);
+
+  if (target) {
+
+    // espera render + layout + renderEngine estabilizar
+    requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          target.scrollIntoView({
-            behavior: 'auto',
-            block: 'start'
-          });
+
+        target.scrollIntoView({
+          behavior: 'auto',
+          block: 'start'
         });
+
       });
-    }
+    });
+
+  } else {
+    console.warn('[scroll-restore] seção não encontrada:', sectionId);
   }
 
 });
