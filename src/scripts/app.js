@@ -341,6 +341,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initCasesSlider();
   initContactFormLoading();
   initContactFormSuccess();
+  initNavActiveState();
 
   // =====================================
   // INITIAL SCROLL RESTORE (ROBUSTO)
@@ -988,3 +989,80 @@ initContactFormSuccess();
 
 
 console.log('APP JS CARREGADO');
+
+// =====================================================
+// NAV ACTIVE STATE (FINAL LIMPO - SINGLE SOURCE OF TRUTH)
+// =====================================================
+
+function initNavActiveState() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const logoLink = document.getElementById("logo-link");
+  const footerLink = document.querySelector('[data-section="conectar"]')
+
+  let activeId = "hero";
+
+  function clearAll() {
+    navLinks.forEach(l => l.classList.remove("active"));
+    logoLink?.classList.remove("active");
+  }
+
+  function apply(id) {
+    activeId = id;
+
+    clearAll();
+
+    if (id === "hero") {
+      logoLink?.classList.add("active");
+    } else {
+      const link = document.querySelector(`.nav-link[href="#${id}"]`);
+      link?.classList.add("active");
+    }
+
+    // footer só ESPELHA estado (não compete)
+    if (id === "conectar") {
+      footerLink?.classList.add("active");
+    }
+  }
+
+  // =====================================================
+  // OBSERVER (ÚNICA FONTE DE VERDADE)
+  // =====================================================
+  const observer = new IntersectionObserver((entries) => {
+    let best = null;
+
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+
+      if (!best || entry.intersectionRatio > best.intersectionRatio) {
+        best = entry;
+      }
+    }
+
+    if (!best) return;
+
+    apply(best.target.id);
+  }, {
+    threshold: [0.3, 0.5, 0.7]
+  });
+
+  sections.forEach(s => observer.observe(s));
+
+  // =====================================================
+  // CLICK MENU (FORÇA SEM DEPENDER DO OBSERVER)
+  // =====================================================
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      const id = link.getAttribute("href").replace("#", "");
+      apply(id);
+    });
+  });
+
+  // =====================================================
+  // INIT (F5 SAFE)
+  // =====================================================
+  requestAnimationFrame(() => {
+    const path = window.location.pathname.replace("/", "") || "hero";
+    apply(path);
+  });
+}
