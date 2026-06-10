@@ -998,20 +998,27 @@ function initNavActiveState() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
   const logoLink = document.getElementById("logo-link");
-  const footerLink = document.querySelector('[data-section="conectar"]')
+
+  const footerLink =
+    document.querySelector('[data-section="conectar"]') ||
+    document.querySelector('.nav-link[href="#conectar"]');
 
   let activeId = "hero";
 
-  function clearAll() {
+  function clearHeaderOnly() {
     navLinks.forEach(l => l.classList.remove("active"));
     logoLink?.classList.remove("active");
   }
 
   function apply(id) {
+    if (!id) return;
+
     activeId = id;
 
-    clearAll();
+    // 🔥 só limpa HEADER
+    clearHeaderOnly();
 
+    // HERO → logo
     if (id === "hero") {
       logoLink?.classList.add("active");
     } else {
@@ -1019,14 +1026,31 @@ function initNavActiveState() {
       link?.classList.add("active");
     }
 
-    // footer só ESPELHA estado (não compete)
-    if (id === "conectar") {
-      footerLink?.classList.add("active");
+    // footer NÃO depende do apply mais
+  }
+
+  // =====================================================
+  // FOOTER STATE INDEPENDENTE (ESTÁVEL)
+  // =====================================================
+  function updateFooter() {
+    const footer = document.getElementById("main-footer");
+    if (!footer || !footerLink) return;
+
+    const rect = footer.getBoundingClientRect();
+
+    const isVisible =
+      rect.top <= window.innerHeight &&
+      rect.bottom >= window.innerHeight * 0.6;
+
+    if (isVisible) {
+      footerLink.classList.add("active");
+    } else {
+      footerLink.classList.remove("active");
     }
   }
 
   // =====================================================
-  // OBSERVER (ÚNICA FONTE DE VERDADE)
+  // OBSERVER (SÓ HEADER)
   // =====================================================
   const observer = new IntersectionObserver((entries) => {
     let best = null;
@@ -1043,20 +1067,27 @@ function initNavActiveState() {
 
     apply(best.target.id);
   }, {
-    threshold: [0.3, 0.5, 0.7]
+    threshold: [0.35, 0.55, 0.75]
   });
 
   sections.forEach(s => observer.observe(s));
 
   // =====================================================
-  // CLICK MENU (FORÇA SEM DEPENDER DO OBSERVER)
+  // CLICK MENU
   // =====================================================
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
-      const id = link.getAttribute("href").replace("#", "");
+      const id = link.getAttribute("href")?.replace("#", "");
       apply(id);
     });
   });
+
+  // =====================================================
+  // SCROLL (FOOTER INDEPENDENTE)
+  // =====================================================
+  window.addEventListener("scroll", () => {
+    updateFooter();
+  }, { passive: true });
 
   // =====================================================
   // INIT (F5 SAFE)
@@ -1064,5 +1095,6 @@ function initNavActiveState() {
   requestAnimationFrame(() => {
     const path = window.location.pathname.replace("/", "") || "hero";
     apply(path);
+    updateFooter();
   });
 }
