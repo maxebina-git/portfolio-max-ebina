@@ -329,6 +329,27 @@ window.addEventListener('DOMContentLoaded', () => {
 
   initCaseModal();
 
+  // =====================================
+  // INITIAL SCROLL RESTORE (HOST SAFE)
+  // =====================================
+
+  const section = window.__INITIAL_SECTION__;
+
+  if (section) {
+    const target = document.getElementById(section);
+
+    if (target) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          target.scrollIntoView({
+            behavior: 'auto',
+            block: 'start'
+          });
+        });
+      });
+    }
+  }
+
 });
 
 // =====================================================
