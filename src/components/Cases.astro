@@ -13,6 +13,18 @@ import case1mobile07 from '../assets/cases/case-1/case-1-mobile-07.png';
 import case1mobile08 from '../assets/cases/case-1/case-1-mobile-08.png';
 import case1mobile09 from '../assets/cases/case-1/case-1-mobile-09.png';
 import case1mobile10 from '../assets/cases/case-1/case-1-mobile-10.png';
+
+import case2presets from '../assets/cases/case-2/case-2-presets.png';
+import case2components from '../assets/cases/case-2/case-2-components.png';
+import case2componentsinteractions from '../assets/cases/case-2/case-2-components-interactions.png';
+import case2datecalendar from '../assets/cases/case-2/case-2-date-calendar.png';
+
+import case2mobile01 from '../assets/cases/case-2/case-2-mobile-01.png';
+import case2mobile02 from '../assets/cases/case-2/case-2-mobile-02.png';
+import case2mobile03 from '../assets/cases/case-2/case-2-mobile-03.png';
+import case2mobile04 from '../assets/cases/case-2/case-2-mobile-04.png';
+import case2mobile05 from '../assets/cases/case-2/case-2-mobile-05.png';
+import case2mobile06 from '../assets/cases/case-2/case-2-mobile-06.png';
 ---
 
 <section id="cases" data-reveal-container class="content-section relative overflow-hidden isolation-isolate w-[calc(100%-32px)] md:w-full max-w-7xl mx-auto rounded-[32px] py-6" data-stagger="true">
@@ -59,7 +71,9 @@ import case1mobile10 from '../assets/cases/case-1/case-1-mobile-10.png';
         <span class="absolute inset-0 bg-white/40 rounded-full scale-0 transition-transform duration-500 ease-out origin-center group-hover:scale-100"></span>
         
         <!-- O ícone precisa de posição relativa para ficar acima do efeito do bg -->
-        <span class="relative z-10 transition-colors duration-300 group-hover:text-foreground">←</span>
+        <span class="relative z-10 transition-colors duration-300 group-hover:text-foreground">
+          <i class="ph ph-bold ph-arrow-left"></i>
+        </span>
       </button>
 
       <!-- Botão Próximo (Next) -->
@@ -93,7 +107,9 @@ import case1mobile10 from '../assets/cases/case-1/case-1-mobile-10.png';
         <span class="absolute inset-0 bg-white/40 rounded-full scale-0 transition-transform duration-500 ease-out origin-center group-hover:scale-100"></span>
         
         <!-- O ícone precisa de posição relativa para ficar acima do efeito do bg -->
-        <span class="relative z-10 transition-colors duration-300 group-hover:text-foreground">→</span>
+        <span class="relative z-10 transition-colors duration-300 group-hover:text-foreground">
+          <i class="ph ph-bold ph-arrow-right"></i>
+        </span>
       </button>
 
     </div>
@@ -101,10 +117,12 @@ import case1mobile10 from '../assets/cases/case-1/case-1-mobile-10.png';
   </div>
 
   <div id="cases-track">
-    <article id="case-1" class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 gap-y-6 items-center">
+    <article id="case-1" class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 gap-y-6 items-stretch">
 
       <div class="case-loader">
-        <span class="text-4xl animate-spin">⟳</span>
+        <span class="text-4xl animate-spin">
+          <i class="ph ph-bold ph-spinner-ball"></i>
+        </span>
       </div>
 
       <h3 class="md:hidden text-2xl md:text-4xl text-muted-foreground font-bold" data-animate="fade-up">
@@ -248,7 +266,10 @@ import case1mobile10 from '../assets/cases/case-1/case-1-mobile-10.png';
       </div>
 
       <!-- Right column -->
-      <div class="hidden md:grid md:col-span-4 flex items-center justify-center" data-animate="fade-up">
+      <div
+        class="hidden md:flex md:col-span-4 h-full items-end justify-center"
+        data-animate="fade-up"
+      >
         <div
           class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center case-modal-trigger cursor-pointer"
           data-src={case1.src}
@@ -268,162 +289,170 @@ import case1mobile10 from '../assets/cases/case-1/case-1-mobile-10.png';
 
     </article >
 
-    <article id="case-2" class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center hidden md:grid">
+    <article id="case-2" class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center md:grid">
 
       <div class="case-loader">
-        <span class="text-4xl animate-spin">⟳</span>
+        <span class="text-4xl animate-spin">
+          <i class="ph ph-bold ph-spinner-ball"></i>
+        </span>
       </div>
 
-      <!-- Left column -->
+      <!-- =========================
+          LEFT COLUMN
+      ========================== -->
       <div class="md:col-span-8 flex flex-col justify-between h-full gap-8">
 
         <div class="space-y-4">
-          
-          <h3 data-animate="fade-up"
-            class="text-2xl md:text-4xl text-muted-foreground font-bold"
-          >
-            Dashboard Partners
+
+          <h3 class="text-2xl md:text-4xl text-muted-foreground font-bold" data-animate="fade-up">
+            Alma Platform DS
           </h3>
 
-          <p data-animate="fade-up"
-            class="text-base text-muted-foreground"
+          <p
+            data-animate="fade-up"
+            class="text-base text-muted-foreground hidden md:block"
           >
-            Descrição do case...
+            Desenvolvimento de um ecossistema de Design System para uma plataforma white-label de observabilidade. O projeto estruturou-se via discovery com operadores e desenvolvedores, garantindo a padronização visual entre módulos. A arquitetura engloba desde a definição de primitivos e um pipeline de Design Tokens — alinhando nomenclaturas de design a variáveis de código — até a criação de componentes e guias de estilo. Ao integrar jornadas e protótipos interativos, o sistema assegura consistência na evolução da plataforma, reduzindo o débito técnico e otimizando a experiência do usuário final em diferentes contextos de uso.
+          </p>
+          <p
+            class="md:hidden"
+            data-animate="fade-up"
+          >
+            Estruturação de um Design System para plataforma white-label, integrando componentes, tokens e padrões visuais através de discovery, validações contínuas e alinhamento com desenvolvimento.
           </p>
 
-        </div>
+          <!-- =========================
+              MOBILE GALLERY (case-2-mobile)
+          ========================== -->
+          <div class="md:hidden space-y-4">
 
-        <!-- images grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div
+              class="case-modal-trigger overflow-hidden rounded-2xl h-[300px]"
+              data-src={case2mobile02.src}
+              data-gallery="case-2-mobile"
+              data-caption="Paleta de cores do sistema: definição estratégica de tokens de cor, estabelecendo profundidade e garantindo acessibilidade em todos os cenários de uso, através de escalas funcionais, status, eventos e opacidade."
+              data-animate="fade-up"
+            >
+              <img
+                src={case2mobile02.src}
+                alt="Case 2 Presets"
+                class="w-full h-auto"
+              />
+            </div>
 
-          <div
-            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center"
-            data-animate="fade-up"
-          >
-            <img 
-              src={case1Wireframe.src} 
-              alt="Case 1 Wireframe" 
-              class="w-full h-auto" 
-            />
+            <div
+              class="hidden case-modal-trigger"
+              data-src={case2mobile01.src}
+              data-gallery="case-2-mobile"
+              data-caption="Biblioteca de botões: definição completa de componentes para todos os cenários e níveis de importância, abrangendo variantes primárias, secundárias e terciárias. O sistema inclui uma vasta gama de estados e contextos para garantir consistência em qualquer interface."
+            ></div>
+
+            <div
+              class="hidden case-modal-trigger"
+              data-src={case2mobile03.src}
+              data-gallery="case-2-mobile"
+              data-caption="Biblioteca de componentes unificada: esta estrutura demonstra a taxonomia organizada de todos os elementos da plataforma, facilitando a manutenção e a aplicação consistente em todo o produto"
+            ></div>
+
+            <div
+              class="hidden case-modal-trigger"
+              data-src={case2mobile04.src}
+              data-gallery="case-2-mobile"
+              data-caption="Fundamentos Tipográficos: o sistema de escrita da plataforma, projetado para assegurar consistência visual e hierarquia clara através de uma escala tipográfica precisa e versátil."
+            ></div>
+
+            <div
+              class="hidden case-modal-trigger"
+              data-src={case2mobile05.src}
+              data-gallery="case-2-mobile"
+              data-caption="Prototipagem inteligente: este estudo detalha o uso de lógica de variáveis e condicionais para mapear todos os cenários de interação de calendários. Essa abordagem permite criar experiências complexas com maior velocidade, mantendo a consistência sem a sobrecarga de criar inúmeros frames."
+            ></div>
+
+            <div
+              class="hidden case-modal-trigger"
+              data-src={case2mobile06.src}
+              data-gallery="case-2-mobile"
+              data-caption="Exemplo de protótipo de calendário de escolha de data simples"
+              data-figma="true"
+            ></div>
+
           </div>
-
-          <div
-            class="bg-white/40 text-secondary-foreground rounded-2xl p-6 flex items-center"
-            data-animate="fade-up"
-          >
-            <img 
-              src={case1Figma.src} 
-              alt="Case 1 Protótipo" 
-              class="w-full h-auto" 
-            />
-            
-          </div>
-
-          <div
-            class="bg-white/40 text-secondary-foreground rounded-2xl p-6 flex items-center"
-            data-animate="fade-up"
-          >
-            <img 
-              src={case1Aplication.src} 
-              alt="Case 1 Aplicação" 
-              class="w-full h-auto" 
-            />
-            
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Right column -->
-      <div class="md:col-span-4 flex items-center justify-center" data-animate="fade-up">
-
-        <img
-          src={case1.src} 
-          alt="Case 1 Dashboard" 
-          class="w-full h-auto rounded-2xl shadow-lg" 
-        />
-
-      </div>
-
-    </article >
-
-    <article id="case-3" class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center hidden md:grid">
-
-      <div class="case-loader">
-        <span class="text-4xl animate-spin">⟳</span>
-      </div>
-
-      <!-- Left column -->
-      <div class="md:col-span-8 flex flex-col justify-between h-full gap-8">
-
-        <div class="space-y-4">
-          
-          <h3 data-animate="fade-up"
-            class="text-2xl md:text-4xl text-muted-foreground font-bold"
-          >
-            Dashboard Partners
-          </h3>
-
-          <p data-animate="fade-up"
-            class="text-base text-muted-foreground"
-          >
-            Descrição do case...
-          </p>
 
         </div>
 
-        <!-- images grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+        <!-- =========================
+            DESKTOP GRID GALLERY
+        ========================== -->
+        <div class="hidden md:grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
 
           <div
-            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center"
+            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center case-modal-trigger cursor-pointer"
+            data-src={case2presets.src}
+            data-gallery="case-2"
+            data-caption="Especificações de design: paleta de cores, sombras, tipografia e bordas"
             data-animate="fade-up"
           >
-            <img 
-              src={case1Wireframe.src} 
-              alt="Case 1 Wireframe" 
-              class="w-full h-auto" 
+            <img
+              src={case2presets.src}
+              alt="Case 2 Presets"
+              class="w-full h-auto"
             />
           </div>
 
           <div
-            class="bg-white/40 text-secondary-foreground rounded-2xl p-6 flex items-center"
+            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center case-modal-trigger cursor-pointer"
+            data-src={case2components.src}
+            data-gallery="case-2"
+            data-caption="Visão geral dos componentes interativos testados, incluindo estados e comportamentos prontos para implementação."
             data-animate="fade-up"
           >
-            <img 
-              src={case1Figma.src} 
-              alt="Case 1 Protótipo" 
-              class="w-full h-auto" 
+            <img
+              src={case2components.src}
+              alt="Case 2 Components"
+              class="w-full h-auto"
             />
-            
           </div>
 
           <div
-            class="bg-white/40 text-secondary-foreground rounded-2xl p-6 flex items-center"
+            class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center case-modal-trigger cursor-pointer"
+            data-src={case2componentsinteractions.src}
+            data-gallery="case-2"
+            data-caption="Refinamento de interatividade e motion: nesta etapa, utilizei variáveis e condicionais para criar protótipos de alta fidelidade sem a necessidade de múltiplos frames, otimizando o fluxo de trabalho e garantindo um comportamento fiel ao produto final."
             data-animate="fade-up"
           >
-            <img 
-              src={case1Aplication.src} 
-              alt="Case 1 Aplicação" 
-              class="w-full h-auto" 
+            <img
+              src={case2componentsinteractions.src}
+              alt="Case 2 Interactions"
+              class="w-full h-auto"
             />
-            
           </div>
+
         </div>
 
       </div>
 
-      <!-- Right column -->
-      <div class="md:col-span-4 flex items-center justify-center" data-animate="fade-up">
+      <!-- =========================
+          RIGHT COLUMN (DESKTOP ONLY)
+      ========================== -->
+      <div class="hidden md:grid md:col-span-4 flex h-full items-end justify-center" data-animate="fade-up">
 
-        <img
-          src={case1.src} 
-          alt="Case 1 Dashboard" 
-          class="w-full h-auto rounded-2xl shadow-lg" 
-        />
+        <div
+          class="bg-white/40 text-primary-foreground rounded-2xl p-6 flex items-center case-modal-trigger cursor-pointer"
+          data-src={case2datecalendar.src}
+          data-gallery="case-2"
+          data-caption="Unindo design visual, motion fluido e interatividade avançada para simular com precisão a experiência final do usuário."
+          data-animate="fade-up"
+          data-figma="true"
+        >
+          <img
+            src={case2datecalendar.src}
+            alt="Case 2 Dashboard"
+            class="w-full h-auto"
+          />
+        </div>
 
       </div>
 
-    </article >
+    </article>
   </div>
 </section>

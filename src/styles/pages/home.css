@@ -203,8 +203,6 @@ html {
 }
 
 #cases-track article {
-  width: 100%;
-  min-width: 100%;
   flex: 0 0 100%;
 }
 

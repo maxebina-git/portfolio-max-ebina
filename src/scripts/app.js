@@ -329,8 +329,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   initCaseModal();
 
-  initBackToTop();
-
 });
 
 // =====================================================
@@ -407,18 +405,14 @@ function initCasesSlider() {
   const track = document.getElementById("cases-track");
   if (!track) return;
 
-  const slides = track.querySelectorAll("article");
+  const slides = Array.from(track.querySelectorAll("article"));
 
   const prev = document.getElementById("case-prev");
   const next = document.getElementById("case-next");
 
   let currentCase = 0;
 
-  // =====================================================
-  // LOADER (interno e escalável)
-  // =====================================================
   function runLoader(index) {
-
     const slide = slides[index];
     if (!slide) return;
 
@@ -432,21 +426,15 @@ function initCasesSlider() {
     });
 
     setTimeout(() => {
-
       loader.classList.remove("is-visible");
 
       setTimeout(() => {
         loader.style.display = "none";
-      }, 500);
-
-    }, 1750);
+      }, 400);
+    }, 1200);
   }
 
-  // =====================================================
-  // UPDATE UI
-  // =====================================================
   function updateCases() {
-
     track.style.transform = `translateX(-${currentCase * 100}%)`;
 
     slides.forEach((s, i) => {
@@ -456,11 +444,7 @@ function initCasesSlider() {
     updateButtons();
   }
 
-  // =====================================================
-  // BOTÕES
-  // =====================================================
   function updateButtons() {
-
     if (prev) {
       const isFirst = currentCase === 0;
       prev.disabled = isFirst;
@@ -476,112 +460,25 @@ function initCasesSlider() {
     }
   }
 
-  // =====================================================
-  // NEXT
-  // =====================================================
-  next?.addEventListener("click", () => {
+  function goNext() {
+    if (currentCase >= slides.length - 1) return;
+    currentCase++;
+    updateCases();
+    runLoader(currentCase);
+  }
 
-    if (currentCase < slides.length - 1) {
-      currentCase++;
-      updateCases();
-      runLoader(currentCase);
-    }
+  function goPrev() {
+    if (currentCase <= 0) return;
+    currentCase--;
+    updateCases();
+    runLoader(currentCase);
+  }
 
-  });
+  next?.addEventListener("click", goNext);
+  prev?.addEventListener("click", goPrev);
 
-  // =====================================================
-  // PREV
-  // =====================================================
-  prev?.addEventListener("click", () => {
-
-    if (currentCase > 0) {
-      currentCase--;
-      updateCases();
-      runLoader(currentCase);
-    }
-
-  });
-
-  // =====================================================
-  // INIT
-  // =====================================================
   updateCases();
 }
-
-// =====================================================
-// CASE 2 LOADER
-// =====================================================
-
-document.getElementById("case-next")?.addEventListener("click", () => {
-
-  const track = document.getElementById("cases-track");
-  if (!track) return;
-
-  const slides = track.querySelectorAll("article");
-
-  let currentCase =
-    Array.from(slides).findIndex(a => a.classList.contains("active"));
-
-  if (currentCase === -1) currentCase = 0;
-
-  const nextIndex = Math.min(currentCase + 1, slides.length - 1);
-
-  const loader = slides[nextIndex].querySelector(".case-loader");
-  if (!loader) return;
-
-  loader.style.display = "flex";
-
-  requestAnimationFrame(() => {
-    loader.classList.add("is-visible");
-  });
-
-  setTimeout(() => {
-
-    loader.classList.remove("is-visible");
-
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500);
-
-  }, 1750);
-
-});
-
-
-document.getElementById("case-prev")?.addEventListener("click", () => {
-
-  const track = document.getElementById("cases-track");
-  if (!track) return;
-
-  const slides = track.querySelectorAll("article");
-
-  let currentCase =
-    Array.from(slides).findIndex(a => a.classList.contains("active"));
-
-  if (currentCase === -1) currentCase = 0;
-
-  const prevIndex = Math.max(currentCase - 1, 0);
-
-  const loader = slides[prevIndex].querySelector(".case-loader");
-  if (!loader) return;
-
-  loader.style.display = "flex";
-
-  requestAnimationFrame(() => {
-    loader.classList.add("is-visible");
-  });
-
-  setTimeout(() => {
-
-    loader.classList.remove("is-visible");
-
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500);
-
-  }, 1750);
-
-});
 
 // =====================================================
 // MODAL
@@ -608,28 +505,78 @@ function initCaseModal() {
 
     const triggers = document.querySelectorAll(".case-modal-trigger");
 
+    const iframe = document.getElementById("case-modal-figma");
+    const image = document.getElementById("case-modal-image");
+    const modal = document.getElementById("case-modal");
+
     triggers.forEach((el) => {
+
       el.addEventListener("click", () => {
+
+        console.log("CLICK TRIGGER:", el, el.dataset);
+
+        // reset visual state
+        iframe.classList.add("hidden");
+        iframe.src = "";
+        image.classList.remove("hidden");
 
         const src = el.dataset.src;
         const caption = el.dataset.caption || "";
 
         if (!src) return;
 
-        const galleryId =
-          el.dataset.gallery;
+        const galleryId = el.dataset.gallery;
 
+        if (!galleryId) return;
+
+        // pega TODOS os itens da mesma gallery (sem depender de article)
         currentGallery = Array.from(
-          document.querySelectorAll(
-            `[data-gallery="${galleryId}"]`
-          )
+          document.querySelectorAll(`[data-gallery="${galleryId}"]`)
+        ).filter(item => item.dataset.src);
+
+        // =====================================================
+        // 🔥 INDEX ROBUSTO (NUNCA MAIS QUEBRA)
+        // =====================================================
+        currentIndex = currentGallery.findIndex(
+          item => item.dataset.src === src
         );
 
-        currentIndex =
-          currentGallery.indexOf(el);
+        if (currentIndex < 0) currentIndex = 0;
 
+        // =====================================================
+        // OPEN MODAL
+        // =====================================================
         openModal(src, caption);
         updateGalleryButtons();
+
+        // =====================================================
+        // FIGMA CASE
+        // =====================================================
+        if (el.dataset.figma === "true") {
+
+          image.classList.add("hidden");
+          iframe.classList.remove("hidden");
+
+          iframe.src =
+            "https://www.figma.com/embed?embed_host=share&url=" +
+            encodeURIComponent(
+              "https://www.figma.com/proto/vkDYLX7YMyiBkfGKFMAlbs/Components?page-id=200%3A2550&node-id=9264-44088&p=f&viewport=376%2C-1594%2C1&t=lypt5jEpf1LLIp2v-8&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=9264%3A44088&show-proto-sidebar=1&hotspot-hints=0&disable-default-keyboard-nav=1&hide-ui=1"
+            );
+
+        } else {
+
+          iframe.classList.add("hidden");
+          iframe.src = "";
+        }
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        requestAnimationFrame(() => {
+          modal.classList.remove("opacity-0");
+          modal.classList.add("opacity-100");
+        });
+
       });
 
     });
@@ -681,25 +628,17 @@ function initCaseModal() {
 // PREV
 // =====================================================
 
-  prevButton?.addEventListener("click", () => {
-
-    if (currentIndex > 0) {
-      showGalleryItem(currentIndex - 1);
-    }
-
-  });
+prevButton?.addEventListener("click", () => {
+  showGalleryItem(currentIndex - 1);
+});
 
   // =====================================================
   // NEXT
   // =====================================================
 
-  nextButton?.addEventListener("click", () => {
-
-    if (currentIndex < currentGallery.length - 1) {
-      showGalleryItem(currentIndex + 1);
-    }
-
-  });
+nextButton?.addEventListener("click", () => {
+  showGalleryItem(currentIndex + 1);
+});
 
   // =====================================================
   // OPEN MODAL
@@ -719,39 +658,64 @@ function initCaseModal() {
     document.body.style.overflow = "hidden";
   }
 
-  function updateGalleryButtons() {
+function updateGalleryButtons() {
 
-    if (!prevButton || !nextButton) return;
+  if (!prevButton || !nextButton) return;
 
-    const isFirst =
-      currentIndex === 0;
+  const isFirst = currentIndex === 0;
+  const isLast = currentIndex === currentGallery.length - 1;
 
-    const isLast =
-      currentIndex === currentGallery.length - 1;
+  prevButton.disabled = isFirst;
+  nextButton.disabled = isLast;
 
-    prevButton.disabled = isFirst;
-    nextButton.disabled = isLast;
+  prevButton.style.opacity = isFirst ? "0.3" : "1";
+  nextButton.style.opacity = isLast ? "0.3" : "1";
 
+  prevButton.style.pointerEvents = isFirst ? "none" : "auto";
+  nextButton.style.pointerEvents = isLast ? "none" : "auto";
+}
+
+ function showGalleryItem(index) {
+
+  if (!currentGallery.length) return;
+
+  // 🔒 clamp seguro (evita overflow bug)
+  if (index < 0) index = 0;
+  if (index >= currentGallery.length) index = currentGallery.length - 1;
+
+  currentIndex = index;
+
+  const item = currentGallery[currentIndex];
+  if (!item) return;
+
+  const iframe = document.getElementById("case-modal-figma");
+
+  const isFigma = item.dataset.figma === "true";
+
+  if (isFigma) {
+
+    modalImage.classList.add("hidden");
+    iframe.classList.remove("hidden");
+
+    iframe.src =
+      "https://www.figma.com/embed?embed_host=share&url=" +
+      encodeURIComponent(
+        "https://www.figma.com/proto/vkDYLX7YMyiBkfGKFMAlbs/Components?page-id=200%3A2550&node-id=9264-44088&p=f&viewport=376%2C-1594%2C1&t=lypt5jEpf1LLIp2v-8&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=9264%3A44088&show-proto-sidebar=1&hotspot-hints=0&disable-default-keyboard-nav=1&hide-ui=1"
+      );
+
+  } else {
+
+    iframe.classList.add("hidden");
+    iframe.src = "";
+
+    modalImage.classList.remove("hidden");
+    modalImage.src = item.dataset.src;
   }
 
-  function showGalleryItem(index) {
+  modalCaption.textContent = item.dataset.caption || "";
 
-    const item =
-      currentGallery[index];
-
-    if (!item) return;
-
-    currentIndex = index;
-
-    modalImage.src =
-      item.dataset.src;
-
-    modalCaption.textContent =
-      item.dataset.caption || "";
-
-    updateGalleryButtons();
-
-  }
+  updateGalleryButtons();
+}
 
   // =====================================================
   // CLOSE MODAL
@@ -791,7 +755,7 @@ function initCaseModal() {
 
   // click overlay or button
   modal.addEventListener("click", (e) => {
-    if (e.target.dataset.close === "modal") {
+    if (e.target.closest('[data-close="modal"]')) {
       closeModal();
     }
   });
