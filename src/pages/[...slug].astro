@@ -18,21 +18,30 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 
-// segurança básica
+// fallback seguro
 if (!slug) {
   return Astro.redirect('/');
 }
+
+// mapeia slug para scroll inicial (opcional mas útil)
+const initialSection = slug;
 ---
 
 <MainLayout>
 
   <main class="w-full">
 
+    <!-- SEMPRE renderiza tudo -->
     <Hero />
     <Cases />
     <Sobre />
     <Conectar />
 
   </main>
+
+  <!-- inicialização de posição baseada na URL -->
+  <script is:inline>
+    window.__INITIAL_SECTION__ = "{initialSection}";
+  </script>
 
 </MainLayout>

@@ -88,19 +88,17 @@ import meImage from '../assets/me.png';
 
         // Capture-phase listener on document to ensure logo clicks are handled even if other handlers interfere.
         function captureLogoClick(e) {
-          var el = e.target.closest && e.target.closest('#logo-button');
-          if (!el) return;
-          // Only handle on desktop (sm+)
-          if (window.matchMedia('(min-width: 640px)').matches) {
-            e.preventDefault();
-            e.stopPropagation();
-            var target = document.getElementById('hero');
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-          }
+
+          const target = e.target;
+
+          if (!(target instanceof Element)) return;
+
+          if (
+            target.closest('a') ||
+            target.closest('button') ||
+            target.closest('[role="button"]')
+          ) return;
+
         }
 
         document.addEventListener('click', captureLogoClick, true); // capture = true
