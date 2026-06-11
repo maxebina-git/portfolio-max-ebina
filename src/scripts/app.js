@@ -342,6 +342,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initContactFormLoading();
   initContactFormSuccess();
   initNavActiveState();
+  initCopyButtons();
 
   // =====================================
   // INITIAL SCROLL RESTORE (ROBUSTO)
@@ -1097,4 +1098,52 @@ function initNavActiveState() {
     apply(path);
     updateFooter();
   });
+}
+
+// =====================================================
+// COPY TO CLIPBOARD
+// =====================================================
+
+function initCopyButtons() {
+
+  const buttons = document.querySelectorAll(".copy-btn");
+
+  buttons.forEach((button) => {
+
+    button.addEventListener("click", async (e) => {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      const value = button.dataset.copy;
+
+      if (!value) return;
+
+      try {
+
+        await navigator.clipboard.writeText(value);
+
+        const icon = button.querySelector("i");
+
+        if (!icon) return;
+
+        icon.className = "ph ph-check text-base";
+
+        setTimeout(() => {
+          icon.className = "ph ph-copy text-base";
+        }, 1200);
+
+      } catch (error) {
+
+        console.error(
+          "[copy-btn]",
+          error
+        );
+
+      }
+
+    });
+
+  });
+
 }

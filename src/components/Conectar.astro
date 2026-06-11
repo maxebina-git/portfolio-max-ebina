@@ -1,225 +1,384 @@
-<section id="conectar" data-reveal-container class="min-h-[calc(70vh-1rem)] content-section relative overflow-hidden isolation-isolate w-[calc(100%-32px)] md:w-full max-w-7xl mx-auto rounded-[32px] py-12 my-12" data-stagger="true">
+<section id="conectar" data-reveal-container class="min-h-[calc(70vh-1rem)] content-section relative overflow-hidden isolation-isolate w-[calc(100%-32px)] md:w-full max-w-7xl mx-auto rounded-[32px] py-10 my-10" data-stagger="true">
 
-  <div class="max-w-3xl mx-auto px-6 text-center space-y-6">
+  <div class="max-w-5xl mx-auto px-4 md:px-6 text-center space-y-4">
 
-    <h2 class="text-4xl font-black tracking-tight text-foreground" data-animate="fade-up">
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight text-foreground" data-animate="fade-up">
       Vamos transformar design em código escalável?
     </h2>
 
-    <p 
-      class="text-lg text-muted-foreground" data-animate="fade-up"
-    >
+    <p class="text-base text-muted-foreground" data-animate="fade-up">
       Fique à vontade para me acionar para contratos, consultorias de DesignOps ou posições core de Product Design.
     </p>
 
-    <form
-      id="contact-form"
-      class="mt-12 max-w-3xl mx-auto space-y-6 text-left"
-      novalidate
-      action="https://maxebina.com.br/send-email.php"
-      method="POST"
-    >
-      <!-- Honeypot anti-spam -->
-      <input
-        type="text"
-        name="website"
-        tabindex="-1"
-        autocomplete="off"
-        class="hidden"
-      />
-      
-      <fieldset class="space-y-6">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.35fr_0.65fr] gap-8 items-center">
 
-        <!-- Nome + Telefone -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-animate="fade-up">
+      <!-- CARDS -->
+      <aside
+        class="order-1 lg:order-2 space-y-4"
+        data-animate="fade-up"
+      >
 
-          <div>
-            <label
-              for="nome"
-              class="block text-sm font-medium mb-2 text-foreground"
-            >
-              Nome
-            </label>
+        <a
+          href="https://wa.me/5511971610688"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block rounded-2xl border border-border bg-background/60 p-5 text-left
+                transition-all duration-300 ease-out hover:cursor-pointer
+                hover:-translate-y-1 hover:border-primary/40
+                hover:bg-gradient-to-br hover:from-primary/5 hover:to-transparent
+                hover:shadow-lg dark:hover:shadow-primary/10"
+        >
+          <div class="flex items-start gap-4">
+            <i class="ph ph-whatsapp-logo text-2xl text-primary transition-transform duration-300 group-hover:scale-110"></i>
 
-            <input
-              id="nome"
-              name="nome"
-              type="text"
-              autocomplete="name"
-              required
-              aria-describedby="nome-error"
-              placeholder="Seu nome"
-              class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
-            />
+            <div>
+              <h3 class="font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
+                WhatsApp
+              </h3>
 
-            <p
-              id="nome-error"
-              class="mt-2 text-sm text-destructive hidden"
-            >
-              Informe seu nome.
-            </p>
+              <p class="mt-1 text-sm text-muted-foreground">
+                Conversas rápidas para projetos,
+                consultorias e oportunidades.
+              </p>
+
+              <div class="mt-2 flex items-center gap-1">
+                <span class="text-sm font-medium text-foreground">
+                  +55 11 97161-0688
+                </span>
+
+                <button
+                  type="button"
+                  class="copy-btn flex h-8 w-8 items-center justify-center rounded-lg cursor-pointer transition hover:bg-primary/10"
+                  data-copy="+55 11 97161-0688"
+                  aria-label="Copiar telefone"
+                >
+                  <i class="ph ph-copy text-base"></i>
+                </button>
+              </div>
+            </div>
           </div>
+        </a>
 
-          <div>
-            <label
-              for="telefone"
-              class="block text-sm font-medium mb-2 text-foreground"
-            >
-              Telefone
-            </label>
+        <a
+          href="mailto:maxebina@gmail.com"
+          class="group block rounded-2xl border border-border bg-background/60 p-5 text-left
+                transition-all duration-300 ease-out hover:cursor-pointer
+                hover:-translate-y-1 hover:border-primary/40
+                hover:bg-gradient-to-br hover:from-primary/5 hover:to-transparent
+                hover:shadow-lg dark:hover:shadow-primary/10"
+        >
+          <div class="flex items-start gap-4">
+            <i class="ph ph-envelope-simple text-2xl text-primary transition-transform duration-300 group-hover:scale-110"></i>
 
-            <input
-              id="telefone"
-              name="telefone"
-              type="tel"
-              autocomplete="tel"
-              required
-              aria-describedby="telefone-error"
-              placeholder="(11) 99999-9999"
-              class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
-            />
+            <div>
+              <h3 class="font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
+                E-mail
+              </h3>
 
-            <p
-              id="telefone-error"
-              class="mt-2 text-sm text-destructive hidden"
-            >
-              Informe um telefone válido.
-            </p>
+              <p class="mt-1 text-sm text-muted-foreground">
+                Compartilhe detalhes do desafio
+                para iniciarmos uma conversa.
+              </p>
+
+              <div class="mt-2 flex items-center gap-1">
+                <span class="text-sm font-medium text-foreground">
+                  maxebina@gmail.com
+                </span>
+
+                <button
+                  type="button"
+                  class="copy-btn flex h-8 w-8 items-center justify-center rounded-lg cursor-pointer transition hover:bg-primary/10"
+                  data-copy="maxebina@gmail.com"
+                  aria-label="Copiar email"
+                >
+                  <i class="ph ph-copy text-base"></i>
+                </button>
+              </div>
+            </div>
           </div>
+        </a>
 
-        </div>
+        <a
+          href="https://www.linkedin.com/in/max-ebina"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block rounded-2xl border border-border bg-background/60 p-5 text-left
+                transition-all duration-300 ease-out hover:cursor-pointer
+                hover:-translate-y-1 hover:border-primary/40
+                hover:bg-gradient-to-br hover:from-primary/5 hover:to-transparent
+                hover:shadow-lg dark:hover:shadow-primary/10"
+        >
+          <div class="flex items-start gap-4">
+            <i class="ph ph-linkedin-logo text-2xl text-primary transition-transform duration-300 group-hover:scale-110"></i>
 
-        <!-- Email -->
-        <div data-animate="fade-up">
-          <label
-            for="email"
-            class="block text-sm font-medium mb-2 text-foreground"
-          >
-            E-mail
-          </label>
+            <div>
+              <h3 class="font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
+                LinkedIn
+              </h3>
 
+              <p class="mt-1 text-sm text-muted-foreground">
+                Conheça experiências, projetos
+                e recomendações profissionais.
+              </p>
+
+              <span class="block mt-2 text-sm font-medium text-foreground">
+                Ver perfil completo
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href="/Max_Ebina_Senior_Product_Designer.pdf"
+          download
+          class="group block rounded-2xl border border-border bg-background/60 p-5 text-left
+                transition-all duration-300 ease-out hover:cursor-pointer
+                hover:-translate-y-1 hover:border-primary/40
+                hover:bg-gradient-to-br hover:from-primary/5 hover:to-transparent
+                hover:shadow-lg dark:hover:shadow-primary/10"
+        >
+          <div class="flex items-start gap-4">
+            <i class="ph ph-file-pdf text-2xl text-primary transition-transform duration-300 group-hover:scale-110"></i>
+
+            <div>
+              <h3 class="font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
+                Currículo
+              </h3>
+
+              <p class="mt-1 text-sm text-muted-foreground">
+                Baixe a versão atualizada com
+                experiência e competências.
+              </p>
+
+              <span class="block mt-2 text-sm font-medium text-foreground">
+                Download PDF
+              </span>
+            </div>
+          </div>
+        </a>
+
+        </aside>
+
+        <!-- FORMULÁRIO -->
+        <div class="order-2 lg:order-1">
+
+        <form
+          id="contact-form"
+          class="space-y-4 text-left"
+          novalidate
+          action="https://maxebina.com.br/send-email.php"
+          method="POST"
+        >
+          <!-- Honeypot anti-spam -->
           <input
-            id="email"
-            name="email"
-            type="email"
-            autocomplete="email"
-            required
-            aria-describedby="email-error"
-            placeholder="voce@empresa.com"
-            class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
+            type="text"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+            class="hidden"
           />
 
-          <p
-            id="email-error"
-            class="mt-2 text-sm text-destructive hidden"
-          >
-            Informe um e-mail válido.
-          </p>
-        </div>
+          <fieldset class="space-y-4">
 
-        <!-- Assunto -->
-        <div data-animate="fade-up">
-          <label
-            for="assunto"
-            class="block text-sm font-medium mb-2 text-foreground"
-          >
-            Assunto
-          </label>
+            <!-- Nome + Telefone -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-animate="fade-up">
 
-          <select
-            id="assunto"
-            name="assunto"
-            required
-            aria-describedby="assunto-error"
-            class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition focus:border-primary"
-          >
-            <option value="">
-              Selecione uma opção
-            </option>
+              <div>
+                <label
+                  for="nome"
+                  class="block text-sm font-medium mb-2 text-foreground"
+                >
+                  Nome
+                </label>
 
-            <option value="product-design">
-              Product Design
-            </option>
+                <input
+                  id="nome"
+                  name="nome"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  aria-describedby="nome-error"
+                  placeholder="Seu nome"
+                  class="w-full rounded-xl border border-border bg-background px-3 py-2 outline-none transition focus:border-primary"
+                />
 
-            <option value="design-system">
-              Design System
-            </option>
+                <p
+                  id="nome-error"
+                  class="mt-2 text-sm text-destructive hidden"
+                >
+                  Informe seu nome.
+                </p>
+              </div>
 
-            <option value="designops">
-              Consultoria DesignOps
-            </option>
+              <div>
+                <label
+                  for="telefone"
+                  class="block text-sm font-medium mb-2 text-foreground"
+                >
+                  Telefone
+                </label>
 
-            <option value="freelance">
-              Projeto Freelancer
-            </option>
+                <input
+                  id="telefone"
+                  name="telefone"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                  aria-describedby="telefone-error"
+                  placeholder="(11) 99999-9999"
+                  class="w-full rounded-xl border border-border bg-background px-3 py-2 outline-none transition focus:border-primary"
+                />
 
-            <option value="hiring">
-              Oportunidade de Contratação
-            </option>
+                <p
+                  id="telefone-error"
+                  class="mt-2 text-sm text-destructive hidden"
+                >
+                  Informe um telefone válido.
+                </p>
+              </div>
 
-            <option value="other">
-              Outro assunto
-            </option>
-          </select>
+            </div>
 
-          <p
-            id="assunto-error"
-            class="mt-2 text-sm text-destructive hidden"
-          >
-            Selecione um assunto.
-          </p>
-        </div>
+            <!-- Email -->
+            <div data-animate="fade-up">
+              <label
+                for="email"
+                class="block text-sm font-medium mb-2 text-foreground"
+              >
+                E-mail
+              </label>
 
-        <!-- Mensagem -->
-        <div data-animate="fade-up">
-          <label
-            for="mensagem"
-            class="block text-sm font-medium mb-2 text-foreground"
-          >
-            Mensagem
-          </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                aria-describedby="email-error"
+                placeholder="voce@empresa.com"
+                class="w-full rounded-xl border border-border bg-background px-3 py-2 outline-none transition focus:border-primary"
+              />
 
-          <textarea
-            id="mensagem"
-            name="mensagem"
-            rows="6"
-            required
-            aria-describedby="mensagem-error"
-            placeholder="Conte um pouco sobre seu projeto, desafio ou oportunidade."
-            class="w-full rounded-xl border border-border bg-background px-4 py-3 outline-none transition resize-y focus:border-primary"
-          ></textarea>
+              <p
+                id="email-error"
+                class="mt-2 text-sm text-destructive hidden"
+              >
+                Informe um e-mail válido.
+              </p>
+            </div>
 
-          <p
-            id="mensagem-error"
-            class="mt-2 text-sm text-destructive hidden"
-          >
-            Escreva uma mensagem.
-          </p>
+            <!-- Assunto -->
+            <div data-animate="fade-up">
+              <label
+                for="assunto"
+                class="block text-sm font-medium mb-2 text-foreground"
+              >
+                Assunto
+              </label>
 
-          <!-- Submit -->
-          <div class="pt-2">
+              <select
+                id="assunto"
+                name="assunto"
+                required
+                aria-describedby="assunto-error"
+                class="w-full rounded-xl border border-border bg-background px-3 py-2 outline-none transition focus:border-primary"
+              >
+                <option value="">
+                  Selecione uma opção
+                </option>
 
-            <p
-              id="form-success"
-              class="hidden opacity-0 transition-all duration-500 mb-4 text-sm font-medium text-green-900 text-center md:text-left"
-            >
-              ✓ Mensagem enviada com sucesso. Responderei em breve.
-            </p>
+                <option value="product-design">
+                  Product Design
+                </option>
 
-            <button
-              id="submit-button"
-              type="submit"
-              class="form-submit inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 font-semibold text-white transition hover:opacity-90 cursor-pointer"
-            >
-              <span id="submit-label">
-                Enviar mensagem
-              </span>
-            </button>
-          </div>
-        </div>
+                <option value="product-design">
+                  IA aplicada ao Design
+                </option>
 
-      </fieldset>
-    </form>
+                <option value="design-system">
+                  Design System
+                </option>
+
+                <option value="designops">
+                  Consultoria DesignOps
+                </option>
+
+                <option value="freelance">
+                  Projeto Freelancer
+                </option>
+
+                <option value="hiring">
+                  Oportunidade de Contratação
+                </option>
+
+                <option value="other">
+                  Outro assunto
+                </option>
+              </select>
+
+              <p
+                id="assunto-error"
+                class="mt-2 text-sm text-destructive hidden"
+              >
+                Selecione um assunto.
+              </p>
+            </div>
+
+            <!-- Mensagem -->
+            <div data-animate="fade-up">
+              <label
+                for="mensagem"
+                class="block text-sm font-medium mb-2 text-foreground"
+              >
+                Mensagem
+              </label>
+
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="6"
+                required
+                aria-describedby="mensagem-error"
+                placeholder="Conte um pouco sobre seu projeto, desafio ou oportunidade."
+                class="w-full rounded-xl border border-border bg-background px-3 py-2 outline-none transition resize-y focus:border-primary"
+              ></textarea>
+
+              <p
+                id="mensagem-error"
+                class="mt-2 text-sm text-destructive hidden"
+              >
+                Escreva uma mensagem.
+              </p>
+
+              <!-- Submit -->
+              <div class="pt-2">
+
+                <p
+                  id="form-success"
+                  class="hidden opacity-0 transition-all duration-500 mb-4 text-sm font-medium text-green-900 text-center md:text-left"
+                >
+                  ✓ Mensagem enviada com sucesso. Responderei em breve.
+                </p>
+
+                <button
+                  id="submit-button"
+                  type="submit"
+                  class="form-submit inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 font-semibold text-white transition hover:opacity-90 cursor-pointer"
+                >
+                  <span id="submit-label">
+                    Enviar mensagem
+                  </span>
+                </button>
+
+              </div>
+            </div>
+
+          </fieldset>
+        </form>
+
+      </div>
+
+    </div>
 
   </div>
 </section>
