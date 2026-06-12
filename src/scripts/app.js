@@ -2,6 +2,8 @@ import renderEngine from './renderEngine.js';
 import './contactValidation.js';
 import './backToTop.js';
 
+history.scrollRestoration = "manual";
+
 let engineStarted = false;
 
 function startEngineOnce() {
@@ -1067,6 +1069,13 @@ function initNavActiveState() {
     if (!best) return;
 
     apply(best.target.id);
+
+    const newPath =
+      best.target.id === "hero"
+        ? "/"
+        : `/${best.target.id}`;
+
+    window.history.replaceState({}, "", newPath);
   }, {
     threshold: [0.35, 0.55, 0.75]
   });

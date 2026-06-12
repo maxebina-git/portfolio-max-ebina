@@ -1,3 +1,7 @@
+---
+import MetricsDonuts from './react/MetricsDonuts.jsx';
+const SHOW_EXPERIMENTAL_METRICS = true;
+---
 <section
   id="sobre"
   class="content-section max-w-7xl mx-auto px-4 md:px-0 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch min-h-[calc(70vh-1rem)]" data-stagger="true"
@@ -28,39 +32,30 @@
         Especialidades
       </h4>
 
-      <ul class="flex flex-wrap gap-2 justify-center lg:justify-start max-w-md">
-        <li class="badge">
-          UX Strategy
-        </li>
-
-        <li class="badge">
-          Discovery
-        </li>
-
-        <li class="badge">
-
-          Design Systems
-        </li>
-
-        <li class="badge">
-          Design Engineering
-        </li>
-
-        <li class="badge">
-          Frontend
-        </li>
-
-        <li class="badge">
-          AI Workflows
-        </li>
-      </ul>
+      
+      {
+        SHOW_EXPERIMENTAL_METRICS ? (
+          <div data-animate="fade-up">
+            <MetricsDonuts client:visible />
+          </div>
+        ) : (
+          <ul class="flex flex-wrap gap-2 justify-center lg:justify-start max-w-md">
+            <li class="badge">UX Strategy</li>
+            <li class="badge">Discovery</li>
+            <li class="badge">Design Systems</li>
+            <li class="badge">Design Engineering</li>
+            <li class="badge">Frontend</li>
+            <li class="badge">AI Workflows</li>
+          </ul>
+        )
+      }
 
       <div class="pt-8" data-animate="fade-up">
         <a
           href="#conectar"
           class="about-link nav-link inline-block relative py-1 transition-colors duration-300 hover:text-[var(--foreground)] before:absolute before:left-0 before:bottom-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-[var(--foreground)] before:transition-transform before:duration-300 before:ease-out before:origin-right hover:before:scale-x-100 hover:before:origin-left"
         >
-          Vamos conversar
+          <span class="ph ph-at mr-1"></span> Vamos conversar
         </a>
       </div>
 
