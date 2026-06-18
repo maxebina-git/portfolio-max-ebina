@@ -36,3 +36,5 @@ jobs:
         local-dir: ./dist/
         server-dir: /maxebina.com.br/www/
         dangerous-clean-slate: true
+        # Adicionado para resolver erros de TimeOut de conexão
+        passive: true
