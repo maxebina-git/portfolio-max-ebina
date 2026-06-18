@@ -36,5 +36,5 @@ jobs:
         local-dir: ./dist/
         server-dir: /maxebina.com.br/www/
         dangerous-clean-slate: true
-        # Usar 'loose' ou 'passive' aqui dentro da configuração de segurança
-        security: passive
+        # Configuração de segurança menos rigorosa para evitar falhas de conexão
+        security: loose
