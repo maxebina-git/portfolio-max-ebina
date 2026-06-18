@@ -1,0 +1,13 @@
+{
+  "project_context": "Este projeto é um portfólio profissional de altíssimo nível, focado em UI/UX e desenvolvimento front-end moderno. Toda e qualquer alteração deve refletir maturidade visual, alto contraste e código limpo.",
+  "core_principles": {
+    "html_semantics": "Utilizar tags HTML5 estritamente semânticas (header, section, main, article, footer, button para ações, a para links). Acessibilidade (regras WCAG, uso correto de atributos alt e aria quando necessário) é mandatória.",
+    "css_architecture": "Utilizar exclusivamente Tailwind CSS utilitário. Evitar estilos inline ou CSS customizado. Manter consistência com a identidade: tema claro de alto contraste, fundo principal baseado em Slate-50, tipografia nítida e uso cirúrgico de espaçamentos padronizados (escala de padding/margin do Tailwind). Cores permitidas: variações de Slate, Green e Amber.",
+    "javascript_clean_code": "Escrever código moderno (ES6+), focado em performance e legibilidade. Funções devem ter responsabilidade única, variáveis devem ser descritivas (const/let, nunca var). No ecossistema Astro, garantir o isolamento correto de scripts que rodam no servidor vs. scripts que rodam no cliente."
+  },
+  "automation_restrictions": [
+    "Manter a integridade do código original: altere apenas o que foi explicitamente solicitado, sem remover lógicas de negócio ou quebrar o ecossistema existente.",
+    "Proibido adicionar dependências externas ou pacotes sem ordem direta.",
+    "A resposta deve ser exclusivamente o código limpo e pronto para substituição, sem blocos de texto explicativos e sem delimitadores de markdown (como ```astro)."
+  ]
+}

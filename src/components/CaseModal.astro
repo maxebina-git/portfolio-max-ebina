@@ -12,165 +12,83 @@
     duration-300
   "
 >
-
-  <!-- Overlay -->
   <div
     class="absolute inset-0 bg-black/80 backdrop-blur-sm"
     data-close="modal"
   ></div>
 
-  <!-- Conteúdo -->
   <div
     class="
         relative
         z-10
         w-full
         max-w-6xl
-
         mx-1
         md:mx-6
-
         p-2
         md:p-8
-
         bg-background
         rounded-3xl
         shadow-2xl
-    "
-    >
-
-    <!-- Controles -->
-    <div
-    class="
-        absolute
-        top-4
-        right-4
         flex
+        flex-col
+        max-h-[90vh]
+        overflow-hidden
+    "
+  >
+    <div
+      class="
+        flex-none
+        flex
+        justify-end
         items-center
         gap-2
-    "
+        mb-4
+      "
     >
-
-    <!-- Prev -->
-    <button
+      <button
         id="case-modal-prev"
         type="button"
-        class="
-        group
-        flex
-        items-center
-        justify-center
-        w-10
-        h-10
-        rounded-full
-        border
-        border-border/50
-        text-muted-foreground
-        text-2xl
-        md:text-base
-        transition-all
-        duration-300
-        hover:border-foreground/40
-        hover:bg-foreground/5
-        cursor-pointer
-        disabled:opacity-30
-        disabled:pointer-events-none
-        "
-    >
-      <i class="ph ph-bold ph-arrow-left"></i>
-    </button>
+        class="group flex items-center justify-center w-10 h-10 rounded-full border border-border/50 text-muted-foreground text-2xl md:text-base transition-all duration-300 hover:border-foreground/40 hover:bg-foreground/5 cursor-pointer disabled:opacity-30 disabled:pointer-events-none"
+      >
+        <i class="ph ph-bold ph-arrow-left"></i>
+      </button>
 
-    <!-- Next -->
-    <button
+      <button
         id="case-modal-next"
         type="button"
-        class="
-        group
-        flex
-        items-center
-        justify-center
-        w-10
-        h-10
-        rounded-full
-        border
-        border-border/50
-        text-muted-foreground
-        text-2xl
-        md:text-base
-        transition-all
-        duration-300
-        hover:border-foreground/40
-        hover:bg-foreground/5
-        cursor-pointer
-        disabled:opacity-30
-        disabled:pointer-events-none
-        "
-    >
-      <i class="ph ph-bold ph-arrow-right"></i>
-    </button>
+        class="group flex items-center justify-center w-10 h-10 rounded-full border border-border/50 text-muted-foreground text-2xl md:text-base transition-all duration-300 hover:border-foreground/40 hover:bg-foreground/5 cursor-pointer disabled:opacity-30 disabled:pointer-events-none"
+      >
+        <i class="ph ph-bold ph-arrow-right"></i>
+      </button>
 
-    <!-- Fechar -->
-    <button
+      <button
         data-close="modal"
-        class="
-        group
-        flex
-        items-center
-        justify-center
-        w-10
-        h-10
-        rounded-full
-        border
-        border-border/50
-        text-muted-foreground
-        text-2xl
-        md:text-base
-        transition-all
-        duration-300
-        hover:border-foreground/40
-        hover:bg-foreground/5
-        cursor-pointer
-        "
-    >
-      <i class="ph ph-bold ph-x"></i>
-    </button>
-
+        class="group flex items-center justify-center w-10 h-10 rounded-full border border-border/50 text-muted-foreground text-2xl md:text-base transition-all duration-300 hover:border-foreground/40 hover:bg-foreground/5 cursor-pointer"
+      >
+        <i class="ph ph-bold ph-x"></i>
+      </button>
     </div>
 
-    <!-- Imagem -->
-    <img
-    id="case-modal-image"
-    src=""
-    alt=""
-    class="
-        w-full
-        object-contain
-        rounded-2xl
+    <div class="flex-1 overflow-y-auto w-full">
+      <img
+        id="case-modal-image"
+        src=""
+        alt=""
+        class="w-full h-auto block rounded-2xl"
+      />
 
-        max-h-[85vh]
-        md:max-h-[80vh]
+      <iframe
+        id="case-modal-figma"
+        class="hidden w-full h-[80vh] rounded-2xl"
+      ></iframe>
+    </div>
 
-        mt-12
-        md:mt-8
-    "
-    />
-
-    <iframe
-      id="case-modal-figma"
-      class="hidden w-full h-[80vh] rounded-2xl mt-12"
-    ></iframe>
-
-    <!-- Legenda -->
-    <p
-      id="case-modal-caption"
-      class="
-        mt-4
-        text-center
-        text-sm
-        text-muted-foreground
-      "
-    ></p>
-
+    <div class="flex-none mt-4">
+      <p
+        id="case-modal-caption"
+        class="text-center text-sm text-muted-foreground"
+      ></p>
+    </div>
   </div>
-
 </div>

@@ -1,0 +1,69 @@
+---
+// Todo o seu back-end seguro continua idêntico aqui!
+import { GoogleGenAI } from '@google/genai';
+
+const apiKey = import.meta.env.GEMINI_API_KEY;
+const ai = new GoogleGenAI({ apiKey });
+
+let respostaIA = '';
+let erro = null;
+
+try {
+  const response = await ai.models.generateContent({
+    model: 'gemini-2.5-flash',
+    // Mudamos o prompt para ela mandar apenas UMA frase limpa, sem listas numéricas
+    contents: 'Escreva uma única frase curta, marcante e impactante de boas-vindas para o título do portfólio de um desenvolvedor front-end focado em UI/UX. Não mande opções, mande apenas a frase direta.',
+  });
+  respostaIA = response.text;
+} catch (e) {
+  erro = e;
+  console.error("Erro na API do Gemini:", e);
+}
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste do Gemini AI</title>
+  </head>
+  <body class="bg-slate-50 min-h-screen flex items-center justify-center p-4 text-slate-800 font-sans">
+    
+    <div class="max-w-xl w-full bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all hover:shadow-md">
+      
+      <div class="flex items-center gap-2 mb-6">
+        <span class="flex h-3 h-3 w-3 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+        </span>
+        <h1 class="text-xs font-semibold uppercase tracking-widest text-slate-400">
+          Gemini Engine Integrado
+        </h1>
+      </div>
+      
+      {erro ? (
+        <div class="bg-amber-50 text-amber-800 p-4 rounded-xl border border-amber-100 text-sm flex flex-col gap-1">
+          <strong class="font-semibold">Aconteceu um probleminha:</strong> 
+          <p class="opacity-90">Dê uma olhada no terminal do seu VS Code para ver o log do Node.</p>
+        </div>
+      ) : (
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold tracking-tight text-slate-900 leading-snug">
+            {respostaIA}
+          </h2>
+          <p class="text-sm text-slate-500">
+            ✨ Gerado dinamicamente via SSR (Server-Side Rendering) no Astro.
+          </p>
+        </div>
+      )}
+      
+      <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+        <a href="/" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition flex items-center gap-1">
+          ← Voltar para a Home
+        </a>
+        <span class="text-xs text-slate-300">v2.5-flash</span>
+      </div>
+    </div>
+
+  </body>
+</html>
